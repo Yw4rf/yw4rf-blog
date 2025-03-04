@@ -1,6 +1,6 @@
 ---
-title: StellarJWT - DockerLabs
-published: 2024-10-31
+title: Internship - DockerLabs
+published: 2025-03-03
 description: 'Se explotó una inyección SQL para obtener datos de usuarios, luego se usó Hydra para un ataque de fuerza bruta en SSH y se accedió a una cuenta. Se escaló horizontalmente a otra cuenta y, mediante una imagen que contenia información oculta con esteganografía LSB, se obtuvieron credenciales adicionales, logrando finalmente escalada de privilegios vertical hasta root.'
 image: '../../../assets/DockerLabs/Internship/internship-banner.png'
 tags: [DockerLabs, RedTeam, Pentesting, HTTP, SSH, SQLi, Hydra, Linux]
