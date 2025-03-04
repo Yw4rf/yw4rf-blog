@@ -68,13 +68,9 @@ export const profileConfig: ProfileConfig = {
       icon: 'fa6-brands:telegram',
       url: 'https://t.me/yw4rf',
     },{
-      name: 'Twitter',
-      icon: 'fa6-brands:twitter',
-      url: 'https://x.com/yw4rf',
-    },{
-      name: 'Threads',
-      icon: 'fa6-brands:threads',
-      url: 'https://www.threads.net/@yw4rf',
+      name: 'Email',
+      icon: 'fa6-solid:envelope',
+      url: 'mailto:tobifgabriel@gmail.com',
     }
   ],
 }
