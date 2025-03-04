@@ -75,7 +75,7 @@ Utilizo **`find`** en combinación con **`grep`** para buscar desde la raíz del
 
 Se realiza la comprobación ingresando el valor de la **`apiKey`** encontrada e ingresa correctamente por lo que el token de autorización es valido:
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-11.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-10.png)
 
 En la página oficial de **[JWT (JSON Web Token)](https://jwt.io/)** es posible decodificar el token, esto da como resultado: 
 
@@ -88,7 +88,7 @@ En la página oficial de **[JWT (JSON Web Token)](https://jwt.io/)** es posible 
 }
 ~~~
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-12.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-11.png)
 
 ## Exploitation
 
@@ -96,19 +96,19 @@ En la sección de **Logs** de la API es posible leer archivos logs, se observa u
 
 En el campo de entrada ejecutamos **`../../../../../etc/passwd`** y funciona. Por lo que se concluye es vulnerable a **`LFI`**:
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-13.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-12.png)
 
 Podemos observar la existencia del usuario llamado **`shirohige`**
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-14.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-13.png)
 
 No se tiene acceso al **`/etc/shadow`** por lo que se intenta leer la clave privada **`id_rsa`** de **SSH**. Mediante **cURL** es posible realizar la misma petición aunque realizarlo desde la terminal permite la utilización de expresiones regulares para la eliminación de saltos de linea (\n) y las comillas dobles ("") del output:  
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-15.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-14.png)
 
 La salida la envio directamente a un archivo con el nombre de **`id_rsa`** y le doy permisos de lectura y escritura con el comando **`chmod 600`**. Se ingresa a **SSH** utilizando la clave privada mediante el comando **`ssh -i id_rsa shirohige@10.10.11.37`**
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-16.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-15.png)
 
 ## Privilege Escalation
 
@@ -116,7 +116,7 @@ Una vez dentro como el usuario **`shirohige`** se buscan los archivos y director
 
 > Solar-Putty es una aplicación que permite a los usuarios administrar sesiones remotas y conectarse a cualquier dispositivo en la red
 
-![Yw4rf Instant](../../../assets/HTB/Instant/instant-17.png)
+![Yw4rf Instant](../../../assets/HTB/Instant/instant-16.png)
 
 Este archivo parece ser un backup encriptado por Solar-PuTTY. Los archivos backup pueden contener credenciales por lo que para descifrar el contenido primero es necesario enviarlo a nuestra máquina local, esto se realiza con el comando **`python3 -m http.server 8080`** 
 
