@@ -3,7 +3,7 @@ title: Whiterose - TryHackMe
 published: 2024-11-06
 description: 'Abordaremos la máquina Whiterose de la plataforma TryHackMe. Realizaremos enumeración de subdominios mediante wFuzz, explotaremos una vulnerabilidad IDOR (Insecure Direct Object Reference) y SSTI (Server Side Template Injection) mediante el CVE-2022-29078. Por ultimo, escalaremos privilegios mediante el CVE-2023-22809 aprovechando una vulnerabilidad en sudoedit.'
 image: '../../../assets/TryHackMe/whiterose/whiterose-tryhackme.png'
-tags: [TryHackMe, RedTeam, Pentesting, HTTP, IDOR, SSTI, Linux]
+tags: [TryHackMe, RedTeam, Pentesting, HTTP, IDOR, BurpSuite, SSTI, Linux]
 category: 'WriteUp'
 draft: false 
 ---

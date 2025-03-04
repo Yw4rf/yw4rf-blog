@@ -3,7 +3,7 @@ title: Broken Access Control
 published: 2024-11-12
 description: 'Broken Access Control es una falla de seguridad que permite a usuarios realizar acciones o acceder a datos que deberían estar restringidos. En este post abordaremos ¿Qué es BAC? ¿Qué se necesita para que suceda? ¿Cómo explotar BAC? ¿Como mitigar BAC? y por último un POC demostrativo con una máquina vulnerable de la plataforma TryHackMe'
 image: '../../../assets/Ethical-Hacking/BAC/tryhackme-BAC.png'
-tags: [Ethical Hacking, OWASP, BAC]
+tags: [Ethical Hacking, OWASP, BAC, ProofOfConcept, BurpSuite]
 category: 'Cybersecurity'
 draft: false 
 ---
