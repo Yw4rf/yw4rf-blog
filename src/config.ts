@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: 'assets/images/banner-1.gif',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: 'assets/images/banner.gif',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: true,         // Display the credit text of the banner image
@@ -51,9 +51,9 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/avatar.gif',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/avatar.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Yw4rf',
-  bio: ' Estudiante de Redes Informáticas | Ciberseguridad | SOC, DFIR & Penetration Testing | CTF Player',
+  bio: 'Estudiante de Redes Informáticas | Cybersecurity | SOC | DFIR | Hands-on Penetration Testing | CTF Player',
   links: [
     {
       name: 'Linkedin',
