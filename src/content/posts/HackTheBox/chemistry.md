@@ -34,21 +34,21 @@ El puerto 22 ejecuta el servicio SSH versión **OpenSSH 8.2p1**. De momento no t
 #### 5000/TCP
 Nmap detectó actividad en el puerto pero no pudo determinar con precisión el servicio. Por el contrario, se observa una respuesta HTTP con el servidor `Werkzeug/3.0.3`, que es un servidor de desarrollo de Python. Es posible que en este puerto se esté ejecutando una aplicación web basada en Flask u otro framework similar.
 
-Al acceder a la dirección IP del objetivo a través del puerto **5000**, se presenta un sitio web denominado **`Chemistry CIF Analyzer`**. Esta plataforma aparentemente permite la carga de archivos **`.CIF` (Crystallographic Information File)** para analizar la estructura contenida en ellos. El sitio ofrece opciones de **registro** e **inicio de sesión**. Dado que no se dispone de credenciales, procedo a seleccionar la opción **"Register"**.
+Accediendo a **`http://10.10.11.38:5000`**, encontramos un sitio web denominado Chemistry CIF Analyzer, el cual permite la carga de archivos .CIF (Crystallographic Information File) para su análisis. El sitio también cuenta con opciones de registro e inicio de sesión. Dado que no disponemos de credenciales, procedemos a registrarnos. 
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-2.png)
 
-Una vez registrado en el sitio, se habilita la opción para subir archivos. Además, la plataforma proporciona un **archivo de ejemplo** disponible para su descarga.
+Una vez registrados, se habilita la opción para subir archivos. Además, el sitio proporciona un **archivo de ejemplo** para su descarga.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-3.png)
 
-Se analiza el archivo descargado y se confirma que es un **archivo `.CIF` estándar**. El sitio web permite subir el archivo y analizar su estructura de forma más comoda.
+El archivo descargado es un **.CIF estándar**, lo que confirma que la aplicación analiza estructuras cristalográficas. Dado que este tipo de plataformas suele depender de bibliotecas específicas para el procesamiento de archivos, realizamos una búsqueda de vulnerabilidades en tecnologías relacionadas.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-4.png)
 
 ### CVE-2024-23346
 
-Durante una búsqueda rápida en Google, encontré el **CVE-2024-23346**, una vulnerabilidad crítica en la biblioteca **pymatgen**, ampliamente utilizada para analizar archivos de información cristalográfica (**`.CIF`**).
+Durante una búsqueda rápida en Google, encontramos el **CVE-2024-23346**, una vulnerabilidad crítica en la biblioteca **pymatgen**, ampliamente utilizada para el análisis de archivos **.CIF**.
 
 El problema radica en el método **`JonesFaithfulTransformation.from_transformation_str()`**, el cual utiliza **`eval()`** de forma insegura para procesar entradas. Esto permite la ejecución de código arbitrario al analizar un archivo **`.CIF`** malicioso.
 
@@ -90,20 +90,19 @@ Si la explotación fue un exito, en la terminal se recibirá una conexión desde
 
 ## Privilege Escalation
 
-Dentro de la máquina comprometida se identificó la presencia del código fuente de la aplicación web **`app.py`**. La inspección de dicho código reveló la existencia de una base de datos **`sqlite`** denominada **`database.db`**
+Dentro de la máquina comprometida, encontramos el código fuente de la aplicación web (**app.py**), el cual hace referencia a una base de datos **SQLite** llamada **`database.db`**.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-9.png)
 
-Se empleó el comando **`find / -type f 2>/dev/null | grep "database.db"`** con el propósito de localizar el archivo de base de datos. El resultado de la ejecución reveló que el archivo se encuentra ubicado en la ruta **`/home/app/instance/database.db`**.
+Se empleó el comando **`find / -type f 2>/dev/null | grep "database.db"`** con el propósito de localizar el archivo de base de datos. El resultado de la ejecución reveló que se encuentra ubicado en la ruta **`/home/app/instance/database.db`**.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-10.png)
 
-El análisis de la base de datos reveló la presencia de una tabla de usuarios que contenía credenciales almacenadas en formato hash **MD5**.
+Al inspeccionar su contenido, encontramos una tabla de usuarios con credenciales almacenadas en formato MD5 **MD5**.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-11.png)
 
-Para la recuperación de las contraseñas, se procedió a la utilización de la herramienta **`Hashcat`**. El proceso de descifrado de los hashes resultó en la obtención de las siguientes credenciales:
-
+Utilizamos **Hashcat** para intentar recuperar las credenciales. Finalmente, obtenemos:
 ~~~
 Username: rosa
 Password: unicorniosrosados
@@ -115,9 +114,9 @@ Se estableció una conexión SSH con el sistema objetivo, autenticándose como e
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-13.png)
 
-Se realizó un análisis de los procesos del sistema mediante la ejecución del comando **`ps aux`**, este comando lista todos los procesos en ejecución junto con el usuario que los ejecuta. Este mismo permitió identificar un proceso en ejecución perteneciente al usuario root, ejecutado por el intérprete de Python 3.9 y ubicado en la ruta **`/opt/monitoring_site/app.py`**. El título del directorio sugiere que se trata de una aplicación web de monitoreo.
+Se realizó un análisis de los procesos del sistema mediante la ejecución del comando **`ps aux`**, este comando lista todos los procesos en ejecución junto con el usuario que los ejecuta. Este mismo permitió identificar un proceso en ejecución perteneciente al usuario **root**, ejecutado por Python 3.9 y ubicado en **`/opt/monitoring_site/app.py`**. El título del directorio sugiere que se trata de una aplicación web de monitoreo.
 
-Al intentar acceder a este archivo, el sistema devuelve un mensaje de **"Acceso no autorizado"**, lo que indica que no se cuentan con los permisos necesarios para visualizarlo o modificarlo. Esto confirma que el archivo es propiedad de **root** y probablemente tenga restricciones de acceso que impiden su lectura o edición por usuarios sin privilegios elevados.
+Al intentar acceder a este archivo, el sistema devuelve un mensaje de **"Acceso no autorizado"**, lo que indica que no se cuentan con los permisos necesarios para visualizarlo o modificarlo.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-14.png)
 
@@ -139,13 +138,11 @@ Se establece un túnel SSH para exponer el puerto **8080** del localhost de la v
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-17.png)
 
-En nuestra máquina local, verificamos si la conexión con el sitio web fue establecida correctamente y si el **port forwarding** funciona como se espera. Para ello, se podría acceder directamente desde el navegador. 
-
-La página cargo correctamente, esto significa que ahora se permite interactuar con la aplicación como si estuviera alojada en nuestra propia máquina.
+Esto nos permite abrir el sitio web en nuestro navegador como si estuviera en nuestra red local.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-18.png)
 
-La ejecución de la herramienta **WhatWeb** nos permite obtener información sobre las tecnologías utilizadas en el sitio web. En este caso, el servidor web en ejecución es **python/3.9** con **`aionhttp/3.9.1`** 
+Ejecutamos la herramienta **WhatWeb** para obtener información sobre las tecnologías en uso. En este caso, el servidor web en ejecución es **python/3.9** con **`aionhttp/3.9.1`** 
 
 Esta información es relevante, ya que nos permite investigar posibles vulnerabilidades asociadas con la versión específica de **aiohttp**
 
@@ -163,11 +160,11 @@ Cuando **aiohttp** se utiliza como servidor web y se configuran rutas estáticas
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-20.png)
 
-En el sitio web, se confirma la existencia de una ruta estática **`/assets/`**. Esto refuerza la idea de que la aplicación podría ser vulnerable a **Local File Inclusion (LFI)**, permitiendo el acceso no autorizado a archivos del sistema o incluso facilitando la ejecución de código arbitrario:
+En el sitio web, se confirma la existencia de una ruta estática **`/assets/`**. Esto refuerza la idea de que la aplicación podría ser vulnerable a **Local File Inclusion (LFI)**, permitiendo el acceso no autorizado a archivos del sistema.
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-21.png)
 
-Mediante **cURL**, verificamos la existencia de esta vulnerabilidad utilizando el siguiente comando: **`curl --path-as-is [URL]/assets/../../../../../../../../etc/shadow`** 
+Mediante **cURL**, verificamos la existencia de esta vulnerabilidad utilizando el siguiente comando: **`curl --path-as-is http://127.0.0.1:8080/assets/../../../../../../../../etc/shadow`** 
 
 ![Chemistry Yw4rf](../../../assets/HTB/Chemistry/chemistry-22.png)
 
