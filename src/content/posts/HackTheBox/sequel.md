@@ -3,7 +3,7 @@ title: Sequel - HackTheBox
 published: 2024-11-19
 description: 'En esta ocasión nos encontraremos ante una máquina vulnerable con el puerto 3306/tcp que ejecuta una base de datos MariaDB. Explotaremos la vulnerabilidad clasificada como A07:2021 – Identification and Authentication Failures según OWASP.'
 image: '../../../assets/HTB/Sequel/sequel-hackthebox.png'
-tags: [HackTheBox, RedTeam, Pentesting, MariaDB, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, MariaDB, MySQL, Linux]
 category: 'WriteUp'
 draft: false 
 ---

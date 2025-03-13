@@ -3,7 +3,7 @@ title: StellarJWT - DockerLabs
 published: 2024-10-31
 description: 'Nos encontramos ante una máquina vulnerable con los puertos 80/HTTP y 22/SSH abiertos. Realizaremos un ataque de fuerza bruta al SSH con un diccionario personalizado utilizando las pistas dadas por la página y un JWT (JSON Web Token). Escalaremos privilegios inicialmente de manera horizontal y finalmente de manera vertical aprovechando los binarios sin contraseña: /usr/bin/socat y /usr/bin/chown.'
 image: '../../../assets/DockerLabs/StellarJWT/stellarjwt.webp'
-tags: [DockerLabs, RedTeam, Pentesting, HTTP, JWT, Hydra, SSH, Linux]
+tags: [DockerLabs, RedTeam, Pentesting, HTTP, JWT, Hydra, Brute Force, SSH, Linux]
 category: 'WriteUp'
 draft: false
 ---

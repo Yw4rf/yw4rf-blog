@@ -3,7 +3,7 @@ title: Vaccine - HackTheBox
 published: 2024-12-04
 description: 'Comienzo identificando los puertos 21/FTP, 22/SSH y 80/HTTP abiertos. Aprovecho el Anonymous Access en FTP para encontrar una carpeta encriptada en PKZIP, la cual desencripto con Hashcat. Dentro, descubro un archivo con credenciales encriptadas en MD5; al descifrarlas, utilizo las credenciales para acceder a un panel de autenticación en el sitio web. Allí, detecto un input vulnerable a SQLi, confirmado con SQLMap, revelando una base de datos PostgreSQL. Usando el parámetro --os-shell de SQLMap, obtengo una shell en el sistema, donde encuentro credenciales en texto claro que me permiten acceder al SSH. Finalmente, escalo privilegios explotando una vulnerabilidad en el editor de texto Vi.'
 image: '../../../assets/HTB/Vaccine/vaccine-hackthebox.png'
-tags: [HackTheBox, ReadTeam, Pentesting, HTTP, FTP, Hashcat, SQLi, DB, PostgreSQL, SQLMap, Linux]
+tags: [HackTheBox, ReadTeam, Pentesting, HTTP, FTP, Hashcat, Zip2John, SQLi, SQLmap, DataBase, PostgreSQL, SQLMap, RCE, Password Cracking, PHP, Linux]
 category: 'WriteUp'
 draft: false 
 ---

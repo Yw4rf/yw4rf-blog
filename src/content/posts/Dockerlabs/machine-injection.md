@@ -3,7 +3,7 @@ title: Injection - DockerLabs
 published: 2024-09-18
 description: 'En este WriteUp, abordaremos la máquina Injection de la plataforma DockerLabs. Realizaremos Escaneo de Puertos, Inyección SQL, Acceso a SSH y Escalada de Privilegios.'
 image: '../../../assets/DockerLabs/Injection/injection.jpeg'
-tags: [DockerLabs, RedTeam, Pentesting, SQLi, Linux]
+tags: [DockerLabs, RedTeam, Pentesting, HTTP, SQLi, Linux]
 category: 'WriteUp'
 draft: false 
 ---

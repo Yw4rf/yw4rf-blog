@@ -3,7 +3,7 @@ title: WalkingCMS - DockerLabs
 published: 2024-10-01
 description: 'Abordaremos la máquina WalkingCMS. Realizaremos escaneo de puertos, comprometeremos una página Wordpress con WPScan, haremos uso de Hydra para un ataque de fuerza bruta, usaremos una Reverse Shell y escalaremos privilegios.'
 image: '../../../assets/DockerLabs/WalkingCMS/walkingcms.jpeg'
-tags: [DockerLabs, RedTeam, HTTP, Wordpress, Hydra, Reverse Shell, Linux]
+tags: [DockerLabs, RedTeam, HTTP, Wordpress, Hydra, Brute Force, WPscan, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---

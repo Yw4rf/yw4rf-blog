@@ -3,7 +3,7 @@ title: EvilCUPS - HackTheBox
 published: 2024-10-16
 description: 'Nos encontraremos con el servicio CUPS (Common Unix Printing System) y haremos uso de una Vulnerability Chaining lo cual nos permitira obtener RCE (Remote Code Execution) mediante un exploit automatizado.'
 image: '../../../assets/HTB/EvilCUPS/evilcups.png'
-tags: [HackTheBox, RedTeam, Pentesting, HTTP, CUPS, Reverse Shell, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, HTTP, CUPS, CVE, Foomatic-RIP, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---

@@ -3,7 +3,7 @@ title: Instant - HackTheBox
 published: 2025-03-04
 description: 'Se realiza el análisis de un archivo .APK, lo que lleva a descubrir subdominios ocultos. Uno de estos subdominios aloja una API protegida con una apiKey, la cual se extrae del código descompilado. Se identifica una vulnerabilidad de LFI (Local File Inclusion) en la API, permitiendo acceder a archivos sensibles, incluyendo una clave privada SSH. Con esto, se obtiene acceso como usuario en el sistema y, mediante el análisis de un backup de Solar-PuTTY, se descubren credenciales que permiten la escalación de privilegios a root.'
 image: '../../../assets/HTB/Instant/instant-banner-lab.png'
-tags: [HackTheBox, RedTeam, Pentesting, HTTP, SSH, API, Swagger, LFI, APKtool, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, HTTP, SSH, API, API, Swagger, LFI, APKtool, Solar-PuTTY, Linux]
 category: 'WriteUp'
 draft: false 
 ---

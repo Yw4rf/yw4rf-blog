@@ -3,7 +3,7 @@ title: Cap - HackTheBox
 published: 2024-10-20
 description: 'Realizaremos la máquina Cap de la plataforma HackTheBox. Nos encontraremos con varios puertos: 80/HTTP, 21/FTP y 22/SSH. Utilizaremos Tshark para analizar paquetes de archivos .PCAP, Web fuzzing para descubrir directorios o archivos ocultos y escalaremos privilegios mediante la capabilitie cap_setuid.'
 image: '../../../assets/HTB/Cap/cap.png'
-tags: [HackTheBox, RedTeam, Pentesting, HTTP, FTP, Tshark, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, HTTP, FTP, IDOR, Tshark, Linux]
 category: 'WriteUp'
 draft: false 
 ---

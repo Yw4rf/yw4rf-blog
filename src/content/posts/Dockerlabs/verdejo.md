@@ -3,7 +3,7 @@ title: Verdejo - DockerLabs
 published: 2024-10-25
 description: 'Nos encontraremos con una página web vulnerable a SSTI (Server Side Template Injection) y mediante (root) NOPASSWD: /usr/bin/base64 podremos leer la clave de ssh id_rsa del usuario root. Haremos uso de ssh2john para extraer el hash y con John The Ripper podremos crackear y obtener la clave que nos permitirá acceder como root al sistema.'
 image: '../../../assets/DockerLabs/Verdejo/verdejo.jpeg'
-tags: [DockerLabs, RedTeam, Pentesting, HTTP, SSTI, SSH, SSH2JOHN, JohnTheRipper, Linux]
+tags: [DockerLabs, RedTeam, Pentesting, HTTP, SSTI, SSH, SSH2JOHN, JohnTheRipper, Jinja2, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---

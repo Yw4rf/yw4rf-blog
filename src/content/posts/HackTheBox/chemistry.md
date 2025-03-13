@@ -3,7 +3,7 @@ title: Chemistry - HackTheBox
 published: 2025-03-08
 description: 'Se explotó una vulnerabilidad en la subida de archivos para obtener RCE mediante un archivo .CIF malicioso. Luego, se utilizó SSH Port Forwarding para acceder a un sitio en localhost, donde se identificó un servidor aiohttp/3.9.1 y una posible vulnerabilidad de LFI, lo que permitió seguir escalando privilegios en el sistema.'
 image: '../../../assets/HTB/Chemistry/chemistry-banner.png'
-tags: [HackTheBox, ReadTeam, Pentesting, HTTP, SSH, LFI, CVE, SQLite, Port Forwarding, Linux]
+tags: [HackTheBox, ReadTeam, Pentesting, HTTP, SSH, CVE, LFI, Pymatgen, AioHTTP, RCE, Arbitrary File Upload, SQLite, Port Forwarding, Linux]
 category: 'WriteUp'
 draft: false 
 ---

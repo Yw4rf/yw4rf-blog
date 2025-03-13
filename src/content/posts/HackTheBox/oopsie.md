@@ -3,7 +3,7 @@ title: Oopsie - HackTheBox
 published: 2024-12-02
 description: 'En este Write-Up, realizo la máquina Oopsie de HackTheBox. Comenzando con los puertos 22 (SSH) y 80 (HTTP) abiertos, en el código fuente del sitio descubrí la ruta hacia un panel de autenticación accesible como guest. Mediante manipulación de cookies, accedí a la sección de uploads, donde subí una reverse shell que me permitió obtener acceso al sistema. Posteriormente, encontré credenciales en texto claro en una base de datos, lo que me permitió ingresar a SSH. Finalmente, exploté una vulnerabilidad en el binario bugtracker a través de path hijacking para escalar privilegios a root.'
 image: '../../../assets/HTB/Oopsie/oopsie-hackthebox.png'
-tags: [HackTheBox, ReadTeam, Pentesting, HTTP, IDOR, Cookie Hijacking, Reverse Shell, SHH, Linux]
+tags: [HackTheBox, ReadTeam, Pentesting, HTTP, IDOR, Cookie Hijacking, PHP, Path Hijacking, Arbitrary File Upload, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---

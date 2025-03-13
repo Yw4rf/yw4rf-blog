@@ -3,7 +3,7 @@ title: TheStickerShop - TryHackMe
 published: 2024-12-05
 description: 'En este WriteUp se analizó un servidor con los puertos 22/tcp (SSH) y 8080/tcp (HTTP) abiertos. Si bien no se detectaron vulnerabilidades en el servicio SSH, en el servidor web por otro lado se identificó una vulnerabilidad de XSS (Cross-Site Scripting) en el formulario de la sección Feedback, que permitió ejecutar código JavaScript malicioso en el navegador. Esto se explotó para realizar data exfiltration del archivo protegido flag.txt'
 image: '../../../assets/TryHackMe/TheStickerShop/banner-thestickershop-lab.png'
-tags: [TryHackMe, ReadTeam, Pentesting, HTTP, XSS, Data Exfiltration, Linux]
+tags: [TryHackMe, ReadTeam, Pentesting, HTTP, XSS, JavaScript, Data Exfiltration, Linux]
 category: 'WriteUp'
 draft: false 
 ---

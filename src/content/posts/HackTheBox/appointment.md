@@ -3,7 +3,7 @@ title: Appointment - HackTheBox
 published: 2024-11-18
 description: 'HackTheBox es una plataforma diseñada para la práctica de hacking ético. En esta ocasión, abordaremos la máquina Appointment. Nos encontraremos con el puerto 80/HTTP y realizaremos Auth Bypass mediante SQLi (SQL Injection) lo que nos permitirá ingresar como admin sin contraseña y encontrar la flag.'
 image: '../../../assets/HTB/Appointment/hackthebox-appointment.png'
-tags: [HackTheBox, RedTeam, Pentesting, HTTP, SQLi, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, HTTP, MariaDB, PHP, SQLi, Linux]
 category: 'WriteUp'
 draft: false 
 ---

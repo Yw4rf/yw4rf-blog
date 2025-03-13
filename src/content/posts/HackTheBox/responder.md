@@ -3,7 +3,7 @@ title: Responder - HackTheBox
 published: 2024-11-23
 description: 'En este WriteUp, resolveremos la máquina Responder. Exploraremos un sistema operativo Windows con los puertos abiertos 80/HTTP y 5985/WINRM. Identificaremos y explotaremos vulnerabilidades de Local File Inclusion (LFI) y Remote File Inclusion (RFI), que nos permitirán incluir una ruta UNC para forzar al servidor vulnerable a realizar una autenticación SMB. Con la herramienta Responder, capturaremos el hash NTLMv2, que posteriormente craquearemos con hashcat para obtener la contraseña lo cual nos permitira ingresar a la máquina víctima con las credenciales obtenidas mediante Evil-WinRM'
 image: '../../../assets/HTB/Responder/responder-hackthebox.png'
-tags: [HackTheBox, ReadTeam, Pentesting, HTTP, WinRM, LFI, RFI, SMB, NTLM, Evil-WinRM, Responder, Windows]
+tags: [HackTheBox, ReadTeam, Pentesting, HTTP, WinRM, LFI, RFI, PHP, SMB, NTLM, Evil-WinRM, Responder, Powershell, Windows]
 category: 'WriteUp'
 draft: false 
 ---

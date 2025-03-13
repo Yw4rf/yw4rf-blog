@@ -3,7 +3,7 @@ title: TwoMillion - HackTheBox
 published: 2024-10-20
 description: 'Nos encontraremos con dos puertos abiertos 22/SSH y 80/HTTP. Obtendremos un codigo de invitación descifrando código encriptado, enumeraremos una API para poder acceder como administrador, inyectaremos una reverse shell, encontraremos una base de datos lo que nos llevara a encontrar usuario y contraseña en un archivo .env y debido a que el Kernel Linux está desactualizado se puede utilizar CVE-2023-0386 para escalar privilegios.'
 image: '../../../assets/HTB/TwoMillion/tm-hackthebox.png'
-tags: [HackTheBox, RedTeam, Pentesting, HTTP, API, BurpSuite, Reverse Shell, Linux]
+tags: [HackTheBox, RedTeam, Pentesting, HTTP, API, BurpSuite, CVE, VPN, Kernel, Reverse Shell, Linux]
 category: 'WriteUp'
 draft: false 
 ---
@@ -110,7 +110,7 @@ Al ingresar correctamente vemos varias secciones
 
 ![TwoMillion yw4rf](../../../assets/HTB/TwoMillion/tm-19.png)
 
-La que más llama la atención es la sección de **Acces** la cual nos permite generar una **VPN** vemos que hay dos botones: **Connection Pack** y **Regenerate**
+La que más llama la atención es la sección de **Access** la cual nos permite generar una **VPN** vemos que hay dos botones: **Connection Pack** y **Regenerate**
 
 ![TwoMillion yw4rf](../../../assets/HTB/TwoMillion/tm-20.png)
 
