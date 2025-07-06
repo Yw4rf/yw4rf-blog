@@ -1,6 +1,11 @@
 // 此文件只包含全局样式或共享的基础样式
 // 组件特定的样式已迁移到各自的组件中
 
+.homeImg { 
+  display: flex; 
+  justify-content: center; 
+}
+
 // 共享的卡片样式属性
 .glass-card {
   background-color: rgba(0, 0, 0, 0.021);
@@ -60,10 +65,10 @@ html, body {
   font-size: 2.0rem;
   display: flex;
   justify-content: center;
-  text-shadow: 0.25rem 0.25rem 0.5rem rgb(1, 162, 190);
   animation: fadeInUp 0.8s ease-in-out forwards;
   opacity: 0;
   animation-delay: 0.1s;
+  font-family: "Press Start 2P", system-ui;
 }
 
 @media (max-width: 768px) {

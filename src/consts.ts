@@ -4,10 +4,10 @@ export const site: SiteConfig = {
   /**
    * 核心站点信息
    */
-  title: 'Stalux博客主题',
+  title: 'Yw4rf',
   titleDefault: 'Stalux博客主题',
   siteName: 'Stalux博客主题',
-  author: 'xingwangzhe',
+  author: 'トビアス・F',
   
   /**
    * SEO 核心配置
@@ -15,7 +15,7 @@ export const site: SiteConfig = {
   description: '博客主题Stalux - 为内容创作者提供的专业展示平台，支持多种自定义功能，包含评论系统集成、友情链接管理、社交媒体分享和丰富的SEO优化选项，让您的内容更具吸引力和可发现性。',
   url: 'https://stalux.needhelp.icu',
   keywords: 'Stalux, 博客主题, 内容创作, Astro主题, 静态网站生成器, SEO优化, 自定义博客, 响应式设计, 评论系统, 前端开发, Astro',
-  lang: 'zh-CN',
+  lang: 'es',
   locale: 'zh_CN',
   canonical: 'https://stalux.needhelp.icu',
 
@@ -35,12 +35,12 @@ export const site: SiteConfig = {
    * 站点导航配置
    */
   nav: [
-    { title: '首页', path: '/', icon: 'home' },
-    { title: '归档', path: '/archives/', icon: 'archive' },
-    { title: '分类', path: '/categories/', icon: 'folder' },
-    { title: '标签', path: '/tags/', icon: 'tag' },
-    { title: '友链', path: '/links/', icon: 'link' },
-    { title: '关于', path: '/about/', icon: 'user' }
+    { title: 'Home', path: '/', icon: 'home' },
+    { title: 'Archives', path: '/archives/', icon: 'archive' },
+    { title: 'Categories', path: '/categories/', icon: 'folder' },
+    { title: 'Tags', path: '/tags/', icon: 'tag' },
+    { title: 'Links', path: '/links/', icon: 'link' },
+    { title: 'About', path: '/about/', icon: 'user' }
   ],
 
   /**

@@ -3,16 +3,16 @@ import { site } from '../consts'
 import { config_site } from '../utils/config-adapter'
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
+import homeImg from "../images/osrs-rune-scape.gif";
 import avatar from '../images/avatar.webp';
 import '../styles/home.styl'
-import Clock from '../components/others/Clock.vue'
 import SocialLinks from '../components/others/SocialLinks.astro'
 import TextTyping from '../components/others/TextTyping.astro'
 import AuthorCard from '../components/others/AuthorCard.astro'
 const avatarImage = config_site.avatarPath || avatar 
 ---
+
 <!DOCTYPE html>
 <html lang={config_site.lang}>    <Head
         title={config_site.title}
@@ -28,15 +28,19 @@ const avatarImage = config_site.avatarPath || avatar
         canonical={config_site.canonical}
         head={config_site.head}
     />
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <script>
         import '../scripts/background.ts';
     </script>
     <body>
+        <Header />
         <div class="main-wrapper">
             <div class="container">
+                <div class="homeImg">
+                    <Image src={homeImg} alt="gif-yw4rf" class="w-full h-60" />
+                </div>
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
-                <Header />
                 <AuthorCard 
                     author={config_site.author} 
                     avatarPath={avatarImage}
@@ -45,10 +49,9 @@ const avatarImage = config_site.avatarPath || avatar
                 >
                 </AuthorCard>
                 <TextTyping/>
-                <Clock client:idle format="24hour" showDate={true} updateInterval={1000} />
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
             </div>
         </div>
-        <Footer/>
+        
     </body>
 </html>

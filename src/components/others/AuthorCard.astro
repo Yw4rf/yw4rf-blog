@@ -25,35 +25,7 @@ import '../../styles/components/others/AuthorCard.styl';
 
 <div class="card">
   <div class="author">
-    <div class="avatar-container">
-      {(typeof avatarPath === 'string' && avatarPath!=='') ? (
-        <img 
-          src={avatarPath} 
-          alt={`${author} avatar`} 
-          class="avatar"
-          width={avatarWidth}
-          height={avatarHeight}
-          loading="eager"
-          decoding="async"
-          srcset={`${avatarPath}?w=${mobileSizes} ${mobileSizes}w, 
-                   ${avatarPath}?w=${tabletSizes} ${tabletSizes}w, 
-                   ${avatarPath}?w=${desktopSizes} ${desktopSizes}w`}
-          sizes="(max-width: 480px) ${mobileSizes}px, 
-                 (max-width: 768px) ${tabletSizes}px, 
-                 ${desktopSizes}px"
-        />
-      ) : (
-        <Image 
-          src={avatar} 
-          alt={`${author} avatar`} 
-          class="avatar"
-          width={avatarWidth}
-          height={avatarHeight}
-          densities={[1, 1.5, 2]}
-          loading="eager"
-        />
-      )}
-    </div>
+    
     <div class="author-info">
       <div class="name"><h2>{author}</h2></div>
       <slot name="description" />

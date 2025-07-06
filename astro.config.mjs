@@ -50,6 +50,9 @@ export default defineConfig({
           },
         },
       }),],    vite: {
+        server: {
+          hmr: false,
+        },
         css: {
           transformer: "lightningcss",
           lightningcss: {

@@ -69,7 +69,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
       <div class="page-header">
         {/* Use a more generic title prop for the H1, description prop for P */}
         <h1 class="page-title">{pageTitle.split(' | ')[0]}</h1>
-        <p class="page-description">{description}（共 {totalPostsCount} 篇）</p>
+        <p class="page-description">{description}（{totalPostsCount} Posts）</p>
       </div>
 
       <div class="timeline-container">
@@ -79,7 +79,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
               <div class="year-header">
                 <h2 class="year-title">{year}</h2>
                 <div class="year-count">
-                  {Object.values(archivesByYearMonth[year]).flat().length} 篇文章
+                  {Object.values(archivesByYearMonth[year]).flat().length} Posts
                 </div>
               </div>
               {Object.keys(archivesByYearMonth[year])
@@ -121,7 +121,6 @@ const sortedYears = Object.keys(archivesByYearMonth)
       {/* Allow passing additional main content if needed */}
       <slot name="main" />
     </main>
-    <Footer />
 
     <script>
       // 懒加载实现 (This script is identical to the original page's script)

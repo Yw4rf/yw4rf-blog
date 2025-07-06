@@ -5,7 +5,7 @@
  */
 // 背景图片总数
 // 预加载所有背景图片
-const backgroundImages = Array.from({ length: 42 }, (_, i) => {
+const backgroundImages = Array.from({ length: 2 }, (_, i) => {
   const index = i + 1;
   return {
     id: index,
@@ -37,7 +37,7 @@ function selectRandomBackground(): void {
     background-repeat: repeat;
     background-size: auto;
     background-position: center;
-    opacity: 0;
+    opacity: .8;
     transition: opacity 1.2s ease;
   `;
   
@@ -50,8 +50,8 @@ function selectRandomBackground(): void {
   
   // 延迟一点点再显示，确保DOM插入后再执行动画
   setTimeout(() => {
-    bgContainer.style.opacity = '1';
-  }, 100);
+    bgContainer.style.opacity = '.3';
+  }, 200);
 }
 
 // 页面加载完成后执行
