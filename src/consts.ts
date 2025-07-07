@@ -5,8 +5,8 @@ export const site: SiteConfig = {
    * 核心站点信息
    */
   title: 'Yw4rf',
-  titleDefault: 'Stalux博客主题',
-  siteName: 'Stalux博客主题',
+  titleDefault: 'Yw4rf',
+  siteName: 'Yw4rf',
   author: 'トビアス・F',
   
   /**
@@ -39,7 +39,6 @@ export const site: SiteConfig = {
     { title: 'Archives', path: '/archives/', icon: 'archive' },
     { title: 'Categories', path: '/categories/', icon: 'folder' },
     { title: 'Tags', path: '/tags/', icon: 'tag' },
-    { title: 'Links', path: '/links/', icon: 'link' },
     { title: 'About', path: '/about/', icon: 'user' }
   ],
 
@@ -47,10 +46,9 @@ export const site: SiteConfig = {
    * 站点特效配置
    */
   textyping: [
-    'Free for free, not free for charge!',
-    '任意键在哪?',
-    'F12看看?',
-    'Hello World!'
+    'Cybersecurity Enthusiast',
+    'SOC, DFIR, Threat Hunting',
+    'Computer Networks student'
   ],
 
   /**

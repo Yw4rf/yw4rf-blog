@@ -74,23 +74,3 @@ import '../../styles/components/others/SocialLinks.styl';
     })}
   </ul>
 </div>
-
-<script>
-import  { animate }  from 'animejs';
-document.addEventListener('DOMContentLoaded', () => {
-    animate('.socila_icon',{
-    y: [
-        { to: '-2.75rem', ease: 'outExpo', duration: 600 },
-        { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
-      ],
-      rotate: {
-        from: '-1turn',
-        delay: 0
-      },
-      delay: (_, i) => i * 50, // Function based value
-      ease: 'inOutCirc',
-      loopDelay: 1000,
-      loop: true
-});
-});
-</script>

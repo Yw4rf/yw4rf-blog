@@ -1,10 +1,10 @@
 ---
-title: 关于Stalux主题
-description: 高效、美观、灵活的Astro静态博客主题
+title: Tobias Gabriel F.
+description: トビアス・F
 priority: -1
 ---
 
-## 👋 欢迎使用Stalux主题
+## 👋 I'm Yw4rf
 
 <div class="card">
 

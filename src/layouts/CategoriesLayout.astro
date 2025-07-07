@@ -1,7 +1,6 @@
 ---
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import '../../src/styles/global.styl';
 import '../styles/layouts/CategoriesLayout.styl';
 import '../styles/pages/categories/index-content.styl';
@@ -32,15 +31,12 @@ const { title, description, author, url, categories, noIndex = false } = Astro.p
     {noIndex && <meta name="robots" content="noindex, nofollow" slot="robots" />}
   </Head>
   <body>
-    <script>
-      import '../scripts/background.ts';
-    </script>
     <Header />
     <main class="categories-container">
       <div class="page-header">
-        <h1 class="page-title">文章分类</h1>
-        <p class="page-description">按主题分类浏览</p>
-      </div>      <!-- 分类卡片网格 - 扁平化展示 -->
+        <h1 class="page-title">Categories</h1>
+<p class="page-description">Explore posts by topic.</p>
+      </div>     
       <div class="categories-grid">
         {categories.length > 0 ? (
           categories.map((category) => (
@@ -53,13 +49,13 @@ const { title, description, author, url, categories, noIndex = false } = Astro.p
                 </div>
                 <div class="category-content">
                   <h2 class="category-name">{category.name}</h2>
-                  <div class="category-count">{category.count} 篇文章</div>
+                  <div class="category-count">{category.count} Posts</div>
                 </div>
               </a>
             </div>
           ))
         ) : (
-          <div class="no-categories">暂无分类</div>
+          <div class="no-categories">No categories</div>
         )}
       </div>
       

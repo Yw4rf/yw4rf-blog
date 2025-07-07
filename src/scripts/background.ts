@@ -5,6 +5,8 @@
  */
 // 背景图片总数
 // 预加载所有背景图片
+
+/** 
 const backgroundImages = Array.from({ length: 2 }, (_, i) => {
   const index = i + 1;
   return {
@@ -58,4 +60,4 @@ function selectRandomBackground(): void {
 document.addEventListener('DOMContentLoaded', selectRandomBackground);
 
 // 导出函数，以便可以在其他地方手动调用
-export { selectRandomBackground };
+export { selectRandomBackground }; */

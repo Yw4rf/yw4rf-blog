@@ -15,7 +15,7 @@ interface Props {
     noindex?: boolean;
 }
 
-const { title = '关于', description = '关于我', noindex } = Astro.props;
+const { title = 'Yw4rf', description = 'トビアス・F', noindex } = Astro.props;
 
 // 页面标题
 const pageTitle = `${title} | ${config_site.title}`;
@@ -46,13 +46,11 @@ const pageTitle = `${title} | ${config_site.title}`;
   />
   </Head>
   <body>
-    <script>
-      import '../scripts/background.ts';
-    </script>
     <Header />
     <main class="about-container">
       <div class="about-header">
-        <h1 class="about-title">{title}</h1>      <div class="about-content">
+        <h1 class="about-title">{title}</h1>      
+        <div class="about-content">
         <slot />
       </div>
       <WalineComment 

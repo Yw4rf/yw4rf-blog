@@ -61,12 +61,12 @@ const sortedPosts = categoryPosts.sort((a, b) => {
 });
 
 // 页面标题
-const pageTitle = `分类: ${categoryPath} | ${config_site.siteName}`;
+const pageTitle = `Category: ${categoryPath} | ${config_site.siteName}`;
 ---
 
 <CategoryDetailLayout
   title={pageTitle}
-  description={`"${categoryPath}" 分类下的所有文章`}
+  description={`Browse all articles categorized under "${categoryPath}".`}
   author={config_site.author || ''}
   url={config_site.url + '/categories/' + categoryPath}
   categoryName={categoryPath}
@@ -101,6 +101,6 @@ const pageTitle = `分类: ${categoryPath} | ${config_site.siteName}`;
       ))}
     </ul>
   ) : (
-    <div class="no-posts">未找到与分类 "{categoryPath}" 相关的文章</div>
+<div class="no-posts">No articles found in the "{categoryPath}" category.</div>
   )}
 </CategoryDetailLayout>

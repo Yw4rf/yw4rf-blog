@@ -25,18 +25,18 @@ const sortedTags = Object.entries(tagCounts)
   .map(([tag, count]) => ({ tag, count }));
 
 // 页面标题
-const pageTitle = '标签云 | ' + config_site.siteName;
+const pageTitle = 'Tags | ' + config_site.siteName;
 ---
 
 <TagsLayout
   title={pageTitle}
-  description="所有文章标签列表"
+  description="Explore articles by topic tags."
   url={config_site.url + '/tags/'}
   noindex={false}
 >
   <Fragment slot="header">
-    <h1 class="page-title">标签云</h1>
-    <p class="page-description">探索不同主题的文章标签</p>
+    <h1 class="page-title">Tags</h1>
+    <p class="page-description">Explore articles by topic tags.</p>
   </Fragment>
   
   <div slot="content" class="tags-cloud">
@@ -48,7 +48,7 @@ const pageTitle = '标签云 | ' + config_site.siteName;
         </a>
       ))
     ) : (
-      <div class="no-tags">暂无标签</div>
+      <div class="no-tags">No tags</div>
     )}
   </div>
 </TagsLayout>

@@ -87,7 +87,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
                 .sort((a, b) => b - a) // 月份降序排列
                 .map(month => (
                 <div class="month-section">
-                  <h3 class="month-title">{month}月</h3>
+                  <h3 class="month-title">{month}. Month</h3>
                   <ul class="post-list">
                     {archivesByYearMonth[year][month].map(post => (
                       <li class="post-item">
@@ -135,7 +135,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
           const loadingText = lazyloadObserver.querySelector('.loading-text') as HTMLElement;
           const loadingSpinner = lazyloadObserver.querySelector('.loading-spinner') as HTMLElement;
           if (isComplete) {
-            if (loadingText) loadingText.textContent = '已加载全部内容';
+            if (loadingText) loadingText.textContent = 'Todo los posts han sido cargados';
             if (loadingSpinner) loadingSpinner.style.display = 'none';
             setTimeout(() => {
               if (lazyloadObserver) {
@@ -148,7 +148,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
               }
             }, 3000);
           } else {
-            if (loadingText) loadingText.textContent = isLoading ? '正在加载...' : '滚动加载更多';
+            if (loadingText) loadingText.textContent = isLoading ? 'Cargando posts...' : 'Desplácese para cargar más posts';
           }
         };
 
@@ -198,12 +198,12 @@ const sortedYears = Object.keys(archivesByYearMonth)
         if (lazyloadObserver) {
           observer.observe(lazyloadObserver);
         } else {
-          console.warn('懒加载指示器元素未找到');
+          console.warn('Elemento indicador de carga diferida no encontrado');
         }
 
         window.addEventListener('error', (e) => {
           if (e.message.includes('lazyload') || e.message.includes('observer')) {
-            console.error('懒加载功能出现错误:', e);
+            console.error('Error en la función de carga diferida:', e);
           }
         });
       });

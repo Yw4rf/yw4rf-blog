@@ -14,12 +14,12 @@ const categories = extractFlatCategories(processedPosts);
 const sortedCategories = sortCategoriesByCount(categories);
 
 // 页面标题
-const pageTitle = '文章分类 | ' + config_site.siteName;
+const pageTitle = 'Categories | ' + config_site.siteName;
 ---
 
 <CategoriesLayout 
   title={pageTitle}
-  description="所有文章分类列表，按主题分类索引"
+  description="Browse all articles, indexed by topic."
   author={config_site.author || ''}
   url={config_site.url + '/categories/'}
   categories={sortedCategories}
