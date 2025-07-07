@@ -20,7 +20,7 @@ const { title, description, author, url, categories, noIndex = false } = Astro.p
 ---
 
 <!DOCTYPE html>
-<html lang="zh-CN">  <Head 
+<html lang={config_site.lang}>  <Head 
     title={title}
     description={description}
     author={author}
@@ -35,7 +35,7 @@ const { title, description, author, url, categories, noIndex = false } = Astro.p
     <main class="categories-container">
       <div class="page-header">
         <h1 class="page-title">Categories</h1>
-<p class="page-description">Explore posts by topic.</p>
+<p class="page-description">Explore articles by topic.</p>
       </div>     
       <div class="categories-grid">
         {categories.length > 0 ? (

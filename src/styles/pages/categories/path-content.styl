@@ -27,64 +27,80 @@
   }
 }
 
+.post-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 2px solid rgba(78, 186, 163, 0.4);
+  height: fit-content;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+    border-left-color: rgba(78, 186, 163, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .post-link {
-  text-decoration: none
-  color: #ffffff
-  display: block
-  margin-bottom: 0.6rem
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.6rem;
 }
 
 .post-date {
-  font-size: 0.85rem
-  color: rgba(255, 255, 255, 0.6)
-  margin-bottom: 0.3rem
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.3rem;
 }
 
 .post-title {
-  margin: 0
-  font-size: 1.4rem
-  font-weight: normal
-  color: rgba(255, 255, 255, 0.9)
-  line-height: 1.4
-  transition: color 0.2s ease
-  
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+
   &:hover {
-    color: rgba(1, 162, 190, 0.9)
+    color: rgba(78, 186, 163, 0.9);
   }
 }
 
 // 文章分类标签样式
 .post-categories {
-  margin-top: 0.5rem
-  display: flex
-  flex-wrap: wrap
-  gap: 0.4rem
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .category-tag {
-  display: inline-block
-  padding: 0.2rem 0.6rem
-  font-size: 0.75rem
-  background: rgba(1, 162, 190, 0.2)
-  color: rgba(1, 162, 190, 0.9)
-  border-radius: 1rem
-  text-decoration: none
-  transition: all 0.2s ease
-  border: 1px solid rgba(1, 162, 190, 0.3)
-  
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  background: rgba(78, 186, 163, 0.2);
+  color: rgba(78, 186, 163, 0.9);
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(78, 186, 163, 0.3);
+
   &:hover {
-    background: rgba(1, 162, 190, 0.3)
-    color: rgba(1, 162, 190, 1)
-    border-color: rgba(1, 162, 190, 0.5)
-    transform: translateY(-1px)
+    background: rgba(78, 186, 163, 0.3);
+    color: rgba(78, 186, 163, 1);
+    border-color: rgba(78, 186, 163, 0.5);
+    transform: translateY(-1px);
   }
-  
-  // 当前分类高亮
+
   &.current {
-    background: rgba(1, 162, 190, 0.8)
-    color: #ffffff
-    border-color: rgba(1, 162, 190, 1)
-    font-weight: 500
+    background: rgba(78, 186, 163, 0.8);
+    color: #ffffff;
+    border-color: rgba(78, 186, 163, 1);
+    font-weight: 500;
   }
 }
 

@@ -35,7 +35,7 @@ const avatarImage = config_site.avatarPath || avatar
         <div class="main-wrapper">
             <div class="container">
                 <div class="homeImg">
-                    <Image src={homeImg} alt="gif-yw4rf" class="w-full h-60" />
+                    <Image src={homeImg} alt="gif-yw4rf" class="homeImage" />
                 </div>
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
                 <AuthorCard 
@@ -45,7 +45,6 @@ const avatarImage = config_site.avatarPath || avatar
                     avatarHeight={100}
                 >
                 </AuthorCard>
-                <TextTyping/>
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
             </div>
         </div>

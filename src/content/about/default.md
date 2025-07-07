@@ -1,6 +1,6 @@
 ---
-title: Tobias Gabriel F.
-description: トビアス・F
+title: About me
+description: Tobias Gabriel F. 
 priority: -1
 ---
 

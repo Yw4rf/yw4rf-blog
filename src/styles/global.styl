@@ -74,6 +74,7 @@ body {
   font-size: 16px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: 100%;
 }
 
 body::before {
@@ -84,14 +85,27 @@ body::before {
   width: 100%;
   height: 100%; 
   background-color: #202020;
-  background-image: url('/src/images/background/shihoru_hai_to_gensou_no_grimgar_by_greenmapple17.svg');
+  background-image: url('/src/images/background/background-pixel.gif');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  filter: blur(6px); 
+  opacity: 1; 
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 32, 32, 0.4); /* capa semiopaca encima del fondo borroso */
   z-index: -1;
 }
+
 
 // 响应式文字大小
 @media (max-width: 768px) {
