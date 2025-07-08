@@ -71,13 +71,10 @@ export const site: SiteConfig = {
    * 社交媒体链接配置
    */
   medialinks: [
-    { title: 'Github', url: 'https://github.com/xingwangzhe/stalux', icon: 'github' },
-    { title: 'Bilibili', url: 'https://space.bilibili.com/', icon: 'bilibili' },
-    { title: 'Twitter', url: 'https://x.com/', icon: 'x-twitter' },
-    { title: 'Weibo', url: 'https://weibo.com/', icon: 'sinaweibo' },
-    { title: 'QQ', url: 'https://qm.qq.com/', icon: 'qq' },
-    { title: 'Telegram', url: 'https://t.me/', icon: 'telegram' },
-    { title: 'Discord', url: 'https://discord.gg/', icon: 'discord' },
+    { title: 'Github', url: 'https://github.com/Yw4rf', icon: 'github' },
+    { title: 'Twitter', url: 'https://x.com/Yw4rf', icon: 'x-twitter' },
+    { title: 'Telegram', url: 'https://t.me/Yw4rf', icon: 'telegram' },
+    { title: 'Gmail', url: 'mailto:yw4rf@protonmail.com', icon: 'gmail' },
   ],
 
   /**

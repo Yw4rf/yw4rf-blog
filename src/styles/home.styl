@@ -92,7 +92,6 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   width 85%
   padding 1.5rem
   background rgba(0, 0, 0, 0.18)
-  border 1px solid rgba(255, 255, 255, 0.1)
   border-radius 1rem
   box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
   color #f0f0f0
@@ -117,6 +116,37 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   pointer-events none
   filter drop-shadow(0 0 6px rgba(255, 0, 128, 0.3))
 
+
+//BUTTON
+
+.buttonHome {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-button
+    background: rgba(78, 186, 163, 0.9)
+    border none
+    border-radius 8px // Slightly rounded corners
+    padding 12px 24px // Vertical and horizontal padding
+    font-family: 'Pixelify Sans'; 
+    display flex
+    align-items center
+    justify-content center
+    gap 8px // Space between text and arrow
+
+    &:hover
+        filter brightness(1.1) // Slightly brighter on hover
+
+.portfolio-button a {
+      color:rgb(0, 0, 0)
+}
+
+.portfolio-button .arrow
+    font-size 1.2em // Make the arrow slightly larger than the text
+    margin-left 4px // Small margin to separate from text
 
 // ───── MEDIA QUERIES ─────
 
