@@ -5,7 +5,7 @@ import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { Image } from "astro:assets";
 import debianImg from "../images/debian.png";
-import avatar from '../images/avatar.webp';
+import avatar from '../images/bulbasaur-pokemon.gif';
 import '../styles/home.styl'
 import SocialLinks from '../components/others/SocialLinks.astro'
 import TextTyping from '../components/others/TextTyping.astro'
@@ -35,6 +35,9 @@ const avatarImage = config_site.avatarPath || avatar
     <body>
         <Header />
         <div class="main-wrapper">
+            <div class="homeImage">
+                <Image src={avatar} alt="balbasaur" class="avatarPokemon" />
+            </div>
             <div class="container">
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
                 <AuthorCard 
@@ -47,6 +50,7 @@ const avatarImage = config_site.avatarPath || avatar
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
             </div>
         </div>
+        <section class="containerText">
         <div class="container-wrapper">
   <div class="container-bloque">
     <p>
@@ -58,10 +62,13 @@ const avatarImage = config_site.avatarPath || avatar
   </div>
 </div>
 <div class="buttonHome">
- <button class="portfolio-button">
-       <a href="/archives">My blog <span class="arrow">&gt;</span></a>
+<a href="/archives">
+    <button class="portfolio-button">
+       My blog <span class="arrow">&gt;</span>
     </button>
+    </a>
     </div>
+</section>
 <Button88x31 />
     </body>
 </html>

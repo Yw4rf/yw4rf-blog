@@ -1,11 +1,6 @@
 // 此文件只包含全局样式或共享的基础样式
 // 组件特定的样式已迁移到各自的组件中
 
-.homeImg { 
-  display: flex; 
-  justify-content: center; 
-}
-
 // 共享的卡片样式属性
 .glass-card {
   background-color: rgba(0, 0, 0, 0.021);
@@ -81,6 +76,10 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     }
 
 
+.containerText {
+ margin-top -200px
+}
+
 // Wrapper para centrar el bloque
 .container-wrapper
   display flex
@@ -100,11 +99,19 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   font-size 0.95rem
   overflow visible
   transition all 0.3s ease
-  margin-top -250px
 
-  &:hover
-    box-shadow 0 0 24px rgba(108, 108, 108, 0.35)
-    transform scale(1.01)
+// Border animation keyframes
+@keyframes borderPulse
+  0%
+    box-shadow: 0 0 8px rgba(78, 186, 163, 0.5), 0 0 16px rgba(78, 186, 163, 0.3)
+  50%
+    box-shadow: 0 0 18px rgba(78, 186, 163, 0.7), 0 0 32px rgba(78, 186, 163, 0.5)
+  100%
+    box-shadow: 0 0 8px rgba(78, 186, 163, 0.5), 0 0 16px rgba(78, 186, 163, 0.3)
+
+// Apply animation to the container
+.container-bloque
+  animation: borderPulse 9s infinite ease-in-out
 
 .debian-img
   position absolute
@@ -115,7 +122,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   opacity 0.9
   z-index 10
   pointer-events none
-  filter drop-shadow(0 0 6px rgba(255, 0, 128, 0.3))
+  filter drop-shadow(0 0 6px rgba(46, 46, 46, 0.3))
 
 
 //BUTTON
@@ -124,7 +131,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   display: flex;
   justify-content: center; 
   align-items: center;
-  margin-bottom: 30px;
+  margin-top: 18px;
+  margin-bottom: 60px;
 }
 
 .portfolio-button
@@ -137,30 +145,49 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     align-items center
     justify-content center
     gap 8px // Space between text and arrow
+    color:rgb(0, 0, 0)
+    z-index: 5;
+    position: relative;
+    box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+    transition: all 0.3s ease
 
     &:hover
-        filter brightness(1.1) // Slightly brighter on hover
+      background: rgba(137, 215, 198, 0.9)
+    box-shadow: 0 0 24px rgba(71, 71, 71, 0.35), 0 0 20px rgba(137, 215, 198, 0.5)
+    transform: scale(1.05)
+    cursor: pointer
+    animation: buttonGlow 1.5s ease-in-out infinite
 
-.portfolio-button a {
-      color:rgb(0, 0, 0)
-}
 
 .portfolio-button .arrow
     font-size 1.2em // Make the arrow slightly larger than the text
     margin-left 4px // Small margin to separate from text
 
+// Avatar pokemon
+
+.homeImage {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 30px;
+}
+
 // ───── MEDIA QUERIES ─────
 
 @media (max-width: 768px)
-  .container {
-  margin-top: -150px;
+  .portfolio-button {
+    padding: 1px 19px; 
+  }
+
+  .containerText {
+  margin-top: -200px;
   }
 
   .container-bloque
     width 85%
     font-size 0.9rem
     padding 1.2rem
-    margin-top -250px
+    margin-top 0px
 
   .debian-img
     width 50px
@@ -172,11 +199,19 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 @media (max-width: 480px)
 
+  .portfolio-button {
+    padding: 0px 20px; 
+  }
+
+  .containerText {
+    margin-top: -210px;
+  }
+
   .container-bloque
     width 85%
     font-size 0.85rem
     padding 1rem
-    margin-top -360px
+    margin-top 0px
 
   .debian-img
     width 40px
@@ -184,4 +219,4 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     right -15px
 
   .Hometitle h1
-    font-size 4.5rem
+    font-size 4.8rem
