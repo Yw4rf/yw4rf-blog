@@ -20,9 +20,9 @@ function getIconSvg(iconName: string): string {
   try {
     const icon = feather.icons[iconName];
     return icon ? icon.toSvg({
-      width: 20,
-      height: 20,
-      'stroke-width': 2,
+      width: 22,
+      height: 22,
+      'stroke-width': 1,
       class: 'nav-icon'
     }) : '';
   } catch (error) {
@@ -33,7 +33,8 @@ function getIconSvg(iconName: string): string {
 import '../styles/components/Header.styl';
 ---
 
-<nav class="nav">  <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="导航菜单" aria-expanded="false">
+<nav class="nav">  
+  <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="导航菜单" aria-expanded="false">
     <span class="menu-icon-wrapper">
       <Fragment set:html={feather.icons['menu'].toSvg({
         width: 24,
@@ -49,6 +50,7 @@ import '../styles/components/Header.styl';
   </button>
 
   <ul id="nav-menu">
+    <li class="emojiNav"><a href="/">(๑>؂•̀๑)</a></li>
     {navItems.map((item) => (
       <li>
         <a href={item.path} class="nav-link">
@@ -61,12 +63,13 @@ import '../styles/components/Header.styl';
       <li>
         <p class="nav-link search-toggle" id="search-toggle">
           <span class="nav-icon-container" set:html={feather.icons['search'].toSvg({
-        width: 20,
-        height: 20,
-        'stroke-width': 2,
+        width: 22,
+        height: 22,
+        'stroke-width': 1,
         class: 'nav-icon'
           })} />
-          <span>Search</span>
+          <span>Search</span> 
+          <span class="emojiNav">﹒◌﹒✦</span>
         </p>
       </li>
   </ul>

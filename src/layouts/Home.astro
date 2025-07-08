@@ -4,7 +4,7 @@ import { config_site } from '../utils/config-adapter'
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { Image } from "astro:assets";
-import homeImg from "../images/osrs-rune-scape.gif";
+import homeImg from "../images/mining.gif";
 import avatar from '../images/avatar.webp';
 import '../styles/home.styl'
 import SocialLinks from '../components/others/SocialLinks.astro'
@@ -28,15 +28,12 @@ const avatarImage = config_site.avatarPath || avatar
         canonical={config_site.canonical}
         head={config_site.head}
     />
-      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <body>
         <Header />
         <div class="main-wrapper">
             <div class="container">
-                <div class="homeImg">
-                    <Image src={homeImg} alt="gif-yw4rf" class="homeImage" />
-                </div>
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
                 <AuthorCard 
                     author={config_site.author} 
