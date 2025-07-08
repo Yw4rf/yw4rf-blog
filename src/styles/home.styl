@@ -100,24 +100,13 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   overflow visible
   transition all 0.3s ease
 
-// Border animation keyframes
-@keyframes borderPulse
-  0%
-    box-shadow: 0 0 8px rgba(78, 186, 163, 0.5), 0 0 16px rgba(78, 186, 163, 0.3)
-  50%
-    box-shadow: 0 0 18px rgba(78, 186, 163, 0.7), 0 0 32px rgba(78, 186, 163, 0.5)
-  100%
-    box-shadow: 0 0 8px rgba(78, 186, 163, 0.5), 0 0 16px rgba(78, 186, 163, 0.3)
 
-// Apply animation to the container
-.container-bloque
-  animation: borderPulse 9s infinite ease-in-out
 
-.debian-img
+.pokeBlue
   position absolute
   top -25px
   right -25px
-  width 60px
+  width 90px
   height auto
   opacity 0.9
   z-index 10
@@ -125,7 +114,37 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   filter drop-shadow(0 0 6px rgba(46, 46, 46, 0.3))
 
 
+.pokeRed
+  position absolute
+  top -25px
+  left -25px  
+  width 90px
+  height auto
+  opacity 0.9
+  z-index 10
+  pointer-events none
+  filter drop-shadow(0 0 6px rgba(46, 46, 46, 0.3))
+
 //BUTTON
+
+.blockSpan { 
+  font-family: 'Press Start 2P';
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+}
+
+.blockSpan2 {
+  font-family: 'Press Start 2P';
+  font-size: 1rem;
+   background: linear-gradient(-90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    float: right; 
+}
 
 .buttonHome {
   display: flex;
@@ -136,7 +155,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 }
 
 .portfolio-button
-    background: rgba(78, 186, 163, 0.9)
+    background: #81E6D9
     border none
     border-radius 8px // Slightly rounded corners
     padding 12px 24px // Vertical and horizontal padding
@@ -152,7 +171,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     transition: all 0.3s ease
 
     &:hover
-      background: rgba(137, 215, 198, 0.9)
+      background:rgb(118, 193, 177)
     box-shadow: 0 0 24px rgba(71, 71, 71, 0.35), 0 0 20px rgba(137, 215, 198, 0.5)
     transform: scale(1.05)
     cursor: pointer
@@ -189,15 +208,28 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     padding 1.2rem
     margin-top 0px
 
-  .debian-img
+  .pokeBlue
     width 50px
     top -20px
     right -20px
+
+  .pokeRed
+    width 57px
+    top -15px
+    right -12px  
 
   .Hometitle h1
     font-size 3.8rem
 
 @media (max-width: 480px)
+
+  .blockSpan { 
+   font-size: .8rem; 
+  }
+
+  .blockSpan2 { 
+   font-size: .8rem; 
+  }
 
   .portfolio-button {
     padding: 0px 20px; 
@@ -213,10 +245,15 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     padding 1rem
     margin-top 0px
 
-  .debian-img
-    width 40px
+  .pokeBlue
+    width 50px
     top -15px
     right -15px
+    
+   .pokeRed
+    width 54px
+    top -12px
+    right -12px 
 
   .Hometitle h1
     font-size 4.8rem

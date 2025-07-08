@@ -4,8 +4,10 @@ import { config_site } from '../utils/config-adapter'
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { Image } from "astro:assets";
-import debianImg from "../images/debian.png";
+import pokeBlue from "../images/pokeball-blue.png";
+import pokeRed from "../images/pokeball-red.png";
 import avatar from '../images/bulbasaur-pokemon.gif';
+
 import '../styles/home.styl'
 import SocialLinks from '../components/others/SocialLinks.astro'
 import TextTyping from '../components/others/TextTyping.astro'
@@ -54,11 +56,28 @@ const avatarImage = config_site.avatarPath || avatar
         <div class="container-wrapper">
   <div class="container-bloque">
     <p>
-      ✦﹒◌﹒ → ﹒◌﹒✦ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita voluptatem eveniet, reiciendis fugiat maiores provident hic incidunt. Illo ipsam maxime architecto maiores laborum quibusdam earum quas sint quo asperiores!
-      Non culpa, voluptatum quo quasi consectetur voluptas eligendi nesciunt sapiente nam autem harum voluptates quae temporibus fugit iusto quis cum impedit? Facere veritatis possimus aliquam blanditiis, voluptate odit numquam nisi.
-      Numquam praesentium officia saepe. Atque illum, vero facere ad aliquid ab natus laborum iure error porro, tenetur totam, mollitia enim est incidunt perferendis optio! Possimus ipsam ullam hic architecto aliquam.
+      <span class="blockSpan">✦﹒◌﹒ → ﹒◌﹒✦  About me</span> <br><br> I'm a Computer Networking student from Buenos Aires with a strong self-taught background in cybersecurity. I specialize in intrusion detection, digital forensics, and have hands-on experience in penetration testing. Currently focusing on Blue Team operations, malware analysis, and reverse engineering, while learning C to enhance my low-level programming skills.
+
     </p>
-    <Image src={debianImg} alt="gif-yw4rf" class="debian-img" />
+    <Image src={pokeBlue} alt="gif-yw4rf" class="pokeBlue" />
+  </div>
+</div>
+<div class="buttonHome">
+<a href="/about">
+    <button class="portfolio-button">
+       About me <span class="arrow">&gt;</span>
+    </button>
+    </a>
+    </div>
+</section>
+<section class="containerNewsletter">
+        <div class="container-wrapper">
+  <div class="container-bloque">
+    <p>
+      <span class="blockSpan2">Blog  ✦﹒◌﹒ → ﹒◌﹒✦</span> <br><br> Explore my blog where I regularly post articles about CTFs, cybersecurity research, practices, experiences, and projects.
+
+    </p>
+    <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" />
   </div>
 </div>
 <div class="buttonHome">
