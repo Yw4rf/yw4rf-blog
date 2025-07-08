@@ -4,12 +4,14 @@ import { config_site } from '../utils/config-adapter'
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import { Image } from "astro:assets";
-import homeImg from "../images/mining.gif";
+import debianImg from "../images/debian.png";
 import avatar from '../images/avatar.webp';
 import '../styles/home.styl'
 import SocialLinks from '../components/others/SocialLinks.astro'
 import TextTyping from '../components/others/TextTyping.astro'
 import AuthorCard from '../components/others/AuthorCard.astro'
+import Button88x31 from '../components/others/88x31.astro'
+
 const avatarImage = config_site.avatarPath || avatar 
 ---
 
@@ -28,7 +30,7 @@ const avatarImage = config_site.avatarPath || avatar
         canonical={config_site.canonical}
         head={config_site.head}
     />
-      <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <body>
         <Header />
@@ -45,6 +47,16 @@ const avatarImage = config_site.avatarPath || avatar
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
             </div>
         </div>
-        
+        <div class="container-wrapper">
+  <div class="container-bloque">
+    <p>
+      ✦﹒◌﹒ → ﹒◌﹒✦ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt expedita voluptatem eveniet, reiciendis fugiat maiores provident hic incidunt. Illo ipsam maxime architecto maiores laborum quibusdam earum quas sint quo asperiores!
+      Non culpa, voluptatum quo quasi consectetur voluptas eligendi nesciunt sapiente nam autem harum voluptates quae temporibus fugit iusto quis cum impedit? Facere veritatis possimus aliquam blanditiis, voluptate odit numquam nisi.
+      Numquam praesentium officia saepe. Atque illum, vero facere ad aliquid ab natus laborum iure error porro, tenetur totam, mollitia enim est incidunt perferendis optio! Possimus ipsam ullam hic architecto aliquam.
+    </p>
+    <Image src={debianImg} alt="gif-yw4rf" class="debian-img" />
+  </div>
+</div>
+<Button88x31 />
     </body>
 </html>

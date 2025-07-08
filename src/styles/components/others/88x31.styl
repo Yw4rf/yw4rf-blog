@@ -1,0 +1,56 @@
+.button-carousel
+  width 100%
+  overflow hidden // Hides the overflowing buttons
+  position relative
+  height 31px // Set the height to match your buttons
+  background-color: rgba(0, 0, 0, 0.18);
+  
+
+.button-track
+  display flex
+  width fit-content // Allows all buttons to be on one line
+  animation carousel-scroll 30s linear infinite // Adjust duration as needed
+
+  // If you want a pause at the end before repeating, consider using
+  // animation: carousel-scroll 30s linear infinite; and
+  // duplicating your button-track content in your HTML to seamlessly loop.
+
+  img
+    width 88px // Individual button width
+    height 31px // Individual button height
+    flex-shrink 0 // Prevents images from shrinking
+
+@keyframes carousel-scroll
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(-50%) // Moves the track by 50% of its width
+
+
+.spaceBetween {
+  margin: 15px 15px;
+}
+
+@media (max-width: 900px) {
+
+.button-carousel {
+  margin-top: 60px;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.button-carousel {
+  margin-top: 60px;
+}
+
+}
+
+@media (max-width: 480px) {
+
+.button-carousel {
+  margin-top: 60px;
+}
+
+}

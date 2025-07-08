@@ -3,12 +3,16 @@
   width: 100%
   max-width: 1200px
   margin: 15px auto
-  padding: 8px 0px
+  padding: 4px 0px
   position: relative
-  background-color: #34495E; 
-   border-radius: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
-  opacity: .8;
+  background-color: rgba(0, 0, 0, 0.18);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text;
+  font-family: "Pixelify Sans", sans-serif;
 
   // 导航列表样式
   ul {
@@ -61,7 +65,7 @@
 // 导航图标容器样式
 .nav-icon-container {
   display: inline-flex
-  margin-right: 6px
+  margin-right: 4px
 }
 
 // 导航图标样式
@@ -150,12 +154,27 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    background-clip: text
+    background-clip: text;
+}
+
+.cuteFace {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text;
+      font-size: 1.5rem;
+      font-family: "Pixelify Sans", sans-serif;
 }
 
 // 针对导航项过多的情况进行优化
 @media (min-width: 901px) {
   .nav {
+    background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
+    color: white
+
     ul {
       // 当导航项过多时，允许换行
       flex-wrap: wrap
@@ -169,6 +188,11 @@
 
 @media (max-width: 1024px) {
   .nav {
+    background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
+    color: white
     max-width: 100%
     padding: 10px 15px
     
@@ -189,6 +213,12 @@
 
 @media (max-width: 900px) {
   .nav {
+    background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
+    color: white
+    
     ul {
       gap: 4px
     }
@@ -226,6 +256,11 @@
 // 在768px以下才完全隐藏原导航栏，显示移动端菜单
 @media (max-width: 768px) {
   .nav {
+    background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
+    color: white
     width: 100%
     margin: 10px auto
     opacity: 1;
@@ -488,6 +523,12 @@
 
 @media (max-width: 480px) {
   .nav {
+    background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
+    color: white
+
     ul {
       width: 98%
       max-width: 380px

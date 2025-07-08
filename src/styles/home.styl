@@ -79,19 +79,73 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     background-clip: text
     }
 
-@media (max-width: 768px) {
-  .Hometitle h1 {
-    font-size: 3.8rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
-    padding: 0 10px;
-  }
-  
-  .HometitleS h1 {
-    font-size: 3.5rem;
-  }
-}
+// Wrapper para centrar el bloque
+.container-wrapper
+  display flex
+  justify-content center
+  align-items center
+  background transparent
+
+.container-bloque
+  position relative
+  width 85%
+  padding 1.5rem
+  background rgba(0, 0, 0, 0.18)
+  border 1px solid rgba(255, 255, 255, 0.1)
+  border-radius 1rem
+  box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+  color #f0f0f0
+  font-family 'Fira Code', monospace
+  font-size 0.95rem
+  overflow visible
+  transition all 0.3s ease
+  margin-top -250px
+
+  &:hover
+    box-shadow 0 0 24px rgba(108, 108, 108, 0.35)
+    transform scale(1.01)
+
+.debian-img
+  position absolute
+  top -25px
+  right -25px
+  width 60px
+  height auto
+  opacity 0.9
+  z-index 10
+  pointer-events none
+  filter drop-shadow(0 0 6px rgba(255, 0, 128, 0.3))
+
+
+// ───── MEDIA QUERIES ─────
+
+@media (max-width: 768px)
+  .container-bloque
+    width 85%
+    font-size 0.9rem
+    padding 1.2rem
+    margin-top -250px
+
+  .debian-img
+    width 50px
+    top -20px
+    right -20px
+
+  .Hometitle h1
+    font-size 3.8rem
+
+@media (max-width: 480px)
+  .container-bloque
+    width 85%
+    font-size 0.85rem
+    padding 1rem
+    margin-top -280px
+
+  .debian-img
+    width 40px
+    top -15px
+    right -15px
+
+  .HometitleS h1
+    font-size 3.5rem
