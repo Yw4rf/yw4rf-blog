@@ -1,0 +1,163 @@
+---
+import '../../styles/components/others/terminal.styl';
+import { Image } from "astro:assets";
+import linuxPixel from "../../images/linux-pixel.png";
+---
+
+<!-- Terminal Fake -->
+<div class="terminal" id="terminal">
+  <div class="output" id="output"></div>
+  <div class="input-line">
+    <span class="prompt">&gt;</span>
+    <input type="text" id="cmdInput" placeholder='Type "help"' autofocus />
+  </div>
+
+  <Image src={linuxPixel} alt="gif-yw4rf" class="pokeBlue" />
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('cmdInput');
+  const output = document.getElementById('output');
+
+  const fileSystem = {
+    '/': {
+      type: 'dir',
+      content: {
+        'about.txt': { type: 'file', content: 'I am Ywarf, cybersecurity enthusiast and CTF player.\n' },
+        'blog': {
+          type: 'dir',
+          content: {
+            'post1.txt': { type: 'file', content: 'First blog post: Analyzing malware with Ghidra.\n' }
+          }
+        },
+        'projects': {
+          type: 'dir',
+          content: {
+            'ctf.txt': { type: 'file', content: 'Recent CTFs: picoCTF, HackTheBox, and custom challenges.\n' }
+          }
+        }
+      }
+    }
+  };
+
+  let currentPath = '/';
+
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      const cmd = input.value.trim();
+      output.innerHTML += `> ${cmd}\n`;
+      input.value = '';
+      handleCommand(cmd.toLowerCase());
+    }
+  });
+
+  function handleCommand(cmd) {
+    const args = cmd.split(' ');
+    const command = args[0];
+    const arg = args[1];
+
+    switch (command) {
+      case 'help':
+        print(`Available commands:\nhelp\nls\ncd <dir>\ncat <file>\nclear\nabout\nblog\ncontact\n`);
+        break;
+      case 'ls':
+        listDirectory();
+        break;
+      case 'cd':
+        changeDirectory(arg);
+        break;
+      case 'cat':
+        showFile(arg);
+        break;
+      case 'clear':
+        output.innerHTML = '';
+        break;
+      case 'about':
+        print(`Redirecting to /about...`);
+        setTimeout(() => window.location.href = '/about', 1000);
+        break;
+      case 'blog':
+        print(`Redirecting to /blog...`);
+        setTimeout(() => window.location.href = '/blog', 1000);
+        break;
+      case 'contact':
+        print(`Reach me at: https://t.me/youruser`);
+        break;
+      case '':
+        break;
+      default:
+        print(`Command not found: ${cmd}`);
+    }
+    scrollToBottom();
+  }
+
+  function listDirectory() {
+    const dir = getDir(currentPath);
+    if (dir && dir.type === 'dir') {
+      const names = Object.keys(dir.content).join('\t');
+      print(names);
+    } else {
+      print('Invalid directory');
+    }
+  }
+
+  function changeDirectory(dirName) {
+    if (!dirName) {
+      print('Usage: cd <directory>');
+      return;
+    }
+
+    if (dirName === '..') {
+      if (currentPath !== '/') {
+        currentPath = currentPath.split('/').slice(0, -2).join('/') + '/';
+        if (currentPath === '') currentPath = '/';
+      }
+    } else {
+      const newPath = currentPath + (currentPath === '/' ? '' : '/') + dirName + '/';
+      const dir = getDir(newPath);
+      if (dir && dir.type === 'dir') {
+        currentPath = newPath;
+      } else {
+        print(`No such directory: ${dirName}`);
+      }
+    }
+  }
+
+  function showFile(fileName) {
+    if (!fileName) {
+      print('Usage: cat <file>');
+      return;
+    }
+
+    const dir = getDir(currentPath);
+    if (dir && dir.type === 'dir') {
+      const file = dir.content[fileName];
+      if (file && file.type === 'file') {
+        print(file.content);
+      } else {
+        print(`No such file: ${fileName}`);
+      }
+    }
+  }
+
+  function getDir(path) {
+    const parts = path.split('/').filter(p => p);
+    let dir = fileSystem['/'];
+    for (let part of parts) {
+      dir = dir.content[part];
+      if (!dir || dir.type !== 'dir') return null;
+    }
+    return dir;
+  }
+
+  function print(text) {
+    output.innerHTML += text + '\n';
+  }
+
+  function scrollToBottom() {
+    output.scrollTop = output.scrollHeight;
+  }
+});
+</script>

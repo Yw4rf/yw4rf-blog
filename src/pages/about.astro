@@ -34,6 +34,7 @@ const { Content } = await render(about);
 // 从内容中提取描述（例如取前100个字符作为摘要）
 const description = about.body?.split('\n').filter(line => line.trim() !== '').slice(0, 2).join(' ').substring(0, 100);
 ---
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
 <AboutPage {...about.data} description={description}>
 	<Content />

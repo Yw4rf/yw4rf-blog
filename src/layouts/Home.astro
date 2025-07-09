@@ -3,6 +3,8 @@ import { site } from '../consts'
 import { config_site } from '../utils/config-adapter'
 import Head from '../components/Head.astro'
 import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
 import { Image } from "astro:assets";
 import pokeBlue from "../images/pokeball-blue.png";
 import pokeRed from "../images/pokeball-red.png";
@@ -13,6 +15,7 @@ import SocialLinks from '../components/others/SocialLinks.astro'
 import TextTyping from '../components/others/TextTyping.astro'
 import AuthorCard from '../components/others/AuthorCard.astro'
 import Button88x31 from '../components/others/88x31.astro'
+import Terminal from '../components/others/Terminal.astro'
 
 const avatarImage = config_site.avatarPath || avatar 
 ---
@@ -74,7 +77,7 @@ const avatarImage = config_site.avatarPath || avatar
         <div class="container-wrapper">
   <div class="container-bloque">
     <p>
-      <span class="blockSpan2">Blog  ✦﹒◌﹒ → ﹒◌﹒✦</span> <br><br> Explore my blog where I regularly post articles about CTFs, cybersecurity research, practices, experiences, and projects.
+      <span class="blockSpan2">My Blog  ✦﹒◌﹒ → ﹒◌﹒✦</span> <br><br> Explore my blog where I regularly post articles about CTFs, cybersecurity research, practices, experiences, and projects.
 
     </p>
     <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" />
@@ -88,6 +91,8 @@ const avatarImage = config_site.avatarPath || avatar
     </a>
     </div>
 </section>
+<Terminal />
 <Button88x31 />
+<Footer />
     </body>
 </html>
