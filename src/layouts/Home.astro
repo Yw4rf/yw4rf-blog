@@ -39,22 +39,16 @@ const avatarImage = config_site.avatarPath || avatar
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <body>
         <Header />
+        <div class="containerHome">
         <div class="main-wrapper">
             <div class="homeImage">
                 <Image src={avatar} alt="balbasaur" class="avatarPokemon" />
             </div>
             <div class="container">
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
-                <AuthorCard 
-                    author={config_site.author} 
-                    avatarPath={avatarImage}
-                    avatarWidth={100}
-                    avatarHeight={100}
-                >
-                </AuthorCard>
+                <div class="Homesubtitle"><h2>{config_site.author}</h2></div>
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
-            </div>
-        </div>
+                <div class="contentHome">
         <section class="containerText">
         <div class="container-wrapper">
   <div class="container-bloque">
@@ -93,6 +87,11 @@ const avatarImage = config_site.avatarPath || avatar
 </section>
 <Terminal />
 <Button88x31 />
+</div>
+            </div>
+        </div>
+        
+</div>
 <Footer />
     </body>
 </html>

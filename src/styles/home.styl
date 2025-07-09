@@ -1,6 +1,7 @@
 // 此文件只包含全局样式或共享的基础样式
 // 组件特定的样式已迁移到各自的组件中
 
+
 // 共享的卡片样式属性
 .glass-card {
   background-color: rgba(0, 0, 0, 0.021);
@@ -54,8 +55,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 200px;
-  margin-top: -50px;
 }
 
 .Hometitle {
@@ -75,9 +74,21 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     background-clip: text
     }
 
+.Homesubtitle {
+   display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  gap: 15px
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+  font-size: 1.5rem;
+}
 
 .containerText {
- margin-top -200px
+ 
 }
 
 // Wrapper para centrar el bloque
@@ -199,14 +210,12 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   }
 
   .containerText {
-  margin-top: -200px;
   }
 
   .container-bloque
     width 85%
     font-size 0.9rem
     padding 1.2rem
-    margin-top 0px
 
   .pokeBlue
     width 50px
@@ -225,6 +234,9 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 @media (max-width: 480px)
 
+  .contentHome {
+  }
+
   .blockSpan { 
    font-size: .8rem; 
   }
@@ -238,14 +250,13 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   }
 
   .containerText {
-    margin-top: -210px;
+    
   }
 
   .container-bloque
     width 85%
     font-size 0.85rem
     padding 1rem
-    margin-top 0px
 
   .pokeBlue
     width 50px

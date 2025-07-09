@@ -1,18 +1,20 @@
 ---
 import { config_site } from '../utils/config-adapter'
 ---
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
 <footer class="site-footer">
     <div class="footer-content">
-        <span class="footer-bottom-text">
-            © 2025 <a href="https://github.com/xingwangzhe/stalux" target="_blank">Stalux</a> theme based.
-        </span>
+        <div class="footer-bottom-text">
+           <span class="copyrightFooter"> © 2025</span> <a href="https://github.com/xingwangzhe/stalux" target="_blank">Stalux</a> theme based.
+        </div>
     </div>
 </footer>
 
 <!-- Footer Style -->
 
 <style>
+
 .site-footer {
   width: 100%;
   padding: 14px 0;
@@ -20,8 +22,13 @@ import { config_site } from '../utils/config-adapter'
   margin-top: auto;
   font-size: 0.9rem;
   color: rgba(78, 186, 163, 0.9);
-  background: rgba(0, 0, 0, 0.18);
-  margin-top: 40px;
+  background: rgb(0, 0, 0);
+  margin-top: 30px;
+  font-family: 'Pixelify Sans';
+}
+
+.copyrightFooter {
+  font-family: sans;
 }
 
 .footer-content {
@@ -30,7 +37,7 @@ import { config_site } from '../utils/config-adapter'
   gap: 0.8rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem; 
 }
 
 .footer-bottom-text {
@@ -43,6 +50,7 @@ import { config_site } from '../utils/config-adapter'
 .footer-bottom-text a {
   color: inherit;
   text-decoration: none;
+  font-family: 'Pixelify Sans';
 }
 
 .footer-bottom-text a:hover {
