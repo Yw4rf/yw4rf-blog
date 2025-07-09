@@ -9,7 +9,7 @@ import linuxPixel from "../../images/linux-pixel.png";
   <div class="output" id="output"></div>
   <div class="input-line">
     <span class="prompt">&gt;</span>
-    <input type="text" id="cmdInput" placeholder='Type "help"' autofocus />
+    <input type="text" id="cmdInput" placeholder='Type "help"' />
   </div>
 
   <Image src={linuxPixel} alt="gif-yw4rf" class="pokeBlue" />
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch (command) {
       case 'help':
-        print(`Available commands:\nhelp\nls\ncd <dir>\ncat <file>\nclear\nabout\nblog\ncontact\n`);
+        print(`Available commands:<dir>\nhelp\nls\ncd\ncat <file>\nclear <dir>\nabout\nblog\ncontact\n`);
         break;
       case 'ls':
         listDirectory();
@@ -80,10 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'blog':
         print(`Redirecting to /blog...`);
-        setTimeout(() => window.location.href = '/blog', 1000);
+        setTimeout(() => window.location.href = '/archives', 1000);
         break;
       case 'contact':
-        print(`Reach me at: https://t.me/youruser`);
+        print(`Reach me at: https://t.me/Yw4rf`);
         break;
       case '':
         break;

@@ -7,117 +7,110 @@ priority: -1
 ## 👋 I'm Yw4rf
 
 <div class="card">
+Stalux is a static blog theme developed based on the Astro framework, designed specifically for content creators. It aims for high performance, a visually appealing and intuitive user interface, and a flexible configuration system.  
+The name "Stalux" combines "Sta" for Static and "lux" for Luxury, indicating a luxurious visual experience.
 
-Stalux是一款基于Astro框架开发的静态博客主题，专为内容创作者设计，追求高性能、美观直观的用户界面与灵活的配置系统。主题名称"Stalux"中的"Sta"代表静态（Static），"lux"代表奢华（Luxury）的外观体验。
+~~Honestly, I just made up the name~~
 
-~~名字其实是我瞎编的~~
-
-无论您是技术博主、内容创作者还是个人站长，Stalux都能为您提供一个专业、美观的内容展示平台。
-
+Whether you're a tech blogger, content creator, or personal site owner, Stalux provides a professional and beautiful platform for showcasing your content.
 </div>
 
-## 🚀 关于Stalux
+## 🚀 About Stalux
 
-Stalux是一个精心设计和开发的静态博客主题，基于现代Web技术栈构建，注重性能与用户体验。
+Stalux is a carefully designed and developed static blog theme built with a modern web technology stack, focusing on performance and user experience.
 
 <div class="timeline">
 
 <div class="timeline-item">
-  <h4>📚 博客内容</h4>
+  <h4>📚 Blog Content</h4>
   <ul>
-    <li>前端开发技术分享（JavaScript、TypeScript、Vue等）</li>
-    <li>学习笔记与心得体会</li>
-    <li>项目开发经验总结</li>
-    <li>有趣的技术探索与实验</li>
-    <li>编程学习资源推荐</li>
+    <li>Frontend development tech sharing (JavaScript, TypeScript, Vue, etc.)</li>
+    <li>Study notes and reflections</li>
+    <li>Project development experience summaries</li>
+    <li>Fun tech explorations and experiments</li>
+    <li>Recommended programming learning resources</li>
   </ul>
 </div>
 
 <div class="timeline-item">
-  <h4>🛠️ 技术栈</h4>
+  <h4>🛠️ Tech Stack</h4>
   <ul>
-    <li>基于 <strong>Astro</strong> 构建的静态站点</li>
-    <li>使用 <strong>TypeScript</strong> 保证代码类型安全</li>
-    <li>集成 <strong>Waline</strong> 评论系统</li>
-    <li>应用 <strong>SEO</strong> 优化策略</li>
-    <li>支持暗黑模式与响应式设计</li>
+    <li>Static site built with <strong>Astro</strong></li>
+    <li>Uses <strong>TypeScript</strong> for type-safe code</li>
+    <li>Integrated <strong>Waline</strong> comment system</li>
+    <li>Applies <strong>SEO</strong> optimization strategies</li>
+    <li>Supports dark mode and responsive design</li>
   </ul>
 </div>
 
 <div class="timeline-item">
-  <h4>🌟 创作理念</h4>
+  <h4>🌟 Philosophy</h4>
   <ul>
-    <li><strong>实用为本</strong>：注重实际应用的技术分享</li>
-    <li><strong>深入浅出</strong>：复杂概念简单化，让读者易于理解</li>
-    <li><strong>原创优先</strong>：优先发布原创内容，分享独特见解</li>
-    <li><strong>持续更新</strong>：保持学习热情，定期分享新内容</li>
+    <li><strong>Practical First</strong>: Focused on applicable technical content</li>
+    <li><strong>Clear & Simple</strong>: Simplifying complex ideas for easy understanding</li>
+    <li><strong>Originality First</strong>: Prioritizing original content with unique insights</li>
+    <li><strong>Consistent Updates</strong>: Continuously learning and regularly sharing new content</li>
   </ul>
 </div>
 
 </div>
 
-## 👨‍💻 主题特性
+## 👨‍💻 Theme Features
 
 <div class="card">
+The Stalux theme includes various practical features to help content creators focus on writing:
 
-Stalux主题具备多种实用特性，帮助内容创作者专注于写作：
-
-- **简洁高效**：精简代码，快速加载，提供流畅的用户体验
-- **全面配置**：丰富的配置选项，可根据个人需求定制外观和功能
-- **SEO友好**：内置多种SEO优化技术，提高搜索引擎可见性
-- **内容优先**：专注内容展示，提供清晰的阅读体验
-
+- **Clean & Efficient**: Lightweight code, fast loading, and smooth user experience  
+- **Comprehensive Configuration**: Rich customization options to tailor the appearance and features  
+- **SEO Friendly**: Built-in SEO optimization to improve search engine visibility  
+- **Content-Focused**: Prioritizes content display for a clear reading experience
 </div>
 
 <div class="highlight">
-
-> "简单，但不简陋；美观，但不浮华。" —— Stalux主题的设计理念，我们相信最好的主题应该让用户的内容成为焦点。
-
+> "Simple, but not plain; elegant, but not flashy." — The design philosophy behind Stalux. We believe the best themes should let your content shine.
 </div>
 
-## 🌐 Stalux的优势
+## 🌐 Why Stalux
 
-Stalux主题专为内容创作者和博客爱好者设计，具有以下核心优势：
+Stalux is designed for content creators and blog enthusiasts, offering the following core advantages:
 
-- **简单部署**：基于Astro构建，可轻松部署到Vercel、Netlify等平台
-- **丰富功能**：内置评论系统、全站搜索、标签云、归档功能等
-- **灵活配置**：提供丰富的配置选项，无需修改源码即可定制
-- **主题切换**：支持浅色/深色模式自动或手动切换
-- **移动友好**：完全响应式设计，在各种设备上提供出色体验
+- **Easy Deployment**: Built with Astro, deployable to Vercel, Netlify, etc.  
+- **Rich Features**: Built-in comment system, site-wide search, tag cloud, archive, and more  
+- **Flexible Configuration**: Highly customizable without editing source code  
+- **Theme Switching**: Light/dark mode toggle (automatic or manual)  
+- **Mobile Friendly**: Fully responsive for a great experience on any device  
 
-如果您喜欢这个主题或有任何建议，欢迎通过GitHub提交Issue或Pull Request。
+If you like the theme or have suggestions, feel free to submit an Issue or Pull Request on GitHub.
 
-## 💡 配置系统
+## 💡 Configuration System
 
-Stalux主题提供了强大而灵活的配置系统，让您可以轻松定制您的博客：
+Stalux provides a powerful and flexible configuration system, making it easy to customize your blog:
 
-- **统一配置**：通过`_config.ts`文件进行集中配置管理
-- **类型安全**：使用TypeScript确保配置类型安全
-- **模块化设计**：各功能模块配置分离，便于维护
-- **适配性强**：适应不同内容需求和个人喜好
-- **兼容性好**：支持各种内容格式和展示方式
+- **Unified Configuration**: Centralized settings via `_config.ts` file  
+- **Type Safety**: TypeScript ensures safe and reliable configurations  
+- **Modular Design**: Separated config modules for easy maintenance  
+- **High Adaptability**: Suits different content needs and personal preferences  
+- **Good Compatibility**: Supports various content formats and layouts
 
 <div class="card">
-
-Stalux主题基于 MIT 许可证开源，您可以自由地使用、修改和分发。主题的所有配置项都有详细的文档说明，即使没有深厚的技术背景，也能轻松上手。
-
+Stalux is open-source under the MIT license. You're free to use, modify, and distribute it. Every configuration option is thoroughly documented, so even users without a strong technical background can get started easily.
 </div>
 
-## 📖 学习资源推荐
+## 📖 Recommended Learning Resources
 
-常用的一些学习资源：
+Some commonly used learning resources:
 
-- [**MDN Web Docs**](https://developer.mozilla.org/)：最全面的Web开发文档
-- [**Vue官方文档**](https://vuejs.org/)：Vue框架学习必备
-- [**TypeScript官方文档**](https://www.typescriptlang.org/docs/)：TypeScript学习指南
-- [**JavaScript.info**](https://javascript.info/)：现代JavaScript教程
-- [**CSS-Tricks**](https://css-tricks.com/)：CSS技巧和最佳实践
+- [**MDN Web Docs**](https://developer.mozilla.org/): Comprehensive web development documentation  
+- [**Vue Official Docs**](https://vuejs.org/): Essential for learning the Vue framework  
+- [**TypeScript Docs**](https://www.typescriptlang.org/docs/): Guide to learning TypeScript  
+- [**JavaScript.info**](https://javascript.info/): Modern JavaScript tutorials  
+- [**CSS-Tricks**](https://css-tricks.com/): CSS tips and best practices
 
-## 🙏 结语
+## 🙏 Final Words
 
-感谢您选择 Stalux 主题！我们希望这款主题能够为您的内容创作提供完美的展示平台，帮助您专注于内容创作而非技术细节。
+Thank you for choosing the Stalux theme! We hope it provides the perfect platform for your content creation, letting you focus on writing instead of technical details.
 
-如果您在使用过程中有任何问题或建议，欢迎通过 GitHub 仓库提交 Issue 或贡献代码。我们将持续改进和优化 Stalux，为内容创作者提供更好的工具。
+If you have any questions or suggestions, feel free to submit issues or contribute code via the GitHub repository. We are committed to continually improving and refining Stalux to offer the best tools for creators.
 
-希望 Stalux 成为您心目中最好用的博客主题之一！
+We hope Stalux becomes one of your favorite blog themes!
 

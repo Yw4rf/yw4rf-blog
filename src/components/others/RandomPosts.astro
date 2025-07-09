@@ -11,7 +11,7 @@ interface Props {
 
 const { 
   count = 5,
-  title = "随机文章",
+  title = "Various posts",
   className = "random-posts",
   delay = "delay-300"
 } = Astro.props;
@@ -23,8 +23,8 @@ const {
     <button 
       id="refresh-random-posts" 
       class="refresh-button" 
-      title="刷新随机文章"
-      aria-label="刷新随机文章">
+      title="refresh-button"
+      aria-label="refresh-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
       </svg>

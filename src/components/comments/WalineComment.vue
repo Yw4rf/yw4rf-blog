@@ -1,22 +1,22 @@
 
 <script setup lang="ts">
 /**
- * Waline评论组件 - Vue版本
- * 集成Waline评论系统，风格与博客主题保持一致
+ * Waline Comment Component - Vue Version
+ * Integrates the Waline comment system, styled consistently with the blog theme
  */
 import { ref, onMounted, watch, onBeforeUnmount, computed } from 'vue';
 import { init, type WalineInstance } from '@waline/client';
-import '@waline/client/style'; // 正确导入CSS路径
+import '@waline/client/style'; // Correct CSS import path
 
-// 引入类型定义，但不导入实际配置
+// Import type definitions only, without importing actual configuration
 import type { SiteConfig, WalineConfig } from '../../types';
 
-// 定义组件参数 - 将所有必要的配置拆分为单独参数
+// Define component props - split all necessary configuration into individual props
 interface Props {
   path?: string;
   title?: string;
   serverURL?: string;
-  // 细分 Waline 配置项，避免传递整个配置对象
+  // Break down Waline config options to avoid passing the entire config object
   lang?: string;
   emoji?: any;
   requiredFields?: string[];
@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
   path: '',
   title: '',
   serverURL: '',
-  lang: 'zh-CN',
+  lang: 'en-US',
   emoji: false,
   requiredFields: () => [],
   reaction: true,
@@ -42,16 +42,16 @@ const props = withDefaults(defineProps<Props>(), {
 const commentRef = ref<HTMLElement | null>(null);
 const walineInstance = ref<WalineInstance | null>(null);
 
-// 初始化Waline评论系统
+// Initialize the Waline comment system
 const initWaline = () => {
   if (!props.serverURL || !commentRef.value) return;
   
-  // 销毁之前的实例
+  // Destroy the previous instance
   if (walineInstance.value) {
     walineInstance.value.destroy();
   }
 
-  // 创建新实例 - 直接使用从props接收的配置项
+  // Create a new instance - use configuration received directly from props
   walineInstance.value = init({
     el: commentRef.value,
     serverURL: props.serverURL,
@@ -64,23 +64,23 @@ const initWaline = () => {
     wordLimit: props.wordLimit,
     pageSize: props.pageSize,
     title: props.title,
-    dark: true // 固定使用暗色模式
+    dark: true // Always use dark mode
   });
 };
 
-// 监听路径变化，重新初始化评论
+// Re-initialize comments when the path changes
 watch(() => props.path, () => {
   initWaline();
 });
 
-// 组件挂载时初始化Waline
+// Initialize Waline when the component is mounted
 onMounted(() => {
   if (props.serverURL) {
     initWaline();
   }
 });
 
-// 组件卸载前清理
+// Clean up before the component is unmounted
 onBeforeUnmount(() => {
   if (walineInstance.value) {
     walineInstance.value.destroy();
@@ -90,13 +90,14 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="waline-comment-container" v-if="serverURL">
-    <h2 class="waline-comment-title">留言评论</h2>
+    <h2 class="waline-comment-title">Share your thoughts</h2>
     <!-- Use data-nosnippet attribute which tells search engines not to include this content in search results snippets -->
     <div ref="commentRef" class="waline-comment" data-nosnippet aria-hidden="true"></div>
     <!-- Use a more targeted approach instead of robots meta tag -->
-    <div class="comments-seo-notice" style="display:none">评论区内容由用户生成，不代表网站观点</div>
+    <div class="comments-seo-notice" style="display:none">The comment section is user-generated and does not represent the views of the website.</div>
   </div>
 </template>
+
 
 <style>
 /* 评论区容器与博客风格一致 */
@@ -120,6 +121,7 @@ onBeforeUnmount(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family: 'Pixelify Sans';
 }
 
 /* Waline根元素自定义 */

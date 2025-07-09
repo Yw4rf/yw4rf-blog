@@ -12,11 +12,11 @@ export const site: SiteConfig = {
   /**
    * SEO 核心配置
    */
-  description: '博客主题Stalux - 为内容创作者提供的专业展示平台，支持多种自定义功能，包含评论系统集成、友情链接管理、社交媒体分享和丰富的SEO优化选项，让您的内容更具吸引力和可发现性。',
+  description: 'Cybersecurity Enthusiast focused on SOC, DFIR, Hands-on Penetration Testing, and active CTF Player.',
   url: 'https://stalux.needhelp.icu',
   keywords: 'Stalux, 博客主题, 内容创作, Astro主题, 静态网站生成器, SEO优化, 自定义博客, 响应式设计, 评论系统, 前端开发, Astro',
-  lang: 'es',
-  locale: 'zh_CN',
+  lang: 'en-US',
+  locale: 'en-US',
   canonical: 'https://stalux.needhelp.icu',
 
   /**
@@ -57,7 +57,7 @@ export const site: SiteConfig = {
   comment: {
     waline: {
       serverURL: 'https://waline.xingwangzhe.fun', // 你的Waline服务器地址 //我加白名单了,别让我在日志里逮到你用(╯▔皿▔)╯
-      lang: 'zh-CN', // 语言设置
+      lang: 'en-US', // 语言设置
       emoji: ['https://unpkg.com/@waline/emojis@1.1.0/weibo'], // 表情包设置
       requiredFields: [], // 必填项
       reaction: false, // 文章反应

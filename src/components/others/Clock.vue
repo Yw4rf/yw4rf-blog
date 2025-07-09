@@ -91,9 +91,9 @@ function calculateFontSize(width, maxSize, minSize) {
 // 格式化时间显示
 const formattedTime = computed(() => {
     if (props.format === '24hour') {
-        return time.value.toLocaleTimeString('zh-CN', { hour12: false });
+        return time.value.toLocaleTimeString('en-US', { hour12: false });
     } else if (props.format === '12hour') {
-        return time.value.toLocaleTimeString('zh-CN', { hour12: true });
+        return time.value.toLocaleTimeString('en-US', { hour12: true });
     } else {
         return time.value.toLocaleTimeString();
     }
@@ -101,12 +101,10 @@ const formattedTime = computed(() => {
 
 // 格式化日期显示
 const formattedDate = computed(() => {
-    return time.value.toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'long'
-    });
+    const day = time.value.getDate();
+    const month = time.value.getMonth() + 1;
+    const year = time.value.getFullYear();
+    return `${day}/${month}/${year}`;
 });
 
 function updateTime() {

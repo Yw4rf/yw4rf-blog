@@ -118,18 +118,18 @@ const categoryStr = categoriesToString(categories);
 							<h1>{title}</h1>							<div class="date">
 								{date && (
 									<div class="published-on">
-										发布时间：<time>{date instanceof Date ? date.toLocaleDateString() : date}</time>
+										Date：<time>{date instanceof Date ? date.toLocaleDateString() : date}</time>
 									</div>
 								)}
 								{updated && (
 									<div class="last-updated-on">
-										更新时间：<time>{updated instanceof Date ? updated.toLocaleDateString() : updated}</time>
+										Updated：<time>{updated instanceof Date ? updated.toLocaleDateString() : updated}</time>
 									</div>
 								)}
 							</div>							<!-- 文章阅读量统计 -->
 							<div class="page-stats">
 								<span id="busuanzi_container_page_pv">
-									👀 阅读量：<span id="busuanzi_value_page_pv"></span>
+									👀 Views：<span id="busuanzi_value_page_pv"></span>
 								</span>
 							</div>
 						</div>
@@ -137,7 +137,7 @@ const categoryStr = categoriesToString(categories);
 					</div>
 								<CC title={title} author={config_site.author} url={config_site.url + '/posts/' + abbrlink} />
 					{(prev || next) ? (
-						<nav class="post-navigation" aria-label="文章导航">
+						<nav class="post-navigation" aria-label="Post Navigation">
 							<div class="post-navigation-inner">
 								{prev ? (
 									<a href={prev.url} class="post-nav-link prev-post" rel="prev">
@@ -147,7 +147,7 @@ const categoryStr = categoriesToString(categories);
 											</svg>
 										</span>
 										<div class="post-nav-content">
-											<span class="post-nav-label">上一篇</span>
+											<span class="post-nav-label">Previous Post</span>
 											<span class="post-nav-title">{prev.title}</span>
 										</div>
 									</a>
@@ -159,8 +159,8 @@ const categoryStr = categoriesToString(categories);
 											</svg>
 										</span>
 										<div class="post-nav-content">
-											<span class="post-nav-label">上一篇</span>
-											<span class="post-nav-title">没有更早的文章</span>
+											<span class="post-nav-label">Previous post</span>
+											<span class="post-nav-title">No earlier post</span>
 										</div>
 									</span>
 								)}
@@ -168,7 +168,7 @@ const categoryStr = categoriesToString(categories);
 								{next ? (
 									<a href={next.url} class="post-nav-link next-post" rel="next">
 										<div class="post-nav-content">
-											<span class="post-nav-label">下一篇</span>
+											<span class="post-nav-label">Next Post</span>
 											<span class="post-nav-title">{next.title}</span>
 										</div>
 										<span class="post-nav-arrow">
@@ -180,8 +180,8 @@ const categoryStr = categoriesToString(categories);
 								) : (
 									<span class="post-nav-link next-post disabled">
 										<div class="post-nav-content">
-											<span class="post-nav-label">下一篇</span>
-											<span class="post-nav-title">没有更新的文章</span>
+											<span class="post-nav-label">Next post</span>
+											<span class="post-nav-title">No newer post</span>
 										</div>
 										<span class="post-nav-arrow">
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -197,7 +197,7 @@ const categoryStr = categoriesToString(categories);
 						serverURL={config_site.comment?.waline?.serverURL}
 						path={Astro.url.pathname}
 						title={title}
-						lang={config_site.comment?.waline?.lang || 'zh-CN'}
+						lang={config_site.comment?.waline?.lang || 'en-US'}
 						emoji={config_site.comment?.waline?.emoji}
 						requiredFields={config_site.comment?.waline?.requiredFields}
 						reaction={config_site.comment?.waline?.reaction}

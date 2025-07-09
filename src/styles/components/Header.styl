@@ -24,6 +24,10 @@
     margin: 0
     flex-wrap: wrap
     gap: 8px
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text;
   }
 
   // 列表项样式
@@ -253,6 +257,10 @@
   }
 }
 
+.search-header h2 {
+  font-family: 'Pixelify Sans', 'Fira Code';
+}
+
 // 在768px以下才完全隐藏原导航栏，显示移动端菜单
 @media (max-width: 768px) {
   .nav {
@@ -294,6 +302,10 @@
       opacity: 0
       transform: translateX(-50%) translateY(-15px) scale(0.9)
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)
+      background: none
+    -webkit-background-clip: initial
+    -webkit-text-fill-color: initial
+    background-clip: initial
       
       &.active {
         display: flex !important
