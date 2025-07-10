@@ -1,5 +1,18 @@
 // 友链页面的样式，针对暗色背景优化
 
+// TEMPORARY
+
+.imageTemporary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageTemporary img {
+  width: 90%;
+  height: auto; 
+}
+
 // 页面容器样式
 .page-container {
   max-width: 1200px
@@ -14,12 +27,13 @@
   padding: 20px 0
   
   .page-title {
-    font-size: 2.5rem
+    font-size: 3.5rem
     margin-bottom: 15px
-    background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(1, 162, 190, 0.9))
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
+     font-family: 'Pixelify Sans' !important; 
   }
   
   .page-description {
@@ -74,6 +88,7 @@
     .friend-content {
       text-align: center
       
+      
       h2 {
         font-size: 1.2rem
         margin-bottom: 8px
@@ -120,6 +135,7 @@
 .friend-link:nth-child(4) { animation-delay: 0.25s }
 .friend-link:nth-child(5) { animation-delay: 0.3s }
 .friend-link:nth-child(n+6) { animation-delay: 0.35s }
+
 
 // 大屏幕：5个卡片一行
 @media (min-width: 1400px) {

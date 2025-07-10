@@ -1,0 +1,7 @@
+---
+import ProjectsLayout from "../layouts/Projects.astro";
+import { config_site } from '../utils/config-adapter' 
+---
+
+<ProjectsLayout links={config_site.friendlinks || []}>
+</ProjectsLayout>

@@ -2,7 +2,7 @@ import type { SiteConfig, BadgeOptions } from './types';
 
 export const site: SiteConfig = {
   /**
-   * 核心站点信息
+   *  TITLES NAMES SECTION
    */
   title: 'Yw4rf',
   titleDefault: 'Yw4rf',
@@ -10,7 +10,7 @@ export const site: SiteConfig = {
   author: 'トビアス・F',
   
   /**
-   * SEO 核心配置
+   * SEO  
    */
   description: 'Cybersecurity Enthusiast focused on SOC, DFIR, Hands-on Penetration Testing, and active CTF Player.',
   url: 'https://stalux.needhelp.icu',
@@ -20,30 +20,31 @@ export const site: SiteConfig = {
   canonical: 'https://stalux.needhelp.icu',
 
   /**
-   * 站点资源配置
+   *  
    */
   favicon: '',
   avatarPath: '',
   
   /**
-   * <head>元素硬嵌入
+   * <head> 
    */
   head: `<meta name="nishia" content="nihaiso">
         <script>console.log("欢迎使用Stalux主题")</script>`,
 
   /**
-   * 站点导航配置
+   * NAVBAR SECTION NAV
    */
   nav: [
     { title: 'Home', path: '/', icon: 'home' },
     { title: 'Archives', path: '/archives/', icon: 'archive' },
     { title: 'Categories', path: '/categories/', icon: 'folder' },
     { title: 'Tags', path: '/tags/', icon: 'tag' },
+    { title: 'Projects', path: '/projects/', icon: 'link' },
     { title: 'About', path: '/about/', icon: 'user' }
   ],
 
   /**
-   * 站点特效配置
+   * TEXT TYPING 
    */
   textyping: [
     'Cybersecurity Enthusiast',
@@ -52,7 +53,7 @@ export const site: SiteConfig = {
   ],
 
   /**
-   * 评论系统配置
+   * WAILINE COMMENTS SECTION
    */
   comment: {
     waline: {
@@ -68,7 +69,7 @@ export const site: SiteConfig = {
   },
 
   /**
-   * 社交媒体链接配置
+   * SOCIAL LINKS SECTION CONTACT
    */
   medialinks: [
     { title: 'Github', url: 'https://github.com/Yw4rf', icon: 'github' },
@@ -78,160 +79,34 @@ export const site: SiteConfig = {
   ],
 
   /**
-   * 友情链接配置
+   * PROYECTS SECTION
    */
-  friendlinks_title: '帮助链接',
-  friendlinks_description: '下列站点对本主题的开发起到了关键作用,非常感谢它们的资料',
-  friendlinks: [
+  friendlinks_title: 'Projects',
+  friendlinks_description: 'Explore a few of my projects.',
+  /**  friendlinks: [
     {
       title: 'Astro',
       url: 'https://astro.build/',
       avatar: 'https://astro.build/favicon.svg',
       description: 'The web framework for content-driven websites'
     },
-    {
-      title: 'Vue',
-      url: 'https://cn.vuejs.org/',
-      avatar: 'https://cn.vuejs.org/logo.svg',
-      description: '易学易用，性能出色，适用场景丰富的 Web 前端框架。'
-    },
-    {
-      title: 'MDN Web Docs',
-      url: 'https://developer.mozilla.org/',
-      avatar: 'https://developer.mozilla.org/favicon.ico',
-      description: 'Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.'
-    },
-    {
-      title: 'Simple Icons',
-      url: 'https://simpleicons.org/',
-      avatar: 'https://simpleicons.org/favicon.ico',
-      description: '流行品牌的 3282 SVG 图标'
-    },
-    {
-      title: 'Feather',
-      url: 'https://feathericons.com/',
-      avatar: 'https://feathericons.com/favicon.ico',
-      description: 'Beautifully simple open-source icons'
-    }
+  
   ],
+  */
 
   /**
-   * 页脚配置
-   * 整合所有页脚相关设置，便于管理
+   * FOOTER SECTION
+   *  
    */
   footer: {
-    // 站点构建时间，用于计算运行时长
+    //  
     buildtime: '2025-05-01T10:00:00', // 站点构建时间，推荐使用ISO 8601标准格式(YYYY-MM-DDTHH:MM:SS)
 
-    // 版权信息
+    // COPYRIGHT CC
     copyright: {
       enabled: true, // 是否启用版权信息
-      startYear: 2024, // 可选：起始年份，如设置为2024，则显示2024-2025
+      startYear: 2025, // 可选：起始年份，如设置为2024，则显示2024-2025
       customText: '' // 可选：自定义版权文本，如为空则使用默认格式
     },
-
-    // 主题信息
-    theme: {
-      showPoweredBy: true, // 是否显示"Powered by Astro"
-      showThemeInfo: true // 是否显示"Theme is Stalux"
-    },
-
-    // 备案信息
-    beian: {
-      // ICP备案
-      icp: {
-        enabled: false, // 是否启用ICP备案显示
-        number: '辽ICP备XXXXXXXX号' // ICP备案号，如不需要可留空
-      },
-      // 公安备案
-      security: {
-        enabled: false, // 是否启用公安备案显示
-        text: '辽公网安备 XXXXXXXXXXXX号', // 公安备案号文字
-        number: 'XXXXXXXXXXXX' // 公安备案号数字部分(用于链接跳转)
-      }
-    },
-
-    // 徽章配置    
-    badges: [
-      {
-        label: 'Built with',
-        message: '❤',
-        color: 'red',
-        style: 'for-the-badge',
-        alt: 'Built with Love',
-        href: 'https://github.com/xingwangzhe'
-      },
-      {
-        label: 'Powered by',
-        message: 'Astro',
-        color: 'orange',
-        style: 'flat-square',
-        alt: 'Powered by Astro',
-        href: 'https://astro.build/'
-      },
-      {
-        label: 'Theme',
-        message: 'Stalux',
-        color: 'blueviolet',
-        alt: 'Theme: Stalux',
-        href: 'https://github.com/xingwangzhe/stalux'
-      },
-      {
-        label: 'license',
-        message: 'MIT',
-        color: 'blue',
-        alt: 'License: MIT',
-        href: 'https://github.com/xingwangzhe/stalux/blob/main/LICENSE'
-      },
-      {
-        label: '开往🚆',
-        message: '友链接力',
-        color: 'green',
-        alt: '开往-友链接力',
-        href: 'https://www.travellings.cn/go.html'
-      },
-      {
-        label: '大佬论坛',
-        message: '',
-        color: 'yellowgreen',
-        alt: '大佬论坛',
-        href: 'https://www.dalao.net/'
-      },
-      {
-        label: 'BlogFinder',
-        message: '',
-        color: 'purple',
-        alt: 'BlogFinder',
-        href: 'https://bf.zzxworld.com/'
-      },
-      {
-        label: '空间穿梭',
-        message: '',
-        color: 'teal',
-        alt: '空间穿梭-随机访问BlogsClub成员博客',
-        href: 'https://www.blogsclub.org/go'
-      },
-      {
-        label: '多吉云',
-        message: 'CDN',
-        color: 'lightblue',
-        alt: '多吉云CDN',
-        href: 'https://www.dogecloud.com/?iuid=11702'
-      },
-      {
-        label: '十年之约',
-        message: '',
-        color: 'brightgreen',
-        alt: '十年之约',
-        href: 'https://www.foreverblog.cn/blog/6304.html'
-      },
-      {
-        label: '博客宇宙',
-        message: '',
-        color: 'darkblue',
-        alt: '博客宇宙',
-        href: 'https://blogverse.cn/'
-      }
-    ] as BadgeOptions[]
   }
 }
