@@ -7,6 +7,9 @@ import '../styles/global.styl';
 import '../styles/layouts/ArchivesLayout.styl'; 
 import dayjs from 'dayjs';
 
+import { Image } from "astro:assets";
+import GifBlog from "../images/gif/blog-section2.gif";
+
 
 interface Props {
   pageTitle: string;  
@@ -60,11 +63,11 @@ const sortedYears = Object.keys(archivesByYearMonth)
     <slot name="head" />
   </Head>
   <body>
-    <script>
-      import '../scripts/background.ts';
-    </script>
     <Header />
     <main class="archives-container">
+      <div class="gifBlog">
+        <Image src={GifBlog} alt="anime gif" class="gif-title" />
+      </div>
       <div class="page-header">
         {/* Use a more generic title prop for the H1, description prop for P */}
         <h1 class="page-title">{pageTitle.split(' | ')[0]}</h1>
@@ -86,7 +89,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
                 .sort((a, b) => b - a) // 月份降序排列
                 .map(month => (
                 <div class="month-section">
-                  <h3 class="month-title">{month}. Month</h3>
+                  <h3 class="month-title">{dayjs(`${month}`, 'M').format('MMMM')}</h3>
                   <ul class="post-list">
                     {archivesByYearMonth[year][month].map(post => (
                       <li class="post-item">
@@ -104,7 +107,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
             </div>
           ))
         ) : (
-          <div class="no-posts">暂无文章</div>
+          <div class="no-posts">No posts</div>
         )}
       </div>
 
@@ -115,7 +118,7 @@ const sortedYears = Object.keys(archivesByYearMonth)
           <span class="dot"></span>
           <span class="dot"></span>
         </div>
-        <div class="loading-text">加载更多内容</div>
+        <div class="loading-text">Loading text...</div>
       </div>
       {/* Allow passing additional main content if needed */}
       <slot name="main" />

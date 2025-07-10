@@ -1,3 +1,16 @@
+.gifBlog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.gifBlog img{
+  width: 40%;
+  height: auto
+}
+
 .archives-container {
   max-width: 1000px
   margin: 0 auto
@@ -105,11 +118,15 @@
 }
 
 .month-title {
-  font-size: 1.4rem
+  font-size: 1.2rem
   margin: 0 0 1rem 0
   border-bottom: 1px dashed rgba(255, 255, 255, 0.2)
   padding-bottom: 0.5rem
-  color: rgba(255, 255, 255, 0.9)
+  font-family: 'Pixelify Sans', sans-serif;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
 }
 
 .post-list {
@@ -251,6 +268,11 @@
 }
 
 @media (max-width: 768px) {
+  .gifBlog img{
+  width: 65%;
+  height: auto
+}
+
   .archives-container {
     padding: 1.5rem 0.5rem 2rem 1.5rem
   }
@@ -259,7 +281,7 @@
     margin-bottom: 2rem
     
     .page-title {
-      font-size: 2rem
+      font-size: 3rem
     }
     
     .page-description {
@@ -315,13 +337,18 @@
 }
 
 @media (max-width: 480px) {
+  .gifBlog img{
+  width: 90%;
+  height: auto
+}
+
   .archives-container {
     padding: 1.5rem 0.5rem 2rem 1.2rem
   }
   
   .page-header {
     .page-title {
-      font-size: 1.8rem
+      font-size: 2.5rem
     }
   }
   

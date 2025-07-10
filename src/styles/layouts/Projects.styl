@@ -1,19 +1,16 @@
-// 友链页面的样式，针对暗色背景优化
-
-// TEMPORARY
-
-.imageTemporary {
+.gifProjects {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.imageTemporary img {
-  width: 90%;
-  height: auto; 
+.gifProjects img{
+  width: 80%;
+  height: auto
 }
 
-// 页面容器样式
 .page-container {
   max-width: 1200px
   margin: 0 auto
@@ -160,11 +157,16 @@
 
 // 平板：2个卡片一行
 @media (max-width: 767px) and (min-width: 480px) {
+  .gifProjects img{
+  width: 80%;
+  height: auto
+}
+  
   .page-header {
     padding: 15px 0
     
     .page-title {
-      font-size: 2rem
+      font-size: 3rem
     }
     
     .page-description {
@@ -179,11 +181,16 @@
 
 // 移动设备：1个卡片一行
 @media (max-width: 479px) {
+  .gifProjects img{
+  width: 90%;
+  height: auto
+}
+
   .page-header {
     padding: 10px 0
     
     .page-title {
-      font-size: 1.8rem
+      font-size: 2.5rem
     }
     
     .page-description {
