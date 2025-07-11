@@ -1,14 +1,13 @@
 // About 页面样式
 .about-container {
   max-width: 1000px
-  margin: 0 auto
   padding: 2rem 1rem
   min-height: calc(100vh - 200px)
-  animation: fadeIn 0.8s ease-in-out forwards
+  animation: fadeIn 0.8s ease-in-out 
 }
 
 .about-header {
-  text-align: center
+  text-align: left
   margin-bottom: 3rem
   
   .about-title {
@@ -20,14 +19,6 @@
     background-clip: text
   }
   
-  .about-description {
-    font-size: 1.2rem
-    color: rgba(255, 255, 255, 0.8)
-    max-width: 700px
-    margin: 0 auto 1rem
-    line-height: 1.6
-  }
-  
   .about-date {
     font-size: 0.9rem
     color: rgba(255, 255, 255, 0.7)
@@ -35,17 +26,15 @@
   }
 }
 
-.about-hero-image {
-  margin: 2rem auto
-  text-align: center
-  
-  img {
-    max-width: 100%
-    height: auto
-    border-radius: 8px
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
-    border: 1px solid rgba(255, 255, 255, 0.1)
-  }
+// CONTAINER DEFAULT.MD 
+
+.about-subtitles {
+  text-align: center;
+  font-family: 'Pixelify Sans';
+  background: linear-gradient(-90deg, rgba(255,255,255,0.9), rgba(1, 162, 190, 0.9))
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
 }
 
 .about-content {
@@ -54,23 +43,23 @@
   padding: 2rem
   margin-bottom: 2rem
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.753)
+  text-align: left !important;
+  font-family: sans-serif;
   
   /* 内容排版增强 */
   p {
-    line-height: 1.7
     margin-bottom: 1.5rem
     color: rgba(255, 255, 255, 0.9)
+    text-leading: 1px !important;
   }
   
   h2, h3, h4 {
-    margin-top: 2rem
     margin-bottom: 1.2rem
     color: rgba(255, 255, 255, 0.95)
   }
   
   h2 {
     font-size: 1.8rem
-    padding-bottom: 0.5rem
     border-bottom: 1px solid rgba(255, 255, 255, 0.2)
   }
   
@@ -81,7 +70,7 @@
   h4 {
     font-size: 1.3rem
   }
-  
+
   ul, ol {
     padding-left: 1.5rem
     margin-bottom: 1.5rem
@@ -113,14 +102,6 @@
       border-bottom-style: solid
       color: rgba(1, 162, 190, 0.8)
     }
-  }
-  
-  img {
-    max-width: 100%
-    height: auto
-    border-radius: 8px
-    display: block
-    margin: 1.5rem auto
   }
   
   code {
@@ -178,18 +159,19 @@
   .card {
     background: rgba(255, 255, 255, 0.05)
     border-radius: 8px
-    padding: 1.5rem
+    padding: .9rem 1.5rem
     margin: 1.5rem 0
     border: 1px solid rgba(255, 255, 255, 0.1)
     transition: all 0.3s ease
-    
+
+
     &:hover {
       transform: translateY(-5px)
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
       background: rgba(255, 255, 255, 0.08)
     }
   }
-  
+
   .timeline {
     position: relative
     padding-left: 2rem
@@ -227,6 +209,45 @@
     }
   }
 }
+
+// SKILLS SECTION
+
+.category {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0 1rem 1rem 1rem;
+      margin-bottom: 0rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .category h2 {
+      font-size: 16px;
+      padding-top: 0.9rem
+      margin-bottom: 20px;
+      font-family: 'Pixelify Sans', sans-serif;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0px 12px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+    }
+
+    .badge img {
+      width: 18px;
+      height: 18px;
+    }
+
 
 /* 响应式样式调整 */
 @media (max-width: 768px) {

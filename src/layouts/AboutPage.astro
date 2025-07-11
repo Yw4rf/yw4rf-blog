@@ -10,7 +10,7 @@ import '../styles/global.styl';
 import '../styles/blog.styl';
 import '../styles/layouts/AboutPage.styl';
 import { Image } from "astro:assets";
-import Bulldog from "../images/Bulldog.webp";
+import PyGame from "../images/svg-skills/pygame_logo.svg";
 
 interface Props {
     title?: string;
@@ -24,7 +24,7 @@ const { title = 'Yw4rf', description = 'トビアス・F', noindex } = Astro.pro
 const pageTitle = `${title} | ${config_site.title}`;
 ---
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang={config_site.lang} class="dark">  <Head 
     title={title + ' | '+ config_site.siteName}
     description={description || title}
@@ -40,6 +40,8 @@ const pageTitle = `${title} | ${config_site.title}`;
       "url": config_site.url + '/about/'
     }}
   >
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
   <link
             slot="head"
             rel="stylesheet"
@@ -47,6 +49,7 @@ const pageTitle = `${title} | ${config_site.title}`;
             integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
             crossorigin="anonymous"
   />
+  
   </Head>
   <body>
     <Header />
@@ -54,9 +57,9 @@ const pageTitle = `${title} | ${config_site.title}`;
       <div class="about-header">
         <h1 class="about-title">{title}</h1>      
         <div class="about-content">
-          <div class="aboutImage">
+         <!-- <div class="aboutImage">
             <Image src={Bulldog} alt="Old School Runescape Yw4rf" class="aboutImage" />
-          </div>
+          </div> -->
           <slot />
       </div>
       <WalineComment 

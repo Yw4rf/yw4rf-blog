@@ -8,6 +8,7 @@
 export interface SiteConfig {
   // 核心基础信息
   title: string;
+  subTitle: string;
   description: string;
   url: string;
   author?: string;
