@@ -36,11 +36,12 @@ export const site: SiteConfig = {
    */
   nav: [
     { title: 'Home', path: '/', icon: 'home' },
-    { title: 'About', path: '/about/', icon: 'user' },
-    { title: 'Projects', path: '/projects/', icon: 'link' },
     { title: 'Blog', path: '/archives/', icon: 'archive' },
     { title: 'Categories', path: '/categories/', icon: 'folder' },
     { title: 'Tags', path: '/tags/', icon: 'tag' },
+    { title: 'About', path: '/about/', icon: 'user' },
+    { title: 'Projects', path: '/projects/', icon: 'link' },
+    
   ],
 
   /**

@@ -4,54 +4,14 @@
     "modified": "2025-07-12T17:33:36.882-03:00",
     "abbrlink": "139bc770"
   },
-  "src/content/posts/_config_code.md": {
-    "created": "2025-05-10T20:34:20.585+08:00",
-    "modified": "2025-05-12T20:25:14.827+08:00",
-    "abbrlink": "b2070784"
-  },
-  "src/content/posts/_config_footer.md": {
-    "created": "2025-05-10T11:23:17.047+08:00",
-    "modified": "2025-05-12T20:25:02.272+08:00",
-    "abbrlink": "71c0a094"
-  },
-  "src/content/posts/_config_header_and_head.md": {
-    "created": "2025-05-10T18:27:31.562+08:00",
-    "modified": "2025-05-12T20:24:50.202+08:00",
-    "abbrlink": "0afea694"
-  },
   "src/content/posts/_config_md.md": {
     "created": "2025-05-10T19:51:14.628+08:00",
     "modified": "2025-05-12T20:25:47.154+08:00",
     "abbrlink": "87d148c8"
   },
-  "src/content/posts/_config_text_media.md": {
-    "created": "2025-05-10T18:56:37.421+08:00",
-    "modified": "2025-05-12T20:25:57.542+08:00",
-    "abbrlink": "f57c2840"
-  },
-  "src/content/posts/_config_total.md": {
-    "created": "2025-05-10T12:18:15.625+08:00",
-    "modified": "2025-05-12T20:26:06.558+08:00",
-    "abbrlink": "3316ac79"
-  },
-  "src/content/posts/_config_waline.md": {
-    "created": "2025-05-10T15:26:13.385+08:00",
-    "modified": "2025-05-12T20:26:23.532+08:00",
-    "abbrlink": "3183ca18"
-  },
-  "src/content/posts/_markdown.md": {
-    "created": "2025-05-10T13:02:52.423+08:00",
-    "modified": "2025-05-12T20:23:40.849+08:00",
-    "abbrlink": "b0c1aab2"
-  },
-  "src/content/posts/_test_luan.md": {
-    "created": "2025-05-13T11:09:11.882+08:00",
-    "modified": "2025-05-13T17:25:11.466+08:00",
-    "abbrlink": "080d8764"
-  },
-  "src/content/posts/test/_config_basic.md": {
+  "src/content/posts/HackTheBox/EvilCUPS/_config_basic.md": {
     "created": "2025-07-05T20:41:25.632-03:00",
-    "modified": "2025-07-06T17:24:15.096-03:00",
-    "abbrlink": "23535042"
+    "modified": "2025-07-12T18:24:16.757-03:00",
+    "abbrlink": "3eb224c6"
   }
 }
