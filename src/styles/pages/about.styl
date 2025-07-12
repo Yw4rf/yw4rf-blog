@@ -1,4 +1,17 @@
-// About 页面样式
+// About 
+
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.aboutImage img {
+  width: 31%;
+  height: auto;
+}
+
 .about-container {
   max-width: 1000px
   padding: 2rem 1rem
@@ -156,21 +169,6 @@
     margin: 1.5rem 0
     border-left: 3px solid rgba(1, 162, 190, 0.8)
   }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.05)
-    border-radius: 8px
-    padding: .9rem 1.5rem
-    margin: 1.5rem 0
-    border: 1px solid rgba(255, 255, 255, 0.1)
-    transition: all 0.3s ease
-
-
-    &:hover {
-      transform: translateY(-5px)
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
-      background: rgba(255, 255, 255, 0.08)
-    }
   }
 
   .timeline {
@@ -209,7 +207,6 @@
       }
     }
   }
-}
 
 // SKILLS SECTION
 
@@ -255,7 +252,6 @@
 .credly-certs {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1.5rem;
   }
 
   .credly-certs > div {
@@ -265,9 +261,35 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
 
+  .targets-container {
+  display: flex;
+  gap: 1rem; /* Equivale a Tailwind's gap-4 */
+  text-decoration: none !important;
+  }
+
+  .targets-container a {
+    text-decoration: none !important;
+  }
+
+.badge-link {  
+  text-decoration: none !important;
+  width: 13rem; /* Tailwind w-52 → 208px */
+  height: auto;
+  border-radius: 0.5rem; /* Tailwind rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind shadow */
+  overflow: hidden;
+  border: none;
+  text-decoration: none;
+}
+
   
 /* 响应式样式调整 */
 @media (max-width: 768px) {
+  .aboutImage img {
+  width: 55%;
+  height: auto;
+}
+
   .about-subtitles {
   font-size: 2.5rem !important;
   }
@@ -296,6 +318,11 @@
 }
 
 @media (max-width: 480px) {
+  .aboutImage img {
+  width: 80%;
+  height: auto;
+}
+
   .about-subtitles {
   font-size: 2rem !important;
   }

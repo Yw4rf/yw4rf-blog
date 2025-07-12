@@ -76,7 +76,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .Homesubtitle {
    display: flex
-  justify-content: center
+  justify-content: center !important
   align-items: center
   flex-wrap: wrap
   gap: 15px
@@ -205,6 +205,10 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 // ───── MEDIA QUERIES ─────
 
 @media (max-width: 768px)
+  .Homesubtitle { 
+    text-align: center;
+  }
+
   .portfolio-button {
     padding: 1px 19px; 
   }

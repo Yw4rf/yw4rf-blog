@@ -9,8 +9,9 @@ import { config_site } from '../utils/config-adapter';
 import '../styles/global.styl';
 import '../styles/blog.styl';
 import '../styles/layouts/AboutPage.styl';
+
 import { Image } from "astro:assets";
-import PyGame from "../images/svg-skills/pygame_logo.svg";
+import aboutSection from "../images/gif/about-section2.gif";
 
 interface Props {
     title?: string;
@@ -53,7 +54,10 @@ const pageTitle = `${title} | ${config_site.title}`;
   </Head>
   <body>
     <Header />
-    <main class="about-container">
+    <div class="aboutImage">
+      <Image src={aboutSection} alt="Lain computer gif" />
+    </div>
+      <main class="about-container">
       <div class="about-header">
         <h1 class="about-title">{title}</h1>      
         <div class="about-content">
