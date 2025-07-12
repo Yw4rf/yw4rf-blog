@@ -6,15 +6,15 @@ priority: -1
 
 
 <div class="card">
-I'm a Computer Networks Technician student with a strong passion for both cybersecurity and programming. My journey into technology began four years ago when I created my first HTML webpage, and I haven't stopped learning since. Today, my primary focus is on Blue Team operations, with particular interests in threat hunting, intrusion detection, and digital forensics.<br><br>I also possess practical knowledge in ethical hacking, specifically in web penetration testing, which has provided me with a comprehensive understanding of both defensive and offensive strategies in information security.<br><br>Currently, I'm deepening my technical skills in cybersecurity and development by creating personal projects that are not only engaging but also contribute valuable resources to the open-source community.
+I'm a Computer Networks Technician student with a strong passion for cybersecurity and programming. My journey into technology began four years ago, when I built my first HTML webpage — since then, I've been continuously expanding my knowledge and skills.<br><br> Currently, my main focus lies in Blue Team operations, particularly in areas such as threat hunting, intrusion detection, and digital forensics. I'm also familiar with ethical hacking and web application penetration testing, which has helped me develop a well-rounded understanding of both defensive and offensive security strategies.<br><br> I actively develop personal projects that merge cybersecurity and software development, many of which are shared with the open-source community. These projects not only reinforce my learning but also aim to contribute meaningful tools and insights for others.<br><br>
 </div>
 
 <br>
 
-<h2 class="about-subtitles"> > Skills</h2>
+<h2 class="about-subtitles"> Skills</h2>
 
 <div class="category">
-    <h2>💻 Lenguajes</h2>
+    <h2>💻 Languages</h2>
     <div class="badges">
       <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /> HTML</div>
       <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> CSS</div>
@@ -30,7 +30,7 @@ I'm a Computer Networks Technician student with a strong passion for both cybers
     </div>
   </div>
 <div class="category">
-    <h2>🔐 Herramientas de Ciberseguridad</h2>
+    <h2>🔐 Cybersecurity Tools</h2>
     <div class="badges">
       <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" /> Kali Linux</div>
       <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Security_Onion_Logo.svg" /> Security Onion</div>
@@ -49,7 +49,7 @@ I'm a Computer Networks Technician student with a strong passion for both cybers
     </div>
   </div>
   <div class="category">
-    <h2>🧩 Frameworks & Tools</h2>
+    <h2>🧩 Frameworks, Libraries and Tools</h2>
     <div class="badges">
       <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg" /> PyGame</div>
       <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" /> .NET</div>
@@ -74,60 +74,58 @@ I'm a Computer Networks Technician student with a strong passion for both cybers
 
 <br>
 
-<h2 class="about-subtitles"> > Experience</h2>
+<h2 class="about-subtitles"> Experience</h2>
 
 <br>
 
 <div class="timeline">
 
-<div class="timeline-item">
-  <h4>🛡️ Ciberseguridad</h4>
-  <ul>
-    <li>Análisis de vulnerabilidades y pentesting</li>
-    <li>Ingeniería inversa y explotación binaria</li>
-    <li>Participación en CTFs (Capture The Flag)</li>
-    <li>Hardening de sistemas y redes</li>
-    <li>Automatización de tareas con scripts y herramientas propias</li>
-  </ul>
-</div>
+  <div class="timeline-item">
+    <h4>🛡️ Blue Team Lab Projects</h4>
+    <ul>
+      <li>Diseñé entornos virtualizados con Security Onion y Wazuh para practicar detección de amenazas y análisis de tráfico de red en tiempo real.</li>
+      <li>Reproduje escenarios de ataque (como brute force o phishing) y desarrollé reglas de detección personalizadas en Suricata y Elastic Stack.</li>
+    </ul>
+  </div>
 
-<div class="timeline-item">
-  <h4>💻 Desarrollo y Programación</h4>
-  <ul>
-    <li>Desarrollo de aplicaciones web (Full-stack)</li>
-    <li>Lenguajes: Python, TypeScript, Rust y C++</li>
-    <li>Frameworks: Django, Astro, Node.js, React</li>
-    <li>APIs REST y GraphQL</li>
-    <li>Automatización, CLI tools y bots</li>
-  </ul>
-</div>
+  <div class="timeline-item">
+    <h4>💻 Web Pentesting Practice</h4>
+    <ul>
+      <li>Realicé pruebas de penetración en aplicaciones web usando Burp Suite, OWASP ZAP y manual testing, centrado en vulnerabilidades como XSS, SQLi y CSRF.</li>
+      <li>Documenté hallazgos, impacto y mitigaciones simulando reportes tipo bug bounty.</li>
+    </ul>
+  </div>
 
-<div class="timeline-item">
-  <h4>🎮 GameDev Indie</h4>
-  <ul>
-    <li>Desarrollo con <strong>Godot</strong> y <strong>Unity</strong></li>
-    <li>Diseño de mecánicas y prototipado rápido</li>
-    <li>Pixel art, shaders y música procedural</li>
-    <li>Distribución en plataformas como Itch.io</li>
-    <li>Exploración de narrativas interactivas y juegos experimentales</li>
-  </ul>
-</div>
+  <div class="timeline-item">
+    <h4>💻 Open-Source Cybersecurity Projects</h4>
+    <ul>
+      <li>Desarrollé herramientas o scripts en Python/Bash para automatizar tareas de análisis forense o escaneo de red.</li>
+      <li>Contribuí a la comunidad compartiendo proyectos técnicos, write-ups o cheatsheets en GitHub y foros especializados.</li>
+    </ul>
+  </div>
 
 </div>
 
 <br>
 
-<h2 class="about-subtitles"> > Certs</h2>
+<h2 class="about-subtitles"> Certs</h2>
 
 <br>
 
-- **UNO** - Técnicatura en Redes Informáticas
-- **CISCO**: Cybersecurity Essentials, Networking Basics, Python Basics
-- **Security Blue Team**: Introduction to Threat Hunting, Introduction to Digital Forensics, Introduction to Network Analysis
+<div class="certificacions-container">
+<ul>
+  <li><strong>UNO</strong> – Associate Degree in Computer Networks</li>
+  <li><strong>CISCO</strong>: Cybersecurity Essentials, Networking Basics, Python Basics</li>
+  <li><strong>Security Blue Team</strong>: Introduction to Threat Hunting, Introduction to Digital Forensics, Introduction to Network Analysis</li>
+</ul>
 
-<u>Certificaciones Futuras</u>: Estoy activamente preparándome para obtener las siguientes certificaciones para expandir mis credenciales:
+<p><u>Future Certifications</u>: I am actively preparing to obtain the following certifications to expand my credentials:</p>
 
-- **CISCO** - Cisco Certified Support Technician (CCST) Cybersecurity
-- **CompTIA** - CompTIA Security+
-- **INE Security** - eJPT (eLearnSecurity Junior Penetration Tester)
-
+<ul>
+  <li><strong>CISCO</strong> – Cisco Certified Support Technician (CCST) Cybersecurity</li>
+  <li><strong>CompTIA</strong> – CompTIA Security+</li>
+  <li><strong>INE Security</strong> – eJPT (eLearnSecurity Junior Penetration Tester)</li>
+</ul>
+<br>
+ 
+</div>

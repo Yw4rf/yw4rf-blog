@@ -29,6 +29,7 @@
 // CONTAINER DEFAULT.MD 
 
 .about-subtitles {
+  font-size: 3rem !important;
   text-align: center;
   font-family: 'Pixelify Sans';
   background: linear-gradient(-90deg, rgba(255,255,255,0.9), rgba(1, 162, 190, 0.9))
@@ -249,8 +250,28 @@
     }
 
 
+// CERTS SECTION
+
+.credly-certs {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+  }
+
+  .credly-certs > div {
+    background-color: hsl(210,8%,5%);
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  
 /* 响应式样式调整 */
 @media (max-width: 768px) {
+  .about-subtitles {
+  font-size: 2.5rem !important;
+  }
+
   .about-header {
     .about-title {
       font-size: 2rem
@@ -275,6 +296,10 @@
 }
 
 @media (max-width: 480px) {
+  .about-subtitles {
+  font-size: 2rem !important;
+  }
+
   .about-container {
     padding: 1.5rem 0.8rem
   }
