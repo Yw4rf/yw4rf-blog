@@ -1,17 +1,22 @@
 {
   "src/content/about/default.md": {
     "created": "2025-05-02T10:52:31.429+08:00",
-    "modified": "2025-07-12T17:33:36.882-03:00",
+    "modified": "2025-07-12T18:47:21.785-03:00",
     "abbrlink": "139bc770"
   },
-  "src/content/posts/_config_md.md": {
-    "created": "2025-05-10T19:51:14.628+08:00",
-    "modified": "2025-05-12T20:25:47.154+08:00",
-    "abbrlink": "87d148c8"
-  },
-  "src/content/posts/HackTheBox/EvilCUPS/_config_basic.md": {
+  "src/content/posts/HackTheBox/EvilCUPS/evilcups.md": {
     "created": "2025-07-05T20:41:25.632-03:00",
     "modified": "2025-07-12T18:24:16.757-03:00",
-    "abbrlink": "3eb224c6"
+    "abbrlink": "36fb04ae"
+  },
+  "src/content/posts/TryHackMe/index.md": {
+    "created": "2025-07-12T18:38:11.761-03:00",
+    "modified": "2025-07-12T18:39:33.223-03:00",
+    "abbrlink": "b43c9a9c"
+  },
+  "src/content/posts/Cybersecurity/BAC/index.md": {
+    "created": "2025-07-12T18:41:12.466-03:00",
+    "modified": "2025-07-12T18:43:51.315-03:00",
+    "abbrlink": "6857fc92"
   }
 }

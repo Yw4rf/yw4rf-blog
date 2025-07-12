@@ -179,7 +179,7 @@ Currently, I'm diving into malware analysis, reverse engineering, and C programm
 </ul>
   </div>
   <div class="category">
-    <h2>📚 Books I've Read</h2>
+    <h2>📚 Books I'm Reading</h2>
       <ul>
         <li>
           1.<a href="https://www.barnesandnoble.com/w/the-web-application-hackers-handbook-dafydd-stuttard/1112113643" target="_blank"><strong> The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws</strong></a> – A foundational guide for web security vulnerabilities.
@@ -187,19 +187,9 @@ Currently, I'm diving into malware analysis, reverse engineering, and C programm
         <li>
           2.<a href="https://booksrun.com/9781500734756-blue-team-handbook-incident-response-edition-a-condensed-field-guide-for-the-cyber-security-incident-responder" target="_blank"><strong> Blue Team Handbook: Incident Response Edition v4</strong></a> – Essential for understanding defensive security and incident response.
         </li>
-        <li>
-          3.<a href="https://0xword.com/libros/69-pentesting-con-powershell.html" target="_blank"><strong> 0xWord - Pentesting con PowerShell Completo v1</strong></a> – Practical techniques for PowerShell-based penetration testing.
+         <li>
+          3.<a href="https://nostarch.com/big-book-small-python-projects" target="_blank"><strong> Big Book of Small Python Projects</strong></a> – Practical projects to sharpen Python programming skills.
         </li>
-        <li>
-          4.<a href="https://www.readings.com.au/product/9781893939752/9781893939752" target="_blank"><strong> Wireshark 101: Essential Skills for Network Analysis</strong></a> – Hands-on learning for network traffic analysis and troubleshooting.
-        </li>
-        <li>
-          6.<a href="https://nostarch.com/big-book-small-python-projects" target="_blank"><strong> Big Book of Small Python Projects</strong></a> – Practical projects to sharpen Python programming skills.
-        </li>
-        <li>
-          5.<a href="https://eloquentjavascript.net/" target="_blank"><strong> Eloquent JavaScript: A Modern Introduction to Programming</strong></a> – Comprehensive foundation in modern JavaScript programming.
-        </li>
-      </ul>
   </div>
 
 </div>
