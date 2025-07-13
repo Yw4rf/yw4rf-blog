@@ -13,11 +13,11 @@ export const site: SiteConfig = {
    * SEO  
    */
   description: 'Cybersecurity Enthusiast focused on SOC, DFIR, Hands-on Penetration Testing, and active CTF Player.',
-  url: 'https://stalux.needhelp.icu',
+  url: 'https://yw4rf.netlify.app',
   keywords: 'Stalux, 博客主题, 内容创作, Astro主题, 静态网站生成器, SEO优化, 自定义博客, 响应式设计, 评论系统, 前端开发, Astro',
   lang: 'en-US',
   locale: 'en-US',
-  canonical: 'https://stalux.needhelp.icu',
+  canonical: 'https://yw4rf.netlify.app',
 
   /**
    *  
@@ -28,8 +28,8 @@ export const site: SiteConfig = {
   /**
    * <head> 
    */
-  head: `<meta name="nishia" content="nihaiso">
-        <script>console.log("欢迎使用Stalux主题")</script>`,
+  head: `<meta name="Yw4rf" content="Yw4rf">
+        <script>console.log("Yw4rf")</script>`,
 
   /**
    * NAVBAR SECTION NAV
@@ -58,7 +58,7 @@ export const site: SiteConfig = {
    */
   comment: {
     waline: {
-      serverURL: 'https://waline.xingwangzhe.fun', // 你的Waline服务器地址 //我加白名单了,别让我在日志里逮到你用(╯▔皿▔)╯
+      serverURL: 'https://RHZbJvipWf8nQyIXcj8uH6tN-MdYXbMMI.api.lncldglobal.com', // 你的Waline服务器地址 //我加白名单了,别让我在日志里逮到你用(╯▔皿▔)╯
       lang: 'en-US', // 语言设置
       emoji: ['https://unpkg.com/@waline/emojis@1.1.0/weibo'], // 表情包设置
       requiredFields: [], // 必填项
