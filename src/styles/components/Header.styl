@@ -6,6 +6,7 @@
   padding: 4px 0px
   position: relative
   border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.18) !important;
   box-shadow: 0 0 10px rgba(0,0,0,0.3); 
   font-family: "Pixelify Sans", sans-serif;
   z-index: 200;
@@ -20,10 +21,6 @@
     margin: 0
     flex-wrap: wrap
     gap: 8px
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-  background-clip: text;
   }
 
   // 列表项样式
@@ -264,7 +261,7 @@ nav {
 // 在768px以下才完全隐藏原导航栏，显示移动端菜单
 @media (max-width: 768px) {
   .nav {
-    background: none
+    background: none !important
     -webkit-background-clip: initial
     -webkit-text-fill-color: initial
     background-clip: initial
@@ -272,7 +269,7 @@ nav {
     width: 100%
     margin: 10px auto
     opacity: 1;
-    background: transparent;
+    box-shadow: none !important;
     
     // 完全隐藏原导航栏
     ul {
@@ -535,11 +532,12 @@ nav {
 
 @media (max-width: 480px) {
   .nav {
-    background: none
+    background: none !important
     -webkit-background-clip: initial
     -webkit-text-fill-color: initial
     background-clip: initial
     color: white
+    box-shadow: none !important;
 
     ul {
       width: 98%

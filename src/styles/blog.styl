@@ -11,7 +11,7 @@ main {
 .main-content {
   display: flex
   min-height: 100vh
-  gap: 5rem
+  gap: .5rem
   position: relative
   margin: 1rem auto
 }
@@ -25,12 +25,13 @@ main {
   border-radius: 12px
   animation: fadeInUp 0.8s ease-in-out forwards
   opacity: 0
+  font-family: 'Inter', sans-serif;
 }
 
 // 侧边栏共同样式
 .left-sidebar,
 .right-sidebar {
-  flex: 0.3
+  flex: .2
   min-width: 0 // 防止溢出
 }
 
@@ -50,7 +51,7 @@ main {
 }
 
 // 头图样式
-.hero-image {
+.avatar-container {
   width: 100%
   margin-bottom: 1rem
   animation: fadeIn 1s ease-in-out forwards
@@ -60,7 +61,6 @@ main {
     display: block
     margin: 0 auto
     border-radius: 12px
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
     max-height: 400px
     object-fit: cover
   }
@@ -71,11 +71,13 @@ main {
   padding: 2rem
   border-radius: 12px
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+  font-size: 1rem;
   
   // 文章排版增强
   p {
     line-height: 1.7
     margin-bottom: 1.5rem
+    
   }
   
   h2, h3, h4 {
@@ -98,45 +100,50 @@ main {
     font-size: 1.3rem
   }
   
-  ul, ol {
-    padding-left: 1.5rem
-    margin-bottom: 1.5rem
-  }
-  
-  li {
-    margin-bottom: 0.5rem
-  }
+ul, ol {
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
   
   blockquote {
-    border-left: 4px solid rgba(1, 162, 190, 0.8)
+    border-left: 4px solid oklch(0.4 0.08 280)
     padding-left: 1rem
     margin-left: 0
-    color: rgba(255, 255, 255, 0.8)
+    color: #ffffffbd
     font-style: italic
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem 
   }
   
   a {
-    color: rgba(41, 182, 246, 1)
-    text-decoration: none
-    transition: all 0.3s ease
-    position: relative
-    
-    &:not(:has(img)) {
-      &:after {
-        content: " 🔗"
-        font-size: 0.85em
-        opacity: 0.7
-      }
-    }
-    
-    &:hover {
-      color: rgba(3, 218, 198, 1)
-      text-shadow: 0 0 8px rgba(3, 218, 198, 0.4)
-    }
+  color: oklch(0.75 0.14 280);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 2px;
+  text-decoration-color: currentColor;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  text-underline-offset: 4px;
+
+  &:hover {
+    background-color: oklch(0.4 0.08 280);
+    color: oklch(0.9 0.15 280);
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.25s ease-in-out;
+    text-decoration-style: solid;
+  }
+
     
     &:active {
-      color: rgba(0, 229, 255, 1)
+      color: #b98ce1ff
     }
   }
 
@@ -170,20 +177,29 @@ main {
       background-color: rgba(255, 255, 255, 0.05)
     }
   }
+  
   code {
-    color:rgba(255, 121, 198, .95);
-  }
+  background-color: oklch(.33 .035 280);
+  color: oklch(.75 .1 280);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  word-break: break-all; /* or overflow-wrap: break-word; */
+}
+
   strong {
-    color:rgba(255, 217, 102, .95);
-  }
+  color: rgba(255, 255, 255, 0.95); 
+}
   del {
-    text-decoration: line-through
-    color: rgba(255, 99, 132, 0.85)
-    background-color: rgba(255, 99, 132, 0.1)
-    padding: 0 4px
-    border-radius: 3px
-    position: relative
-  }
+  text-decoration: line-through;
+  color: oklch(.75 .1 280);  
+  background-color: rgba(255, 99, 132, 0.12); 
+  padding: 0 4px;
+  border-radius: 3px;
+  position: relative;
+}
+
 
   u {
     text-decoration: none
@@ -199,7 +215,7 @@ main {
       height: 2px
       background: linear-gradient(90deg, rgba(102, 217, 255, 0.7), rgba(3, 218, 198, 0.7))
       border-radius: 1px
-      box-shadow: 0 0 4px rgba(3, 218, 198, 0.4)
+      box-shadow: 0 0 4px rgba(0, 255, 229, 0.4)
     }
   }
 
@@ -297,6 +313,7 @@ main {
   
   .prose {
     padding: 1rem
+    font-size: 1.1rem;
   }
   
   .title h1 {

@@ -116,23 +116,8 @@ const categoryStr = categoriesToString(categories);
 					<div class="hero-image">
 						<!-- 如果有特色图片可以在这里添加 -->
 					</div>					<div class="prose fade-in-up delay-200">						<div class="title">
-							<h1>{title}</h1>							<div class="date">
-								{date && (
-									<div class="published-on">
-										Date：<time>{date instanceof Date ? date.toLocaleDateString() : date}</time>
-									</div>
-								)}
-								{updated && (
-									<div class="last-updated-on">
-										Updated：<time>{updated instanceof Date ? updated.toLocaleDateString() : updated}</time>
-									</div>
-								)}
-							</div>							<!-- 文章阅读量统计 -->
-							<div class="page-stats">
-								<span id="busuanzi_container_page_pv">
-									👀 Views：<span id="busuanzi_value_page_pv"></span>
-								</span>
-							</div>
+							<h1>{title}</h1>
+							<br>
 						</div>
 						<slot />					
 					</div>

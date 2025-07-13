@@ -16,11 +16,9 @@ updated: 2024-11-12
 abbrlink: bac
 ---
 
-![BAC Yw4rf](tryhackme-BAC.png)
+![BAC Yw4rf](BAC.png)
 
 ## ¿Qué es Access Control?
-
-![BAC Yw4rf](BAC.png)
 
 El control de acceso es un conjunto de políticas y configuraciones que aseguran que cada usuario pueda acceder solo a los recursos y funcionalidades que tiene autorizados. Por ejemplo, un usuario registrado en una aplicación de redes sociales puede ver su propio perfil, pero no el perfil privado de otro usuario sin permiso. Cuando este control de acceso falla se le conoce como **Broken Access Control**.
 

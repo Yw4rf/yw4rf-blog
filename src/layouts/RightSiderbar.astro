@@ -1,6 +1,5 @@
 ---
 import type { MarkdownHeading } from 'astro';
-import Clock from '../components/others/Clock.vue';
 import SidebarCategories from '../components/categories/SidebarCategories.astro';
 import Tags from '../components/others/Tags.astro';
 
@@ -9,11 +8,6 @@ import '../styles/layouts/rightSidebar.styl';
 ---
 
 <sidebar class="right-sidebar">
-  <!-- 时钟组件 -->
-  <div class="clock-section fade-in-right delay-100">
-    <Clock client:idle format="24hour" showDate={true} updateInterval={1000} />
-  </div>
-  
   <!-- 文章目录部分 -->
   <div class="sidebar-section toc-container fade-in-right delay-200">
     <div class="section-header">
