@@ -51,14 +51,38 @@
   font-style: italic;
 }
 
+.tuxProjects {
+  position absolute
+  top -25px
+  right -25px
+  width 80px
+  height auto
+  opacity 0.9
+  z-index 10
+  pointer-events none
+  filter drop-shadow(0 0 6px rgba(46, 46, 46, 0.3))
+}
+
 @media (max-width: 768px) {
     .terminal { 
         max-width: 85%;
+    }
+
+    .tuxProjects {
+    width 50px
+    top -20px
+    right -20px
     }
 }
 
 @media (max-width: 480px) {
     .terminal { 
         max-width: 95%;
+    }
+
+    .tuxProjects {
+    width 50px
+    top -15px
+    right -15px
     }
 }

@@ -8,6 +8,7 @@ import Footer from '../components/Footer.astro'
 import { Image } from "astro:assets";
 import pokeBlue from "../images/pokeball-blue.png";
 import pokeRed from "../images/pokeball-red.png";
+import Vim from "../images/nvim-pixel-art.png";
 import avatar from '../images/bulbasaur-pokemon.gif';
 
 import '../styles/home.styl'
@@ -48,23 +49,70 @@ const avatarImage = config_site.avatarPath || avatar
             </div>
             <div class="container">
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
-                <div class="Homesubtitle"><h2>Security Researcher</h2></div>
+                <div class="Homesubtitle"><h2>Digital Defender & Pixel Crafter</h2></div>
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
                 <div class="contentHome">
         <section class="containerText">
         <div class="container-wrapper">
   <div class="container-bloque">
     <p>
-      <span class="blockSpan">→ ﹒◌﹒✦  About me</span> <br><br> I'm a Computer Networking student from Buenos Aires with a strong self-taught background in cybersecurity. I specialize in intrusion detection, digital forensics, and have hands-on experience in penetration testing. Currently focusing on Blue Team operations, malware analysis, and reverse engineering, while learning C to enhance my low-level programming skills.
-
+      <span class="blockSpan">→ ﹒◌﹒✦  About me</span><br><br>
     </p>
+<p>Hi! I'm <strong>Yw4rf</strong> — a 20-year-old cybersecurity and networking student from Buenos Aires, Argentina. I'm focused on <strong>Blue Team security</strong> 🛡️ and <strong>computer networking</strong> 🌐, building home labs to practice threat detection, traffic analysis, and digital forensics using tools like <strong>Wireshark</strong>, <strong>Packet Tracer</strong>, <strong>Python</strong>, and <strong>Bash</strong>. I also explore <strong>indie game development</strong> 🎮 by creating 2D prototypes in <strong>Godot</strong> and <strong>Unity</strong>, combining pixel art with chiptune music to bring ideas to life. 📚 I document everything on <strong>GitHub</strong> — from hands-on security labs to creative coding projects. Always experimenting, always learning.</p>
+
     <Image src={pokeBlue} alt="gif-yw4rf" class="pokeBlue" />
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h4>🔍 logs & labs</h4>
+        <ul>
+          <li>
+            I’m building hands-on defensive security skills through home labs using tools like <strong>Security Onion</strong>, <strong>Wazuh</strong>, and the <strong>ELK Stack</strong>, simulating real-world attacks (brute force, phishing, port scans) to test detection rules with <strong>Suricata</strong>. I also explore traffic analysis with <strong>Wireshark</strong> and <strong>Zeek</strong>, and develop automation scripts in <strong>Python</strong> and <strong>Bash</strong> to parse logs, monitor ports, or scan networks. My projects and write-ups are documented on GitHub.
+          </li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h4>🔌 cables & configs</h4>
+        <ul>
+          <li>
+            As part of my training in computer networking, I’m mastering the fundamentals of <strong>OSI/TCP models</strong>, <strong>IP addressing</strong>, <strong>DNS</strong>, and basic routing. I use tools like <strong>Cisco Packet Tracer</strong> to simulate network environments and configure virtual routers and switches, while employing diagnostic techniques with <strong>Nmap</strong>, <strong>Netcat</strong>, and <strong>Wireshark</strong> to analyze packet behavior and protocols.
+          </li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h4>🎮 2D dreams & bugs</h4>
+        <ul>
+          <li>
+            In my creative time, I experiment with game development using engines like <strong>Godot</strong> and <strong>Unity</strong>, focusing on 2D gameplay mechanics, intuitive controls, and visual feedback. I enjoy building small prototypes that combine <strong>pixel art</strong>, <strong>chiptune soundtracks</strong>, and simple mechanics, using programming to bring interactive ideas to life.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="card">
+  <div class="targets-container">
+  <a href="https://cyberdefenders.org/p/Yw4rf">
+    <div class="badge-link">
+      <img src="https://cyberdefenders-storage.s3.me-central-1.amazonaws.com/profile-badges/Yw4rf.png" alt="yw4rf's cyberdefenders badge">
+    </div>
+  </a>
+    <a href="https://app.hackthebox.com/profile/2035837">
+    <div class="badge-link">
+      <img src="http://www.hackthebox.eu/badge/image/2035837" alt="yw4rf's hackthebox stats">
+    </div>
+  </a>
+</div>
+</div>
   </div>
 </div>
+
 <div class="buttonHome">
-<a href="/about">
+<a href="https://t.me/Yw4rf" target="_blank">
     <button class="portfolio-button">
-       About me <span class="arrow">&gt;</span>
+       Contact me <span class="arrow">&gt;</span>
     </button>
     </a>
     </div>
@@ -73,8 +121,7 @@ const avatarImage = config_site.avatarPath || avatar
         <div class="container-wrapper">
   <div class="container-bloque">
     <p>
-      <span class="blockSpan2">My Blog  → ﹒◌﹒✦</span> <br><br> Explore my blog where I regularly post articles about CTFs, cybersecurity research, practices, experiences, and projects.
-
+      <span class="blockSpan2">My Blog  → ﹒◌﹒✦</span> <br><br> I share write-ups on CTFs, threat detection, log analysis, and defensive scripting with tools like Suricata, Zeek, and Python. You'll also find network labs, traffic captures, and config notes from hands-on experiments. Between labs, I post dev logs from 2D game projects—pixel art, prototypes, and plenty of bugs. Always building, always learning.
     </p>
     <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" />
   </div>
@@ -86,6 +133,84 @@ const avatarImage = config_site.avatarPath || avatar
     </button>
     </a>
     </div>
+</section>
+<section class="containerSkills">
+  <div class="container-wrapper">
+  <div class="container-bloque">
+    <p>
+      <span class="blockSpan3">→ ﹒◌﹒✦ Skills</span> <br><br>
+    </p>
+    <Image src={Vim} alt="gif-yw4rf" class="vimSkills" />
+    <div class="categorySkills">
+  <h2>💻 Languages</h2>
+  <div class="badges">
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> HTML</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> CSS</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> JavaScript</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"/> C</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"/> C#</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"/> Go</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"/> Bash</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg"/> PowerShell</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/> MySQL</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"/> Markdown</div>
+  </div>
+</div>
+<!-- Cybersecurity Tools -->
+<div class="categorySkills">
+  <h2>🔐 Cybersecurity Tools</h2>
+  <div class="badges">
+    <!-- OS & Suites -->
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" /> Kali Linux</div>
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Security_Onion_Logo.svg" /> Security Onion</div>
+    <div class="badge"><img src="https://www.nosolohacking.info/wp-content/uploads/2020/09/nmap-logo-256x256-1.png" /> Nmap</div>
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Wireshark_icon_new.png" /> Wireshark</div>
+    <div class="badge"><img src="https://suricata.io/wp-content/uploads/2023/09/Logo-Suricata-vert-whitetype-R.png" /> Suricata</div>
+    <div class="badge"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeWRb8nkIoXAAI-0kL3PucjvciThWbSPV7vQ&s" /> Wazuh</div>
+    <div class="badge"><img src="https://miro.medium.com/v2/resize:fit:954/1*ssgbiwYHOi9gIXt9pGCJYw.png" /> OpenVAS</div>
+    <div class="badge"><img src="https://img.icons8.com/?size=192&id=PW0ChfedZvTh&format=png" /> Metasploit</div>
+    <div class="badge"><img src="https://w7.pngwing.com/pngs/286/446/png-transparent-burp-suite-macos-bigsur-icon-thumbnail.png" /> Burp Suite</div>
+    <div class="badge"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRugKVxZtIh1SSbqxVN4jY2cMlGjRyeaxnYtA&s" /> Hashcat</div>
+    <div class="badge"><img src="https://volatilityfoundation.org/wp-content/uploads/2023/11/IMG_6307.png?w=144" /> Volatility</div>
+    <div class="badge"><img src="https://avatars.githubusercontent.com/u/866922?v=4" /> Autopsy</div>
+    <div class="badge"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/android-4437043-3684810.png?f=webp" /> AleAPP</div>
+    <div class="badge"><img src="https://cdn.freebiesupply.com/logos/large/2x/elastic-stack-logo-png-transparent.png" /> Elastic Stack</div>
+  </div>
+</div>
+
+<!-- Frameworks, Libraries and Tools -->
+<div class="categorySkills">
+  <h2>🧩 Frameworks & Libraries</h2>
+  <div class="badges">
+    <!-- Frameworks & Libraries -->
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" /> .NET</div>
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg" /> PyGame</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"/> TailwindCSS</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" /> Astro</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"/> GraphQL</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" /> Bun</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" /> JWT</div>
+  </div>
+</div>
+<div class="categorySkills">
+  <h2>🛠️ Tools</h2>
+  <div class="badges">
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Vmware_workstation_16_icon.svg" /> VMware</div>
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/VirtualBox_2024_Logo.svg"/> VirtualBox</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> Docker</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/> Git</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/> GitHub</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/> VSCode</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg" /> Neovim</div>
+    <div class="badge"><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/2023_Obsidian_logo.svg"/> Obsidian</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"/> Debian</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" /> Apache</div>
+    <div class="badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"/> Nginx</div>
+  </div>
+</div>
+    </div>
+  </div>
 </section>
 <Terminal />
 </div>

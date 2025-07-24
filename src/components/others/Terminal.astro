@@ -13,7 +13,7 @@ import linuxPixel from "../../images/linux-pixel.png";
     <input type="text" id="cmdInput" placeholder='Type "help"' />
   </div>
 
-  <Image src={linuxPixel} alt="gif-yw4rf" class="pokeBlue" />
+  <Image src={linuxPixel} alt="gif-yw4rf" class="tuxProjects" />
 </div>
 <div class="buttonHome">
 <a href="/projects">
@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     '/': {
       type: 'dir',
       content: {
-        'about.txt': { type: 'file', content: 'I am Ywarf, cybersecurity enthusiast and CTF player.\n' },
-        'blog': {
+        'readme.txt': { type: 'file', content: 'Hii, use "help" command to check available commands.\n' },
+        'secret': {
           type: 'dir',
           content: {
-            'post1.txt': { type: 'file', content: 'First blog post: Analyzing malware with Ghidra.\n' }
+            'top_secret.txt': { type: 'file', content: 'I don´t have any secret.\n' }
           }
         },
-        'projects': {
+        'ideas': {
           type: 'dir',
           content: {
-            'ctf.txt': { type: 'file', content: 'Recent CTFs: picoCTF, HackTheBox, and custom challenges.\n' }
+            'idea1.txt': { type: 'file', content: 'Thinking...\n' }
           }
         }
       }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch (command) {
       case 'help':
-        print(`Available commands:<dir>\nhelp\nls\ncd\ncat <file>\nclear <dir>\nabout\nblog\ncontact\n`);
+        print(`Available commands:<dir>\nhelp   <--[show available commands]\nls   <--[list all files]\ncd   <--[switch between directories]\ncat   <--[displays file contents] <file>\nclear   <--[clear the terminal screen]\nexit   <--[exit the terminal screen] <dir>\nprojects   <--[redirect /projects section]\nblog   <--[redirect /blog section]\ncontact   <--[contact me via telegram]\n`);
         break;
       case 'ls':
         listDirectory();
@@ -82,9 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'clear':
         output.innerHTML = '';
         break;
-      case 'about':
-        print(`Redirecting to /about...`);
-        setTimeout(() => window.location.href = '/about', 1000);
+      case 'exit':
+        output.innerHTML = '';
+        break;
+      case 'projects':
+        print(`Redirecting to /projects...`);
+        setTimeout(() => window.location.href = '/projects', 1000);
         break;
       case 'blog':
         print(`Redirecting to /blog...`);

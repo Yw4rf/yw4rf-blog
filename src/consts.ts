@@ -39,7 +39,6 @@ export const site: SiteConfig = {
     { title: 'Blog', path: '/archives/', icon: 'archive' },
     { title: 'Categories', path: '/categories/', icon: 'folder' },
     { title: 'Tags', path: '/tags/', icon: 'tag' },
-    { title: 'About', path: '/about/', icon: 'user' },
     { title: 'Projects', path: '/projects/', icon: 'link' },
     
   ],

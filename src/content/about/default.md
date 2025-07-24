@@ -6,17 +6,19 @@ priority: -1
 
 
 <div class="about-text">
-<p class="">
-I'm a 20-year-old Computer Networks Technology student from Buenos Aires, Argentina, passionate about cybersecurity and programming. My journey began with a simple HTML page four years ago, and since then, I've combined formal studies with constant self-learning.
+<p>Hi! I'm [Tu Nombre o Alias] — a 20-year-old cybersecurity and networking student from Buenos Aires, Argentina.</p>
 
-I focus on Blue Team operations — digital forensics, log analysis, threat hunting, intrusion detection, and incident response — sharpening my skills through hands-on labs, HackTheBox, and CyberDefenders.
+<p>🔐 I'm deeply into <strong>Blue Team security</strong> — threat detection, log analysis, and digital forensics.  
+I run home labs, write Python/Bash tools, and learn by doing challenges on HackTheBox and CyberDefenders.</p>
 
-I also explore Red Team techniques, using tools like Nmap, Metasploit, BurpSuite, and Hashcat, which helps me understand threats from both sides. I'm experienced with Linux and Windows AD environments, and use Python and Bash to automate workflows and analyze exploits.
+<p>🌐 I'm also studying <strong>Computer Networks</strong> and building up my skills in routing, traffic analysis, and network simulation with tools like Packet Tracer, Wireshark, and Nmap.</p>
 
-Through my blog, I publish CTF write-ups, technical insights, and open-source tools to reinforce my knowledge and contribute to the community.
+<p>🎮 On the creative side, I love experimenting with <strong>indie game development</strong>. I tinker with 2D prototypes in Godot and Unity, combining pixel art, game design, and music as a fun way to express ideas and improve as a programmer.</p>
 
-Currently, I'm diving into malware analysis, reverse engineering, and C programming — always looking for new challenges to grow in the cybersecurity field.
-</p>
+<p>I document my journey through GitHub, write-ups, and personal notes — always learning, always building.</p>
+
+<p>Thanks for stopping by!</p>
+
 </div>
 
 <br>
@@ -125,21 +127,7 @@ Currently, I'm diving into malware analysis, reverse engineering, and C programm
   </ul>
 </div>
 
-<div class="card">
-  <div class="targets-container">
-  <a href="https://app.hackthebox.com/profile/2035837">
-    <div class="badge-link">
-      <img src="http://www.hackthebox.eu/badge/image/2035837" alt="yw4rf's hackthebox stats">
-    </div>
-  </a>
 
-  <a href="https://cyberdefenders.org/p/Yw4rf">
-    <div class="badge-link">
-      <img src="https://cyberdefenders-storage.s3.me-central-1.amazonaws.com/profile-badges/Yw4rf.png" alt="yw4rf's cyberdefenders badge">
-    </div>
-  </a>
-</div>
-</div>
 
 <br>
 </div>
