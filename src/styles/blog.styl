@@ -16,10 +16,9 @@ main {
   margin: 1rem auto
 }
 
-// 文章内容区
 .article-content {
   flex: 1
-  min-width: 0 // 解决Flexbox内容溢出问题
+  min-width: 0 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.753)
   background-color: rgba(0, 0, 0, 0.1)
   border-radius: 12px
@@ -73,7 +72,6 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
   font-size: 1rem;
   
-  // 文章排版增强
   p {
     line-height: 1.7
     margin-bottom: 1.5rem
@@ -113,37 +111,41 @@ li {
 }
   
   blockquote {
-    border-left: 4px solid oklch(0.4 0.08 280)
-    padding-left: 1rem
-    margin-left: 0
-    color: #ffffffbd
-    font-style: italic
-    margin-bottom: 1.5rem 
+    border-left: 3px solid rgba(0, 255, 229, 0.1)
+  padding-left: 1rem
+  margin-left: 0
+  color: rgba(255, 255, 255, 0.85)
+  font-family: 'Inter', sans-serif
+  margin-bottom: 1.5rem
+  background: rgba(255, 255, 255, 0.03)
+  border-radius: 8px
+  padding-top: 0.75rem
+  padding-bottom: 0.75rem
   }
   
   a {
-  color: oklch(0.75 0.14 280);
-  font-weight: 600;
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 2px;
-  text-decoration-color: currentColor;
-  transition: all 0.25s ease-in-out;
-  position: relative;
-  text-underline-offset: 4px;
+  color: #00ddffff
+  font-weight: 600
+  text-decoration-line: underline
+  text-decoration-style: dashed
+  text-decoration-thickness: 2px
+  text-decoration-color: currentColor
+  transition: all 0.25s ease-in-out
+  text-underline-offset: 4px
+  position: relative
 
   &:hover {
-    background-color: oklch(0.4 0.08 280);
-    color: oklch(0.9 0.15 280);
-    padding: 4px 6px;
-    border-radius: 6px;
-    transition: all 0.25s ease-in-out;
-    text-decoration-style: solid;
+    background-color: rgba(0, 255, 229, 0.1)
+    color: #00ffe5
+    padding: 2px 6px
+    border-radius: 4px
+    text-decoration-style: solid
+    text-decoration-color: #00ffe5
   }
 
     
     &:active {
-      color: #b98ce1ff
+      color: #29e8c9
     }
   }
 
@@ -179,8 +181,8 @@ li {
   }
   
   code {
-  background-color: oklch(.33 .035 280);
-  color: oklch(.75 .1 280);
+   background-color: rgba(0, 255, 229, 0.07);
+  color: #00ddffff;
   padding: 4px 6px;
   border-radius: 4px;
   font-size: 14px;
@@ -193,8 +195,8 @@ li {
 }
   del {
   text-decoration: line-through;
-  color: oklch(.75 .1 280);  
-  background-color: rgba(255, 99, 132, 0.12); 
+  color: rgba(102, 217, 255, 0.95);  
+  background-color: rgba(0, 255, 229, 0.1); 
   padding: 0 4px;
   border-radius: 3px;
   position: relative;
@@ -220,14 +222,12 @@ li {
   }
 
   em {
-    font-style: italic
     color: rgba(142, 220, 230, 0.95)
     position: relative
     padding: 0 2px
   }
 }
-
-// 标题样式  
+  
 .title {
   margin-bottom: 2rem
   text-align: center
@@ -246,7 +246,6 @@ li {
   }
 }
 
-// 日期样式
 .date {
   display: flex
   justify-content: center

@@ -3,26 +3,27 @@
 }
 
 .terminal {
-  background-color:rgb(0, 34, 64);
+  background-color: #002b36ba;
   color: #ffffff;
   font-family: monospace;
   padding: 1rem;
   border-radius: 8px;
   max-width: 70%;
   margin: 0 auto;
-  box-shadow: 0 0 10px #003366;
-  font-family: 'Pixelify Sans', 'Fira Code'
+  box-shadow: 0 0 10px #002b368e;
+  font-family: monospace
   margin-top: 90px;
   position: relative;
 }
 
 .output {
   min-height: 150px;
+  margin-top: 70px;
   margin-bottom: 0.5rem;
   white-space: pre-wrap;
   max-height: 300px;
   overflow-y: auto;
-  font-family: 'Pixelify Sans', 'Fira Code'
+  font-family: monospace
   font-size: 18px;
 }
 
@@ -54,13 +55,14 @@
 .tuxProjects {
   position absolute
   top -25px
-  right -25px
+  left -15px
   width 80px
   height auto
   opacity 0.9
   z-index 10
   pointer-events none
   filter drop-shadow(0 0 6px rgba(46, 46, 46, 0.3))
+  float: left;
 }
 
 @media (max-width: 768px) {
@@ -71,7 +73,7 @@
     .tuxProjects {
     width 50px
     top -20px
-    right -20px
+    left -5px
     }
 }
 
@@ -83,6 +85,6 @@
     .tuxProjects {
     width 50px
     top -15px
-    right -15px
+    left -5px
     }
 }

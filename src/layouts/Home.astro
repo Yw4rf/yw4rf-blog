@@ -8,7 +8,7 @@ import Footer from '../components/Footer.astro'
 import { Image } from "astro:assets";
 import pokeBlue from "../images/pokeball-blue.png";
 import pokeRed from "../images/pokeball-red.png";
-import Vim from "../images/nvim-pixel-art.png";
+import Vim from "../images/pokeViolet.png";
 import avatar from '../images/bulbasaur-pokemon.gif';
 
 import '../styles/home.styl'
@@ -48,9 +48,11 @@ const avatarImage = config_site.avatarPath || avatar
                 <Image src={avatar} alt="balbasaur" class="avatarPokemon" />
             </div>
             <div class="container">
+              <div class="textHeader">
                 <div class="Hometitle"><h1>{config_site.title}</h1></div>
-                <div class="Homesubtitle"><h2>Digital Defender & Pixel Crafter</h2></div>
+                <div class="Homesubtitle"><h2>CybSec & Pixel Crafter</h2></div>
                 <SocialLinks mediaLinks={config_site.medialinks || []} />
+                </div>
                 <div class="contentHome">
         <section class="containerText">
         <div class="container-wrapper">
@@ -64,34 +66,35 @@ const avatarImage = config_site.avatarPath || avatar
 
     <div class="timeline">
 
-      <div class="timeline-item">
-        <h4>🔍 logs & labs</h4>
-        <ul>
-          <li>
-            I’m building hands-on defensive security skills through home labs using tools like <strong>Security Onion</strong>, <strong>Wazuh</strong>, and the <strong>ELK Stack</strong>, simulating real-world attacks (brute force, phishing, port scans) to test detection rules with <strong>Suricata</strong>. I also explore traffic analysis with <strong>Wireshark</strong> and <strong>Zeek</strong>, and develop automation scripts in <strong>Python</strong> and <strong>Bash</strong> to parse logs, monitor ports, or scan networks. My projects and write-ups are documented on GitHub.
-          </li>
-        </ul>
-      </div>
+  <div class="timeline-item">
+    <h4>🔍 logs & labs</h4>
+    <ul>
+      <li>
+        I build defensive security skills through home labs with <strong>Security Onion</strong>, <strong>Wazuh</strong>, and <strong>ELK</strong>. I simulate attacks, test <strong>Suricata</strong> rules, analyze traffic with <strong>Wireshark</strong> and <strong>Zeek</strong>, and script automation in <strong>Python</strong> and <strong>Bash</strong>. Projects live on GitHub.
+      </li>
+    </ul>
+  </div>
 
-      <div class="timeline-item">
-        <h4>🔌 cables & configs</h4>
-        <ul>
-          <li>
-            As part of my training in computer networking, I’m mastering the fundamentals of <strong>OSI/TCP models</strong>, <strong>IP addressing</strong>, <strong>DNS</strong>, and basic routing. I use tools like <strong>Cisco Packet Tracer</strong> to simulate network environments and configure virtual routers and switches, while employing diagnostic techniques with <strong>Nmap</strong>, <strong>Netcat</strong>, and <strong>Wireshark</strong> to analyze packet behavior and protocols.
-          </li>
-        </ul>
-      </div>
+  <div class="timeline-item">
+    <h4>🔌 cables & configs</h4>
+    <ul>
+      <li>
+        I study networking basics: <strong>OSI/TCP models</strong>, <strong>IP</strong>, <strong>DNS</strong>. I simulate networks in <strong>Packet Tracer</strong>, configure routers/switches, and troubleshoot with <strong>Nmap</strong>, <strong>Netcat</strong>, and <strong>Wireshark</strong>.
+      </li>
+    </ul>
+  </div>
 
-      <div class="timeline-item">
-        <h4>🎮 2D dreams & bugs</h4>
-        <ul>
-          <li>
-            In my creative time, I experiment with game development using engines like <strong>Godot</strong> and <strong>Unity</strong>, focusing on 2D gameplay mechanics, intuitive controls, and visual feedback. I enjoy building small prototypes that combine <strong>pixel art</strong>, <strong>chiptune soundtracks</strong>, and simple mechanics, using programming to bring interactive ideas to life.
-          </li>
-        </ul>
-      </div>
+  <div class="timeline-item">
+    <h4>🎮 2D dreams & bugs</h4>
+    <ul>
+      <li>
+        I prototype 2D games in <strong>Godot</strong> and <strong>Unity</strong>, blending <strong>pixel art</strong>, <strong>chiptunes</strong>, and smooth mechanics. I focus on interaction, controls, and visual feedback.
+      </li>
+    </ul>
+  </div>
 
-    </div>
+</div>
+
     <div class="card">
   <div class="targets-container">
   <a href="https://cyberdefenders.org/p/Yw4rf">
@@ -117,28 +120,11 @@ const avatarImage = config_site.avatarPath || avatar
     </a>
     </div>
 </section>
-<section class="containerNewsletter">
-        <div class="container-wrapper">
-  <div class="container-bloque">
-    <p>
-      <span class="blockSpan2">My Blog  → ﹒◌﹒✦</span> <br><br> I share write-ups on CTFs, threat detection, log analysis, and defensive scripting with tools like Suricata, Zeek, and Python. You'll also find network labs, traffic captures, and config notes from hands-on experiments. Between labs, I post dev logs from 2D game projects—pixel art, prototypes, and plenty of bugs. Always building, always learning.
-    </p>
-    <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" />
-  </div>
-</div>
-<div class="buttonHome">
-<a href="/archives">
-    <button class="portfolio-button">
-       My blog <span class="arrow">&gt;</span>
-    </button>
-    </a>
-    </div>
-</section>
 <section class="containerSkills">
   <div class="container-wrapper">
   <div class="container-bloque">
     <p>
-      <span class="blockSpan3">→ ﹒◌﹒✦ Skills</span> <br><br>
+      <span class="blockSpan3">Skills → ﹒◌﹒✦</span> <br><br>
     </p>
     <Image src={Vim} alt="gif-yw4rf" class="vimSkills" />
     <div class="categorySkills">
@@ -211,6 +197,23 @@ const avatarImage = config_site.avatarPath || avatar
 </div>
     </div>
   </div>
+</section>
+<section class="containerNewsletter">
+        <div class="container-wrapper">
+  <div class="container-bloque">
+    <p>
+      <span class="blockSpan2">→ ﹒◌﹒✦ My Blog</span> <br><br> I share write-ups on CTFs, threat detection, log analysis, and defensive scripting with tools like Suricata, Zeek, and Python. You'll also find network labs, traffic captures, and config notes from hands-on experiments. Between labs, I post dev logs from 2D game projects—pixel art, prototypes, and plenty of bugs. Always building, always learning.
+    </p>
+    <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" />
+  </div>
+</div>
+<div class="buttonHome">
+<a href="/archives">
+    <button class="portfolio-button">
+       My blog <span class="arrow">&gt;</span>
+    </button>
+    </a>
+    </div>
 </section>
 <Terminal />
 </div>

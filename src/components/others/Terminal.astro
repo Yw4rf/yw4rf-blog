@@ -107,7 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function listDirectory() {
     const dir = getDir(currentPath);
     if (dir && dir.type === 'dir') {
-      const names = Object.keys(dir.content).join('\t');
+      const names = Object.entries(dir.content).map(([name, entry]) => {
+  return entry.type === 'dir' ? `${name}/` : name;
+}).join('\t');
       print(names);
     } else {
       print('Invalid directory');
@@ -115,26 +117,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function changeDirectory(dirName) {
-    if (!dirName) {
-      print('Usage: cd <directory>');
-      return;
-    }
+  if (!dirName) {
+    print('Usage: cd <directory>');
+    return;
+  }
 
-    if (dirName === '..') {
-      if (currentPath !== '/') {
-        currentPath = currentPath.split('/').slice(0, -2).join('/') + '/';
-        if (currentPath === '') currentPath = '/';
-      }
+  let path;
+  if (dirName.startsWith('/')) {
+    // Ruta absoluta
+    path = dirName;
+  } else {
+    // Ruta relativa
+    path = currentPath + (currentPath.endsWith('/') ? '' : '/') + dirName;
+  }
+
+  // Normaliza la ruta (resuelve "." y "..")
+  const parts = path.split('/').filter(p => p && p !== '.');
+  const stack = [];
+
+  for (let part of parts) {
+    if (part === '..') {
+      stack.pop();
     } else {
-      const newPath = currentPath + (currentPath === '/' ? '' : '/') + dirName + '/';
-      const dir = getDir(newPath);
-      if (dir && dir.type === 'dir') {
-        currentPath = newPath;
-      } else {
-        print(`No such directory: ${dirName}`);
-      }
+      stack.push(part);
     }
   }
+
+  const normalizedPath = '/' + stack.join('/') + '/';
+
+  const dir = getDir(normalizedPath);
+  if (dir && dir.type === 'dir') {
+    currentPath = normalizedPath;
+  } else {
+    print(`No such directory: ${dirName}`);
+  }
+}
+
 
   function showFile(fileName) {
     if (!fileName) {

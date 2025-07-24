@@ -36,10 +36,10 @@ export const site: SiteConfig = {
    */
   nav: [
     { title: 'Home', path: '/', icon: 'home' },
+    { title: 'Projects', path: '/projects/', icon: 'link' },
     { title: 'Blog', path: '/archives/', icon: 'archive' },
     { title: 'Categories', path: '/categories/', icon: 'folder' },
     { title: 'Tags', path: '/tags/', icon: 'tag' },
-    { title: 'Projects', path: '/projects/', icon: 'link' },
     
   ],
 
@@ -100,13 +100,13 @@ export const site: SiteConfig = {
    */
   footer: {
     //  
-    buildtime: '2025-05-01T10:00:00', // 站点构建时间，推荐使用ISO 8601标准格式(YYYY-MM-DDTHH:MM:SS)
+    buildtime: '2025-05-01T10:00:00', 
 
     // COPYRIGHT CC
     copyright: {
-      enabled: true, // 是否启用版权信息
-      startYear: 2025, // 可选：起始年份，如设置为2024，则显示2024-2025
-      customText: '' // 可选：自定义版权文本，如为空则使用默认格式
+      enabled: true, 
+      startYear: 2025, 
+      customText: '' 
     },
   }
 }

@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import btn1 from '/src/images/88x31/banner1.gif';
+import btn2 from '/src/images/88x31/banner2.gif';
+import btn3 from '/src/images/88x31/banner3.gif';
+import btn4 from '/src/images/88x31/banner4.gif';
+---
+
+<style>
+#vinyl-gallery * {
+    all: unset;
+  }
+ 
+  #vinyl-gallery {
+    all: initial!important;
+    width: 100%!important;
+    height: 230px!important;
+    margin: 30px 0!important;
+    display: flex!important;
+    flex-direction: row !important;
+    position: relative!important;
+    margin-left: -6px!important;
+    justify-content: center !important;
+  }
+ 
+  #vinyl-gallery .vinyl {
+      all:unset!important;
+    perspective: 500px !important;
+    width: 18px!important;
+    transition: width 0.5s!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover {
+    width: 148px!important;
+  }
+ 
+  #vinyl-gallery img {
+      all:unset!important;
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s!important;
+    width: 180px!important;
+    height: 180px!important;
+    transform: rotateX(0deg) rotateY(25deg)!important;
+    transform-style: preserve-3d!important;
+    border-radius: 4px!important;
+    border: 2px solid rgba(0, 0, 0, 0.1)!important;
+object-fit: cover!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover img {
+    transform: rotateX(0deg) rotateY(10deg)!important;
+    width: 188px!important;
+    height: 188px!important;
+    margin-top: -2px!important;
+  }
+ 
+  #vinyl-gallery .title {
+    color: #000000;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    padding-left: 6px;
+  }
+ 
+  #vinyl-gallery .vinyl:nth-child(n):hover + .title {
+    visibility: visible;
+  }
+
+</style>
+<div id="vinyl-gallery">
+  <div class="vinyl">
+    <Image src={btn1} alt="NixOS button" />
+  </div>
+  <div class="title">Artist - Album</div>
+
+  <div class="vinyl">
+    <Image src={btn2} alt="NixOS button" />
+  </div>
+  <div class="title">Artist - Album</div>
+
+  <div class="vinyl">
+    <Image src={btn3} alt="NixOS button" />
+  </div>
+  <div class="title">Artist - Album</div>
+
+  <div class="vinyl">
+    <Image src={btn4} alt="NixOS button" />
+  </div>
+  <div class="title">Artist - Album</div>
+
+  <!-- Repite según sea necesario -->
+</div>

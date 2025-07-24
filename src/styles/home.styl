@@ -8,7 +8,6 @@
   opacity: 0;
 }
 
-// 为不同的卡片设置不同的延迟
 .glass-card:nth-child(1) { animation-delay: 0.1s; }
 .glass-card:nth-child(2) { animation-delay: 0.2s; }
 .glass-card:nth-child(3) { animation-delay: 0.3s; }
@@ -52,6 +51,10 @@ html, body {
   justify-content: center;
 }
 
+.textHeader {
+  margin-top: -35px;
+}
+
 .Hometitle {
   font-size: 3.0rem;
   display: flex;
@@ -70,17 +73,18 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     }
 
 .Homesubtitle {
-   display: flex
+  display: flex
   justify-content: center !important
   align-items: center
   flex-wrap: wrap
   gap: 15px
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
   font-size: 1.5rem;
   font-family: "Pixelify Sans", sans-serif;
+  margin-top: -10px;
 }
 
 // Wrapper para centrar el bloque
@@ -98,7 +102,6 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   border-radius 1rem
   box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
   color #f0f0f0
-  font-family 'Fira Code', monospace
   font-size 0.95rem
   overflow visible
   transition all 0.3s ease
@@ -126,10 +129,18 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
         rgba(255, 255, 255, 0.2))
       border-radius: 2px
     }
-    
+
+    .timeline-item h4 {
+      font-family: 'Pixelify Sans', sans-serif;
+      padding-bottom: 4px;
+    }
+
     .timeline-item {
       position: relative
       margin-bottom: 2rem
+      line-height: 1.55;
+      font-family: sans;
+      font-family: 'Inter', sans-serif;
       
       &::before {
         content: ""
@@ -148,7 +159,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .pokeBlue
   position absolute
   top -25px
-  right -25px
+  right 0px
   width 90px
   height auto
   opacity 0.9
@@ -159,9 +170,9 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .pokeRed
   position absolute
-  top -25px
-  left -25px  
-  width 95px
+  top -20px
+  right -25px
+  width 100px
   height auto
   opacity 0.9
   z-index 10
@@ -172,8 +183,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .vimSkills
   position absolute
   top -25px
-  right -25px
-  width 110px
+  left -25px  
+  width 88px
   height auto
   opacity 0.9
   z-index 10
@@ -184,8 +195,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .categorySkills {
       background: rgba(255, 255, 255, 0);
-      padding: .7rem 0rem;
-      margin-bottom: 0;
+      margin-bottom: 0.7rem;
+      margin-left: -10px;
       border-radius: 16px;
     }
 
@@ -219,7 +230,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .targets-container {
   display: flex;
-  gap: 1rem; /* Equivale a Tailwind's gap-4 */
+  gap: 1rem; 
   text-decoration: none !important;
   }
 
@@ -229,13 +240,19 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .targets-container a img {  
   text-decoration: none !important;
-  width: 13rem; /* Tailwind w-52 → 208px */
+  width: 13rem; 
   height: auto;
-  border-radius: 0.5rem; /* Tailwind rounded */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind shadow */
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   border: none;
   text-decoration: none;
+}
+
+// BLOG SECTION
+
+.containerNewsletter {
+  margin-top: 50px;
 }
 
 //BUTTON
@@ -253,20 +270,20 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .blockSpan2 {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1rem;
-   background: linear-gradient(-90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
-    float: right; 
+    float: left; 
 }
 
 .blockSpan3 {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    float: left;
+    float: right;
 }
 
 .buttonHome {
@@ -302,8 +319,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 
 .portfolio-button .arrow
-    font-size 1.2em // Make the arrow slightly larger than the text
-    margin-left 4px // Small margin to separate from text
+    font-size 1.2em 
+    margin-left 4px
 
 // Avatar pokemon
 
@@ -335,28 +352,29 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     padding 1.2rem
 
   .vimSkills 
-    width 70px
+    width 60px
+    top -10px
+    left -5px
 
   .pokeBlue
-    width 50px
-    top -20px
-    right -20px
+    width 60px
+    top -10px
+    right 0px
 
   .pokeRed
-    width 57px
-    top -15px
-    right -15px 
-    margin-left: 5px; 
+    width 60px
+    top -10px
+    right 0px
  
 
   .Hometitle h1
     font-size 3.8rem
 
+  .containerNewsletter
+   margin-top: 50px;
+  
+
 @media (max-width: 480px)
-
-  .contentHome {
-  }
-
   .blockSpan { 
    font-size: .8rem; 
   }
@@ -380,19 +398,23 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     padding 1rem
 
   .vimSkills
-    margin-right: 5px;
+    width: 50px;
+
 
   .pokeBlue
     width 50px
-    top -15px
-    right -15px
-    margin-right: 5px;
+    top -10px
+    right 0px
     
    .pokeRed
     width 55px
-    top -12px
-    right -12px
-    margin-left: 15px; 
+    top -10px
+    right 0px
+
+  .targets-container a img 
+    width: 9rem; 
+  
+
 
   .Hometitle h1
     font-size 4.8rem
