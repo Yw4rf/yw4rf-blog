@@ -27,10 +27,6 @@
   li {
     margin: 4px 8px
     flex-shrink: 0
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text;
   }
 
   // 搜索按钮特殊样式
@@ -42,6 +38,13 @@
     &:hover {
       color: var(--color-primary)
     }
+  }
+
+  .SearchSpan {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text;
   }
 }
 
@@ -264,11 +267,14 @@ nav {
 
 // 在768px以下才完全隐藏原导航栏，显示移动端菜单
 @media (max-width: 768px) {
-  .nav {
-    background: none !important
+  .cuteFace {
+    background: none
     -webkit-background-clip: initial
     -webkit-text-fill-color: initial
     background-clip: initial
+  }
+
+  .nav {
     color: white
     width: 100%
     margin: 10px auto
@@ -303,10 +309,6 @@ nav {
       opacity: 0
       transform: translateX(-50%) translateY(-15px) scale(0.9)
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)
-      background: none
-    -webkit-background-clip: initial
-    -webkit-text-fill-color: initial
-    background-clip: initial
       
       &.active {
         display: flex !important
@@ -358,6 +360,10 @@ nav {
       opacity: 0
       transform: translateY(15px)
       animation: mobileMenuItemSlideIn 0.3s ease-out forwards
+      background: none
+      -webkit-background-clip: initial
+      -webkit-text-fill-color: initial
+      background-clip: initial
       
       &:nth-child(1) { animation-delay: 0.1s }
       &:nth-child(2) { animation-delay: 0.15s }
