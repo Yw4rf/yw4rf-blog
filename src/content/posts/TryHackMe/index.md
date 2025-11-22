@@ -11,9 +11,37 @@ tags:
   - Reverse Shell
   - CVE Privesc
   - Linux
+  - TEST1
+  - TEST2
+  - TEST3
+  - TEST4
+  - TEST5
+  - TEST6
+  - TEST7
+  - TEST8
+  - TEST9
+  - TEST10
+  - TEST11
+  - TEST12
+  - TEST13
+  - TEST14
+  - TEST15
+  - TEST16
+  - TEST17
+  - TEST18
+  - TEST19
+  - TEST20
+  - TEST21
+  
 categories:
     - TryHackMe
     - WriteUp
+    - Test1
+    - Test2 
+    - Test3
+    - Test4
+    - Test5
+    - Test6
 date: 2024-11-06
 updated: 2024-11-06
 abbrlink: whiterose

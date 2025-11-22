@@ -44,7 +44,7 @@
     "@expressive-code/plugin-line-numbers": "^0.41.2",
     "@fancyapps/ui": "^6.0.5",
     "animejs": "^4.0.2",
-    "astro": "^5.10.1",
+    "astro": "^5.16.0",
     "astro-expressive-code": "^0.41.2",
     "astro-pagefind": "^1.8.3",
     "astro-seo": "^0.8.4",
@@ -60,6 +60,7 @@
     "remark-toc": "^9.0.0",
     "remove-markdown": "^0.6.2",
     "sanitize-html": "^2.17.0",
+    "sharp": "^0.34.5",
     "simple-icons": "^15.3.0",
     "stylus": "^0.64.0",
     "vue": "^3.5.17"

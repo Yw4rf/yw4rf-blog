@@ -15,8 +15,12 @@ import pagefind from "astro-pagefind";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import timestampIntegration from './src/integrations/timestamp-integration.mjs';
-// https://astro.build/config
+import { defineConfig, passthroughImageService } from "astro/config";
+
 export default defineConfig({
+    image: {
+        service: passthroughImageService(),
+    },
     build: {
       format: "directory",
     },    site: config_site.url,
@@ -111,7 +115,7 @@ export default defineConfig({
           }
         }
     },
-    // 禁用开发工具栏
+   // 禁用开发工具栏
     devToolbar: {
         enabled: false,
     },    markdown: {

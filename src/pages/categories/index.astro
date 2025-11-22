@@ -4,8 +4,9 @@ import { config_site } from '../../utils/config-adapter';
 import { processFrontmatter } from '../../integrations/process-frontmatter';
 import { extractFlatCategories, sortCategoriesByCount } from '../../utils/category-utils';
 import CategoriesLayout from '../../layouts/CategoriesLayout.astro';
+import TagsLayout from '../../layouts/TagsLayout.astro';
 
-// 获取文章集合
+// CATEGORIES
 const allPosts = await getCollection('posts');
 const processedPosts = await Promise.all(allPosts.map(post => processFrontmatter(post)));
 
@@ -15,8 +16,51 @@ const sortedCategories = sortCategoriesByCount(categories);
 
 // 页面标题
 const pageTitle = 'Categories | ' + config_site.siteName;
+
+
+// TAGS
+const posts = await Promise.all(allPosts.map(post => processFrontmatter(post)));
+
+// 提取所有标签并计算数量
+const tagCounts: Record<string, number> = {};
+posts.forEach(post => {
+  const tags = post.data.tags || [];
+  tags.forEach((tag: string) => {
+    if (tag.trim()) {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    }
+  });
+});
+// 转换为排序后的数组
+const sortedTags = Object.entries(tagCounts)
+  .sort(([, countA], [, countB]) => countB - countA) // 按数量降序排序
+  .map(([tag, count]) => ({ tag, count }));
 ---
 
+<TagsLayout
+  title={pageTitle}
+  description="Explore articles by topic tags."
+  url={config_site.url + '/tags/'}
+  noindex={false}
+>
+  <Fragment slot="header">
+    <h1 class="page-title">Tags</h1>
+    <p class="page-description">Explore articles by topic tags.</p>
+  </Fragment>
+  
+  <div slot="content" class="tags-cloud">
+    {sortedTags.length > 0 ? (
+      sortedTags.map(({ tag, count }) => (
+        <a href={`/tags/${tag}/`} class="tag-item" data-count={count}>
+          <span class="tag-name">{tag}</span>
+          <span class="tag-count">{count}</span>
+        </a>
+      ))
+    ) : (
+      <div class="no-tags">No tags</div>
+    )}
+  </div>
+</TagsLayout>
 <CategoriesLayout 
   title={pageTitle}
   description="Browse all articles, indexed by topic."
