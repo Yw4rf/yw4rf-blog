@@ -6,6 +6,7 @@ body {
 
 .tags-layout-container {
   max-width: 1200px
+  width: 75%
   margin: 0 auto
   padding: 2rem 1rem
   min-height: calc(100vh - 200px)
@@ -14,6 +15,8 @@ body {
 .page-header {
   text-align: center
   margin-bottom: 3rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07)
   
   .page-title {
     display: flex
@@ -28,6 +31,10 @@ body {
     font-family: 'Pixelify Sans', 'Fira Code';
   }
   
+  .container-description {
+    margin-top: -10px
+  }
+
   .page-description {
     font-size: 1.1rem
     color: rgba(255, 255, 255, 0.8)
@@ -51,7 +58,8 @@ body {
     text-decoration: none
     transition: all 0.3s ease
     font-size: 0.9rem
-    
+    margin-top: -14px
+
     &:hover {
       background-color: rgba(1, 162, 190, 0.2)
       transform: translateY(-2px)
@@ -75,7 +83,7 @@ body {
   display: flex
   align-items: center
   padding: 0.5rem 1rem
-  background rgba(0, 0, 0, 0.18)
+  background rgba(5, 5, 5, 0.18)
   border-radius 2rem
   box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
   color #f0f0f0

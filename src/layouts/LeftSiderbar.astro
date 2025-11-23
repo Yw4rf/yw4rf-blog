@@ -53,16 +53,16 @@ import '../styles/layouts/LeftSidebar.styl';
                 <div class="author-info">
                     <h2 class="author-name">{config_site.author}</h2>
                     <p class="author-description">{config_site.description}</p>
+                    <SocialLinks mediaLinks={config_site.medialinks.slice(0, 3)} /> 
                 </div>
         </div>
-    </div>
+    </div><!--
         <div class="sidebar-section fade-in-left delay-200">
-            <SocialLinks mediaLinks={config_site.medialinks.slice(0, 4)} /> <!-- 限制显示数量 -->
         </div>
         
-        <!-- 使用解耦的随机文章组件 -->
+        
         <RandomPosts count={5} delay="delay-300" />
-        <!-- 文章分类已迁移至右侧边栏 -->
+          -->
 </sidebar>
 
 <script>

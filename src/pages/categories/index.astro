@@ -45,26 +45,3 @@ const sortedTags = Object.entries(tagCounts)
   categories={sortedCategories}
   noIndex={false}
 />
-<TagsLayout
-  title={pageTitle}
-  description="Explore articles by topic tags."
-  url={config_site.url + '/tags/'}
-  noindex={false}
->
-  <Fragment slot="header">
-     <p class="page-description">Explore articles by topic tags.</p>
-  </Fragment>
-  
-  <div slot="content" class="tags-cloud">
-    {sortedTags.length > 0 ? (
-      sortedTags.map(({ tag, count }) => (
-        <a href={`/tags/${tag}/`} class="tag-item" data-count={count}>
-          <span class="tag-name">{tag}</span>
-          <span class="tag-count">{count}</span>
-        </a>
-      ))
-    ) : (
-      <div class="no-tags">No tags</div>
-    )}
-  </div>
-</TagsLayout>

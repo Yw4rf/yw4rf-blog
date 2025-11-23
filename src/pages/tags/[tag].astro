@@ -4,6 +4,7 @@ import { config_site } from '../../utils/config-adapter';
 import { processFrontmatter } from '../../integrations/process-frontmatter';
 import dayjs from 'dayjs';
 import TagsLayout from '../../layouts/TagsLayout.astro';
+import Header from '../../components/Header.astro';
 
 export async function getStaticPaths() {
   // 获取所有文章并处理frontmatter
@@ -47,7 +48,7 @@ const sortedPosts = taggedPosts.sort((a, b) => {
 });
 
 // 页面标题
-const pageTitle = `标签: ${tag} | ${config_site.siteName}`;
+const pageTitle = `Tag: ${tag} | ${config_site.siteName}`;
 ---
 
 <TagsLayout
@@ -67,8 +68,10 @@ const pageTitle = `标签: ${tag} | ${config_site.siteName}`;
       </span>
       {tag}
     </h1>
+    <div class="container-description">
     <p class="page-description">Found {sortedPosts.length} related articles</p>
     <a href="/tags/" class="back-link">Back to Tags</a>
+    </div>
     </div>
   </Fragment>
   
@@ -100,7 +103,7 @@ const pageTitle = `标签: ${tag} | ${config_site.siteName}`;
         ))}
       </ul>
     ) : (
-      <div class="no-posts">未找到与标签 "{tag}" 相关的文章</div>
+      <div class="no-posts">No hay articulos para el tag: "{tag}"</div>
     )}
   </div>
 </TagsLayout>

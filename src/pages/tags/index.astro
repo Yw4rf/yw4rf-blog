@@ -61,11 +61,3 @@ const sortedTags = Object.entries(tagCounts)
     )}
   </div>
 </TagsLayout>
-<CategoriesLayout 
-  title={pageTitle}
-  description="Browse all articles, indexed by topic."
-  author={config_site.author || ''}
-  url={config_site.url + '/categories/'}
-  categories={sortedCategories}
-  noIndex={false}
-/>

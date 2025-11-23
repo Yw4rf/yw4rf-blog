@@ -73,59 +73,64 @@ const sortedYears = Object.keys(archivesByYearMonth)
         <p class="page-description">A space to share experiences in hacking, security, indie game development, networking, and other geeky/technical stuff ({totalPostsCount} Posts）</p>
       </div>
 
+      
       <div class="timeline-container">
-        {sortedYears.length > 0 ? (
-          sortedYears.map(year => (
-            <div class="year-section">
-              {Object.keys(archivesByYearMonth[year])
-                .map(Number)
-                .sort((a, b) => b - a) 
-                .map(month => (
-                <div class="month">
-  <ul class="post-list">
-    {archivesByYearMonth[year][month].map(post => (
-      <li class="post-item">
-        <a href={`/posts/${post.data.abbrlink}/`} class="post-entry"> 
-          <div class="post-content">
-            <span class="post-title">{post.data.title}</span>
-                 <div class="post-metadata">
-                              
-  {/* Descripción */}
-  <span class="post-description-similar">{post.data.description || 'No hay descripción disponible'}</span>
+  {sortedYears.length > 0 ? (
+    sortedYears.map(year => (
+      <div class="year-section">
+        {Object.keys(archivesByYearMonth[year])
+          .map(Number)
+          .sort((a, b) => b - a) 
+          .map(month => (
+            <div class="month">
+          
+              <ul class="post-list">
+                {archivesByYearMonth[year][month].map(post => (
+                  <li class="post-item">
+                    <div class="post-entry"> 
+                      <div class="post-content">
+                        
+                        {/* Fecha arriba, como en el estilo deseado */}
+                        <span class="post-date-top">
+                          <span class="date-icon">🕒</span> 
+                          {dayjs(post.data.date).format('MMMM DD, YYYY')}
+                        </span>
 
-  <span class="post-date">📅 {dayjs(post.data.date).format('YYYY-MM-DD')}</span>
-
-  {/* Contenedor de CATEGORÍAS limitado a 2 */}
-  {post.data.categories && post.data.categories.length > 0 && (
-    <div class="post-categories-container"> 📂
-      {post.data.categories.slice(0, 2).map((category: string) => (
-        <span class="post-category">{category}</span>
-      ))}
-    </div>
-  )}
-
-  {/* Contenedor de etiquetas limitado a 4 */}
+                        <span class="post-title"><a href={`/posts/${post.data.abbrlink}/`}>{post.data.title}</a></span>
+                             
+                      <div class="post-metadata">
+                          
+  {/* Contenedor de etiquetas */}
   {post.data.tags && post.data.tags.length > 0 && (
-    <div class="post-tags-container"> 🏷️
-      {post.data.tags.slice(0, 3).map((tag: string) => (
-        <span class="post-tag">#{tag} </span>
+    <div class="post-tags-container">
+      <div class="post-tag-title">tags:  
+      {post.data.tags.slice(0, 4).map((tag: string) => (
+        <span class="post-tag">
+          <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">🏷️ {tag}</a>
+        </span>
       ))}
+      </div>
     </div>
   )}
+                          
 </div>
-          </div>
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
-              ))}
+                        
+                        {/* ¡¡¡ESTO ES LO IMPORTANTE!!!: La descripción como un bloque de texto separado */}
+                        <span class="post-description-similar">{post.data.description || 'No hay descripción disponible'}</span>
+                        
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))
-        ) : (
-          <div class="no-posts">No posts</div>
-        )}
+          ))}
       </div>
+    ))
+  ) : (
+    <div class="no-posts">No posts</div>
+  )}
+</div>
 
       <div id="lazyload-observer" class="lazyload-observer">
         <div class="loading-spinner">

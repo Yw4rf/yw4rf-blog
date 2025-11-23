@@ -2,8 +2,8 @@
   display: flex
   justify-content: center
   align-items: center
-  margin: 25px auto
-  width: 90%
+  margin: 5px auto
+  width: 100%
   max-width: 800px
   
   ul {
@@ -13,7 +13,7 @@
     list-style: none
     padding: 0
     margin: 0
-    gap: 10px
+    gap: 5px
   }
   
   li {
@@ -24,17 +24,19 @@
     display: flex
     align-items: center
     justify-content: center
-    width: 40px
-    height: 40px
-    border-radius: 50%
+    width: 25px
+    height: 25px
+    border-radius: 20%
     transition: all 0.3s ease
-    color: #ffffff
+    color: #000000ff
     text-decoration: none
-    background-color: rgba(0, 0, 0, 0.18)
+    background: #81E6D9
     
     &:hover {
       transform: translateY(-3px)
-      background-color: rgba(255, 255, 255, 0.2)
+      background:rgb(118, 193, 177)
+      animation: buttonGlow 1.5s ease-in-out infinite
+      box-shadow: 0 0 10px rgba(71, 71, 71, 0.35), 0 0 20px rgba(137, 215, 198, 0.5)
     }
   }
   
@@ -64,8 +66,8 @@
 /* 添加svg图标的样式 */
 .icon-container {
   svg {
-    width: 24px
-    height: 24px
+    width: 13px
+    height: 13px
     font-size: 1.5rem
   }
 }

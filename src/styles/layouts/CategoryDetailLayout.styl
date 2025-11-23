@@ -3,19 +3,33 @@
 // 容器样式
 .category-detail-container {
   max-width: 1200px
+  width: 75%
   margin: 0 auto
   padding: 2rem 1rem
   min-height: calc(100vh - 200px)
 }
 
+.page-title {
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 3.5rem
+    margin-bottom: 1rem
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    font-family: 'Pixelify Sans', 'Inter';
+}
+
 // 页面标题部分
 .page-header {
+  text-align: center
   margin-bottom: 2.5rem
   position: relative
   padding-bottom: 1rem
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07)
     .page-title {
-    font-size: 1.8rem
     margin-bottom: 0.5rem
     display: flex
     align-items: center
@@ -31,23 +45,26 @@
       font-weight: 500
     }
   }
-  
+
   .page-description {
-    font-size: 1rem
-    color: rgba(255, 255, 255, 0.7)
+    font-size: 1.1rem
+    color: rgba(255, 255, 255, 0.8)
     margin-bottom: 0.5rem
   }
   
   .back-link {
-    font-size: 0.9rem
-    color: rgba(255, 255, 255, 0.6)
-    text-decoration: none
     display: inline-block
-    transition: all 0.2s ease
+    padding: 0.4rem 1rem
+    border-radius: 2rem
+    background-color: rgba(255, 255, 255, 0.1)
+    color: #ffffff
+    text-decoration: none
+    transition: all 0.3s ease
+    font-size: 0.9rem
     
     &:hover {
-      color: rgba(1, 162, 190, 0.9)
-      text-decoration: underline
+      background-color: rgba(1, 162, 190, 0.2)
+      transform: translateY(-2px)
     }
   }
 }
@@ -55,6 +72,10 @@
 // 文章列表容器
 .post-list-container {
   position: relative
+}
+
+.post-list-container slot{
+  background-color: rgba(94, 255, 0, 1)
 }
 
 // 响应式布局
