@@ -12,6 +12,7 @@ categories:
     - TryHackMe
     - WriteUp
 date: 2024-11-12
+description: "hola soy un BAC Xd"
 updated: 2024-11-12
 abbrlink: bac
 ---

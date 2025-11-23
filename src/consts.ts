@@ -37,7 +37,7 @@ export const site: SiteConfig = {
   nav: [
     { title: 'Home', path: '/', icon: 'home' },
     { title: 'Blog', path: '/archives/', icon: 'archive' },
-    { title: 'Tags', path: '/categories/', icon: 'tag' },
+    { title: 'Categories', path: '/categories/', icon: 'tag' },
     { title: 'Projects', path: '/projects/', icon: 'link' },
     
   ],

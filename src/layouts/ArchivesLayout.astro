@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 
 import { Image } from "astro:assets";
 import GifBlog from "../images/gif/blog-section2.gif";
-
+import Button88x31 from '../components/others/88x31.astro'
 
 interface Props {
   pageTitle: string;  
@@ -52,7 +52,8 @@ const sortedYears = Object.keys(archivesByYearMonth)
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 <!DOCTYPE html>
-<html lang={config_site.lang}>  <Head
+<html lang={config_site.lang}>
+  <Head
     title={pageTitle}
     description={description}
     author={config_site.author}
@@ -76,24 +77,43 @@ const sortedYears = Object.keys(archivesByYearMonth)
         {sortedYears.length > 0 ? (
           sortedYears.map(year => (
             <div class="year-section">
-              <div class="year-header">
-                <h2 class="year-title">{year}</h2>
-                <div class="year-count">
-                  {Object.values(archivesByYearMonth[year]).flat().length} Posts
-                </div>
-              </div>
               {Object.keys(archivesByYearMonth[year])
                 .map(Number)
-                .sort((a, b) => b - a) // 月份降序排列
+                .sort((a, b) => b - a) 
                 .map(month => (
-                <div class="month-section">
-  <h3 class="month-title">{dayjs(`${month}`, 'M').format('MMMM')}</h3>
+                <div class="month">
   <ul class="post-list">
     {archivesByYearMonth[year][month].map(post => (
       <li class="post-item">
-        <a href={`/posts/${post.data.abbrlink}/`} class="post-entry">
-          <span class="post-date">{dayjs(post.data.date).format('YYYY-MM-DD')}</span>
-          <span class="post-title">{post.data.title}</span>
+        <a href={`/posts/${post.data.abbrlink}/`} class="post-entry"> 
+          <div class="post-content">
+            <span class="post-title">{post.data.title}</span>
+                 <div class="post-metadata">
+                              
+  {/* Descripción */}
+  <span class="post-description-similar">{post.data.description || 'No hay descripción disponible'}</span>
+
+  <span class="post-date">📅 {dayjs(post.data.date).format('YYYY-MM-DD')}</span>
+
+  {/* Contenedor de CATEGORÍAS limitado a 2 */}
+  {post.data.categories && post.data.categories.length > 0 && (
+    <div class="post-categories-container"> 📂
+      {post.data.categories.slice(0, 2).map((category: string) => (
+        <span class="post-category">{category}</span>
+      ))}
+    </div>
+  )}
+
+  {/* Contenedor de etiquetas limitado a 4 */}
+  {post.data.tags && post.data.tags.length > 0 && (
+    <div class="post-tags-container"> 🏷️
+      {post.data.tags.slice(0, 3).map((tag: string) => (
+        <span class="post-tag">#{tag} </span>
+      ))}
+    </div>
+  )}
+</div>
+          </div>
         </a>
       </li>
     ))}
@@ -107,7 +127,6 @@ const sortedYears = Object.keys(archivesByYearMonth)
         )}
       </div>
 
-      <!-- 懒加载指示器 -->
       <div id="lazyload-observer" class="lazyload-observer">
         <div class="loading-spinner">
           <span class="dot"></span>

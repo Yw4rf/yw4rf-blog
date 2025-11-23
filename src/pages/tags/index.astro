@@ -2,10 +2,23 @@
 import { getCollection } from 'astro:content';
 import { config_site } from '../../utils/config-adapter';
 import { processFrontmatter } from '../../integrations/process-frontmatter';
+import { extractFlatCategories, sortCategoriesByCount } from '../../utils/category-utils';
+import CategoriesLayout from '../../layouts/CategoriesLayout.astro';
 import TagsLayout from '../../layouts/TagsLayout.astro';
 
-// 获取文章集合并处理frontmatter
+// CATEGORIES
 const allPosts = await getCollection('posts');
+const processedPosts = await Promise.all(allPosts.map(post => processFrontmatter(post)));
+
+// 获取所有分类并按文章数量排序
+const categories = extractFlatCategories(processedPosts);
+const sortedCategories = sortCategoriesByCount(categories);
+
+// 页面标题
+const pageTitle = 'Categories | ' + config_site.siteName;
+
+
+// TAGS
 const posts = await Promise.all(allPosts.map(post => processFrontmatter(post)));
 
 // 提取所有标签并计算数量
@@ -18,14 +31,10 @@ posts.forEach(post => {
     }
   });
 });
-
 // 转换为排序后的数组
 const sortedTags = Object.entries(tagCounts)
   .sort(([, countA], [, countB]) => countB - countA) // 按数量降序排序
   .map(([tag, count]) => ({ tag, count }));
-
-// 页面标题
-const pageTitle = 'Tags | ' + config_site.siteName;
 ---
 
 <TagsLayout
@@ -52,4 +61,11 @@ const pageTitle = 'Tags | ' + config_site.siteName;
     )}
   </div>
 </TagsLayout>
-
+<CategoriesLayout 
+  title={pageTitle}
+  description="Browse all articles, indexed by topic."
+  author={config_site.author || ''}
+  url={config_site.url + '/categories/'}
+  categories={sortedCategories}
+  noIndex={false}
+/>

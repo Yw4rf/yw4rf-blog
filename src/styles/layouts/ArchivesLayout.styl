@@ -1,25 +1,17 @@
 body {
   font-family: 'Inter', sans-serif;
-}
-
-.gifBlog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 45px;
-  margin-bottom: 20px;
-}
-
-.gifBlog img{
-  width: 40%;
-  height: auto
+  margin-bottom: 35px
 }
 
 .archives-container {
-  max-width: 1000px
-  margin: 0 auto
-  padding: 0rem 1rem
-  min-height: calc(100vh - 200px)
+  width: 63%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-header {
@@ -44,92 +36,177 @@ body {
   }
 }
 
-.year-section {
-  margin-bottom: 3rem
-  position: relative
-  animation: fadeIn 0.6s ease forwards
-  opacity: 0
-}
+// ESTILOS DE ARCHIVOS MODIFICADOS (Sintaxis Stylus Pura)
 
-.year-header {
+.year-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background rgba(0, 0, 0, 0.18)
+  border-radius 1rem
+  box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+  margin-top: 2rem
+  padding-bottom: 0.25rem
+
+.year-title
+  font-size: 1.5rem
+  font-weight: 600
+
+.month-title
+  margin-top: 1rem
+  font-size: 1rem
+  color: #ccc
+  font-family: 'Pixelify Sans', monospace
+
+.post-list
+  list-style: none
+  padding-left: 0
+  margin-top: 0.5rem
+
+.post-item
+  margin: 1rem 0
+
+.post-entry
+  display: block
+  padding: 1.25rem 1.5rem  
+  background rgba(0, 0, 0, 0.18)
+  border-radius 1rem
+  box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+  text-decoration: none
+  transition: background 0.2s ease
+  font-family: 'Inter', sans-serif
+  color: #eee
+
+  &:hover
+    background: rgba(255, 255, 255, 0.06) 
+
+.post-content
+  display: block
+
+.post-title
+  font-weight: 700 
+  font-size: 1.2rem 
+  color: #f0f0f0 
+  margin-bottom: 0.5rem 
+  display: block 
+  text-align: left
+
+.post-metadata
   display: flex
   align-items: center
-  margin-bottom: 1.5rem
-}
+  flex-wrap: wrap
 
-.year-title {
-  font-size: 1.8rem
-  margin: 0
+.post-date
+  font-size: 0.85rem
   color: rgba(78, 186, 163, 0.9)
-}
+  font-weight: 500
+  margin-right: 1.5rem
+  margin-bottom: 0.5rem
+  display: flex
+  margin-top: 12px
 
-.year-count {
-  margin-left: 1rem
-  font-size: 0.9rem
-  padding: 0.3rem 0.8rem
-  background-color: rgba(1, 162, 190, 0.14)
-  border-radius: 1rem
-  color: rgba(255, 255, 255, 0.9)
-}
 
-.month-section {
-  margin-bottom: 2rem
-  position: relative
-}
+// Categories
+.post-categories-container
+  color: rgba(78, 186, 163, 0.9)
+  flex-wrap: wrap
+  gap: 0.5rem
+  margin-bottom: 0.75rem
+  margin-top: 12px
+  margin-right: 1.5rem
 
-.month-title {
-  font-size: 1.2rem
-  margin: 0 0 1rem 0
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.2)
-  padding-bottom: 0.5rem
-  font-family: 'Pixelify Sans', sans-serif;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
-}
+.post-category
+  padding-right: 0.6rem  
 
-.post-list {
-  list-style: none
-  padding: 0
-  margin: 0
-}
+// Tags
+.post-tags-container
+  color: rgba(78, 186, 163, 0.9)
+  flex-wrap: wrap
+  gap: 0.5rem
+  margin-top: 0
+  margin-bottom: 0.75rem
+  display: flex
+  margin-top: 12px
 
-.post-date {
-  min-width: 100px
+.post-tag
+  font-size: 0.75rem
+  font-weight: 500
+  color: #fff
+  background-color: rgba(78, 186, 163, 0.2)
+  border: 1px solid rgba(78, 186, 163, 0.5)
+  padding: 0.2rem 0.6rem
+  border-radius: 4px
+  line-height: 1
+
+// Descripción
+.post-description-similar
   font-size: 0.9rem
   color: rgba(255, 255, 255, 0.6)
-  margin-right: 1rem
-}
-
-.post-link {
-  color: rgba(255, 255, 255, 0.9)
-  text-decoration: none
-  transition: all 0.2s ease
-  position: relative
+  display: -webkit-box
+  -webkit-line-clamp: 6 
+  -webkit-box-orient: vertical
   overflow: hidden
-  display: inline-block
+  text-overflow: ellipsis
+  width: 100%
+  max-width: 100%
+
+// Media Queries (Sintaxis corregida)
+@media (max-width: 768px)
+  .gifBlog img
+    width: 65%
+    height: auto
+
+  .archives-container
+    padding: 2rem 1.5rem
+    width: 85%
   
-  &::after {
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 1px
-    background-color: rgba(78, 186, 163, 0.9)
-    transform: translateX(-100%)
-    transition: transform 0.3s ease
-  }
-  
-  &:hover {
-    color: rgba(78, 186, 163, 0.9)
+  .page-header
+    margin-bottom: 2rem
     
-    &::after {
-      transform: translateX(0)
-    }
-  }
-}
+    .page-title
+      font-size: 3rem
+    
+    .page-description
+      font-size: 1rem
+  
+  .year-title
+    font-size: 1.6rem
+  
+  .month-title
+    font-size: 1.2rem
+
+  .post-entry
+    padding: 1rem
+
+  .post-title
+    font-size: 1.1rem
+
+  .post-date
+    margin-right: 0.75rem
+
+  .post-description-similar
+    -webkit-line-clamp: 3
+
+@media (max-width: 480px)
+  .gifBlog img
+    width: 90%
+    height: auto
+
+  .archives-container
+    padding: 2rem 1.2rem
+    width: 90%
+
+  .page-header
+    .page-title
+      font-size: 2.5rem
+  
+  .year-title
+    font-size: 1.4rem
+  
+  .month-title
+    font-size: 1.1rem
+
+
 
 .no-posts {
   text-align: center
@@ -205,131 +282,4 @@ body {
     opacity: 1
     transform: translateY(0)
   }
-}
-
-
-// TEMPORAL
-
-.timeline-container
-  padding: 0rem 1rem
-  max-width: 768px
-  margin: auto
-
-.year-header
-  display: flex
-  justify-content: space-between
-  align-items: center
-  border-bottom: 1px solid rgba(255,255,255,0.1)
-  margin-top: 2rem
-  padding-bottom: 0.25rem
-
-.year-title
-  font-size: 1.5rem
-  font-weight: 600
-
-.month-title
-  margin-top: 1rem
-  font-size: 1rem
-  color: #ccc
-  font-family: 'Pixelify Sans', monospace
-
-.post-list
-  list-style: none
-  padding-left: 0
-  margin-top: 0.5rem
-
-.post-item
-  margin: 0.3rem 0
-
-.post-entry
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 0.5rem 0.75rem
-  border-radius: 6px
-  background: rgba(255, 255, 255, 0.03)
-  text-decoration: none
-  transition: background 0.2s ease
-  font-family: 'Inter', sans-serif
-  font-size: 0.9rem
-  color: #eee
-
-  &:hover
-    background: rgba(255, 255, 255, 0.06)
-
-.post-date
-  font-size: 0.8rem
-  color: #aaa
-  flex-shrink: 0
-  margin-right: 1rem
-
-.post-title
-  flex-grow: 1
-  text-align: right
-  font-weight: 500
-
-
-
-
-@media (max-width: 768px) {
-  .gifBlog img{
-  width: 65%;
-  height: auto
-}
-
-  .archives-container {
-    padding: 2rem 1.5rem
-  }
-  
-  .page-header {
-    margin-bottom: 2rem
-    
-    .page-title {
-      font-size: 3rem
-    }
-    
-    .page-description {
-      font-size: 1rem
-    }
-  }
- 
-  .year-title {
-    font-size: 1.6rem
-  }
-  
-  .month-title {
-    font-size: 1.2rem
-  }
-  
-  .post-date {
-    min-width: auto
-    margin-bottom: 0.2rem
-    margin-right: 0
-  }
-}
-
-@media (max-width: 480px) {
-  .gifBlog img{
-  width: 90%;
-  height: auto
-}
-
-  .archives-container {
-    padding: 2rem 1.2rem
-  }
-  
-  .page-header {
-    .page-title {
-      font-size: 2.5rem
-    }
-  }
-  
-  .year-title {
-    font-size: 1.4rem
-  }
-  
-  .month-title {
-    font-size: 1.1rem
-  }
-  
 }

@@ -5,6 +5,7 @@ import { processFrontmatter } from '../../integrations/process-frontmatter';
 import { extractFlatCategories, sortCategoriesByCount } from '../../utils/category-utils';
 import CategoriesLayout from '../../layouts/CategoriesLayout.astro';
 import TagsLayout from '../../layouts/TagsLayout.astro';
+import Button88x31 from '../../components/others/88x31.astro'
 
 // CATEGORIES
 const allPosts = await getCollection('posts');
@@ -36,7 +37,14 @@ const sortedTags = Object.entries(tagCounts)
   .sort(([, countA], [, countB]) => countB - countA) // 按数量降序排序
   .map(([tag, count]) => ({ tag, count }));
 ---
-
+<CategoriesLayout 
+  title={pageTitle}
+  description="Browse all articles, indexed by topic."
+  author={config_site.author || ''}
+  url={config_site.url + '/categories/'}
+  categories={sortedCategories}
+  noIndex={false}
+/>
 <TagsLayout
   title={pageTitle}
   description="Explore articles by topic tags."
@@ -44,8 +52,7 @@ const sortedTags = Object.entries(tagCounts)
   noindex={false}
 >
   <Fragment slot="header">
-    <h1 class="page-title">Tags</h1>
-    <p class="page-description">Explore articles by topic tags.</p>
+     <p class="page-description">Explore articles by topic tags.</p>
   </Fragment>
   
   <div slot="content" class="tags-cloud">
@@ -61,11 +68,3 @@ const sortedTags = Object.entries(tagCounts)
     )}
   </div>
 </TagsLayout>
-<CategoriesLayout 
-  title={pageTitle}
-  description="Browse all articles, indexed by topic."
-  author={config_site.author || ''}
-  url={config_site.url + '/categories/'}
-  categories={sortedCategories}
-  noIndex={false}
-/>
