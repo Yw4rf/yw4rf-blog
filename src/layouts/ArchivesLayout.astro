@@ -83,8 +83,6 @@ const sortedYears = Object.keys(archivesByYearMonth)
           .sort((a, b) => b - a) 
           .map(month => (
             <div class="month">
-              {/* ¡Añadimos el título del mes aquí para seguir el patrón de la imagen! */}
-              <h3 class="month-header">  📅 {dayjs(`${year}-${month}-01`).format('MMMM YYYY')}</h3> 
               <ul class="post-list">
                 {archivesByYearMonth[year][month].map(post => (
                   <li class="post-item">
@@ -100,12 +98,12 @@ const sortedYears = Object.keys(archivesByYearMonth)
                         <span class="post-title"><a href={`/posts/${post.data.abbrlink}/`}>{post.data.title}</a></span>
                              
                       <div class="post-metadata">
-                          
+  <div class="tags-container">
   {/* Contenedor de etiquetas */}
   {post.data.tags && post.data.tags.length > 0 && (
     <div class="post-tags-container">
       <div class="post-tag-title">🏷️ tags:  
-      {post.data.tags.slice(0, 4).map((tag: string) => (
+      {post.data.tags.slice(0, 14).map((tag: string) => (
         <span class="post-tag">
           <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">#{tag}</a>
         </span>
@@ -113,7 +111,21 @@ const sortedYears = Object.keys(archivesByYearMonth)
       </div>
     </div>
   )}
-                          
+  </div>
+  <div class="tags-mobile-container">
+   {/* Contenedor de etiquetas */}
+  {post.data.tags && post.data.tags.length > 0 && (
+    <div class="post-tags-container">
+      <div class="post-tag-title">🏷️ tags:  
+      {post.data.tags.slice(0, 3).map((tag: string) => (
+        <span class="post-tag">
+          <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">#{tag}</a>
+        </span>
+      ))}
+      </div>
+    </div>
+  )}                      
+  </div> 
 </div>
                         
                         {/* ¡¡¡ESTO ES LO IMPORTANTE!!!: La descripción como un bloque de texto separado */}

@@ -5,7 +5,7 @@ body {
 }
 
 .archives-container {
-  width: 73%;
+  width: 72%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -17,10 +17,11 @@ body {
 
 .page-header {
   text-align: center
-  margin-bottom: 3rem
+  margin-bottom: 1.5rem
   
   .page-title {
     font-size: 3.5rem
+    margin-top: 2rem
     margin-bottom: 1rem
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
     -webkit-background-clip: text
@@ -44,11 +45,10 @@ body {
 .month-header // Nuevo encabezado de mes más simple y destacado
   font-size: 1.5rem
   font-weight: 500
-  color: #fff
+  color: rgba(255, 255, 255, 0.8)
   margin-top: 3rem // Separación clara de la sección anterior
   margin-bottom: 0.75rem
-  padding-left: 0.5rem // Para alinearlo con los elementos de la lista
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) // Una línea sutil
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03) // Una línea sutil
   display: block
   font-family: 'Inter', sans-serif
 
@@ -57,33 +57,30 @@ body {
   padding-left: 0
 
 .post-item
-  box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
-  margin-top: 15px
+  margin-top: 10px
 
 .post-entry
   display: flex
   flex-direction: column // Apilamos verticalmente
   padding: 1.5rem 0 // Aumentamos el padding vertical, reducimos el horizontal
   order-bottom: 1px dashed rgba(255, 255, 255, 0.1) // Una línea punteada como separador sutilb
-  background: rgba(0, 0, 0, 0.18)
+  background: transparent
   box-shadow: none // Sin sombra
   text-decoration: none
   transition: background 0.2s ease, padding-left 0.2s ease
   font-family: 'Inter', sans-serif
   color: #f0f0f0
   position: relative // Para la posible línea de tiempo
-  margin: 10px 0
 
   &:hover
     padding-left: 0.5rem // Pequeña animación de desplazamiento a la derecha
 
 .post-content
   display: block
-  padding-left: 1rem // Sangría para el contenido
 
 .post-date-top // Estilo para la fecha encima del título
   font-size: 0.8rem
-  color: #D8F7F1 // Color más tenue
+  color: rgba(255, 255, 255, 0.8) // Color más tenue
   font-weight: 400
   margin-bottom: 0.25rem
   display: flex
@@ -96,28 +93,23 @@ body {
 /* Estilo para todos los enlaces NO visitados */
 .post-title a,
 .post-title a:link {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
+    color: #f0f0f0
 }
 
 /* Estilo para los enlaces visitados */
 .post-title a:visited {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
+    color: #f0f0f0
 }
 
 .post-title a:hover {
-  text-decoration: underline solid rgba(78, 186, 163, 0.9)
-    transition: color 0.2s ease
+    text-decoration: underline dashed rgba(78, 186, 163, 0.9)
+    transition: text-decoration 1s ease
+    animation: 0.5s ease
 }
 
 .post-title
   font-weight: 600 // Menos negrita
-  font-size: 1.5rem // Título más grande
+  font-size: 1.8rem // Título más grande
   color: rgba(78, 186, 162, 1)
   margin-bottom: 0.75rem
   display: block
@@ -132,6 +124,9 @@ body {
   display: none // Opcional: ocultamos los elementos que no queremos del diseño anterior
 
 // Tags - Hacemos que se parezcan más a texto plano
+.tags-mobile-container 
+  display: none
+
 .post-tags-container
   display: flex
   flex-wrap: wrap
@@ -172,8 +167,8 @@ body {
 
 // Descripción
 .post-description-similar
-  font-size: 0.9rem
-  color: #D8F7F1
+  font-size: 1rem
+  color: rgba(255, 255, 255, 0.9)
   display: -webkit-box
   -webkit-line-clamp: 6 
   -webkit-box-orient: vertical
@@ -185,6 +180,12 @@ body {
 
 // Media Queries (Sintaxis corregida)
 @media (max-width: 768px)
+  .tags-mobile-container 
+    display: block
+
+  .tags-container 
+    display: none
+
   .gifBlog img
     width: 65%
     height: auto
@@ -218,35 +219,42 @@ body {
     padding-left: 0.5rem
 
   .post-date-top
-    font-size: 0.75rem
+    font-size: 0.8rem
 
   .post-title
-    font-size: 1.3rem
-    margin-bottom: 0.5rem
+    font-size: 1.8rem
+    margin-top: -8px;
+    margin-bottom: -18px;
   
   .post-tags-container
     gap: 0.5rem
     margin-top: 0.25rem
+    font-size: 0.9rem 
 
   .post-description-similar
-    font-size: 0.85rem
+    font-size: 1rem
     -webkit-line-clamp: 3
     margin-top: 0.5rem
+    margin-top: -3px;
 
 @media (max-width: 480px)
   .gifBlog img
     width: 90%
     height: auto
 
+  .page-description
+    padding: 0px 20px
+
   .archives-container
-    padding: 1rem 0.5rem
+    padding: 1.5rem 1rem
     width: 95%
 
   .page-header
     margin-bottom: 1rem
     .page-title
-      font-size: 2rem
-      
+      font-size: 3.5rem
+      margin-top: 0rem
+
   .month-header 
     font-size: 1.2rem
     margin-top: 1.5rem
@@ -260,17 +268,17 @@ body {
     padding-left: 0.25rem
 
   .post-title
-    font-size: 1.2rem
-    margin-top: -12px;
-    margin-bottom: -28px;
+    font-size: 1.8rem
+    margin-top: -5px;
+    margin-bottom: -18px;
 
   .post-date-top, .post-tag
-    font-size: 0.7rem
+    font-size: 0.8rem
 
   .post-description-similar
-    margin-top: -8px;
-    font-size: 0.8rem
-    -webkit-line-clamp: 2
+    margin-top: -3px;
+    font-size: 0.9rem
+    -webkit-line-clamp: 6
 
 
 .no-posts

@@ -1,5 +1,5 @@
 ---
-title: Broken Access Control
+title: Broken Access Control (BAC)
 tags: 
   - TryHackMe
   - OWASP top 10 
@@ -12,12 +12,10 @@ categories:
     - TryHackMe
     - WriteUp
 date: 2024-11-12
-description: "hola soy un BAC Xd"
+description: "こんにちは、azaraです。今年もみなさまにご指導ご鞭撻をいただき、無事 1 年を過ごすことができました。 無事に誕生日を迎え、暮に近づく中の振り返り記事となります。 summary インターネットに放流された早10年、エンジニア稼業を始めてからもう直ぐ…"
 updated: 2024-11-12
 abbrlink: bac
 ---
-
-![BAC Yw4rf](BAC.png)
 
 ## ¿Qué es Access Control?
 

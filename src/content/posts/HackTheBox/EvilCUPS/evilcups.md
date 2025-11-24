@@ -11,6 +11,7 @@ categories:
     - HackTheBox
     - WriteUp
 date: 2024-10-16
+description: "この記事では、このブログをどのように運用しているかについて軽くメモがわりに残しておく用の記事。 現状の運用について 現状のブログ運用については、下記のような流れで行なっています Obsidian での執筆と git との連携による記事の管理/保存 (ローカル) branch…"
 updated: 2024-10-16
 abbrlink: evilcups
 ---

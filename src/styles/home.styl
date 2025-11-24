@@ -329,7 +329,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .contact-box {
     color: #f0f0f0;
-    padding: 15px;
+    padding: 15px 0px;
     border-radius: 8px;
     font-family: sans-serif;
     font-family: 'Inter', sans-serif
@@ -344,24 +344,22 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .contact-list {
     list-style: none;
-    padding: 0;
+    padding: 0px 15px;
     margin: 0;
 }
 
 .contact-list li {
     align-items: center;
-    margin-bottom: 5px; /* Menos espacio entre ítems */
+    margin-bottom: 0px; /* Menos espacio entre ítems */
 }
 
 .contact-list li::before {
     /* * * * CORRECCIÓN DEL CÍRCULO * * * */
-    content: "•";
+    content: "-";
     color: #5c6370; /* Color gris oscuro/negro para que se mezcle más */
     font-size: 1.4em;
     line-height: 0;
     margin-right: 8px;
-    /* Ajuste fino para la posición si es necesario */
-    transform: translateY(-2px); 
 }
 
 .icon {
@@ -382,19 +380,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 /* Estilos para los enlaces */
 .contact-list a {
     color: #61afef;
-    text-decoration: none; /* Quitar el subrayado por defecto del navegador */
-    
-    /* --- CAMBIOS CLAVE AQUÍ --- */
-    border-bottom: 1px dashed #61afef; /* Cambiado a 'dashed' (discontinuo) */
-    padding-bottom: 3px; /* Añade espacio y empuja el borde hacia abajo */
-    /* -------------------------- */
-    
+    text-decoration: 1px underline dashed #61afef
     transition: color 0.2s, border-color 0.2s;
-}
-
-.contact-list a:hover {
-    color: #98c379;
-    border-color: #98c379;
 }
 
 
@@ -464,7 +451,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   }
 
   .container-bloque
-    width 95%
+    width 99%
     font-size 0.85rem
     padding 1rem
 

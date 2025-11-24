@@ -10,6 +10,8 @@ import '../styles/components/PostNavigation.styl';
 import {config_site} from '../utils/config-adapter';
 import removeMd from 'remove-markdown';
 
+
+
 // 正确定义Props类型
 interface Props {
     title: string;
@@ -23,9 +25,24 @@ interface Props {
 	abbrlink?: string;
 	prev?: { title: string; url: string } | null;
 	next?: { title: string; url: string } | null;
+	minutesRead?: { title: string; url: string } | null;
 }
 
-const { title, date, updated, tags, categories, headings = [], description, author, abbrlink, prev, next } = Astro.props;
+const {
+	title,
+	date,
+	updated,
+	tags,
+	categories,
+	headings = [],
+	description,
+	author,
+	abbrlink,
+	prev,
+	next,
+	minutesRead,
+} = Astro.props;
+
 import '../styles/blog.styl'
 import '../styles/global.styl'
 import LeftSiderbar from './LeftSiderbar.astro';
@@ -114,11 +131,39 @@ const categoryStr = categoriesToString(categories);
 				<article class="article-content">
 					<div class="hero-image">
 						<!-- 如果有特色图片可以在这里添加 -->
-					</div>					<div class="prose fade-in-up delay-200">						<div class="title">
+					</div>
+					
+					<div class="prose fade-in-up delay-200">
+						<div class="title">
 							<h1>{title}</h1>
-							<br>
+							<div class="date">
+								{
+									date && (
+										<div class="published-on">
+											Published on：
+											<time>
+												{date instanceof Date
+													? date.toLocaleDateString('zh-CN')
+													: date}
+											</time>
+										</div>
+									)
+								}
+								{
+									updated && (
+										<div class="last-updated-on">
+											Updated on：
+											<time>
+												{updated instanceof Date
+													? updated.toLocaleDateString('zh-CN')
+													: updated}
+											</time>
+										</div>
+									)
+								}
+							</div>
 						</div>
-						<slot />					
+						<slot />
 					</div>
 								<CC title={title} author={config_site.author} url={config_site.url + '/posts/' + abbrlink} />
 					{(prev || next) ? (
