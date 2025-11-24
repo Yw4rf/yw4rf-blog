@@ -83,7 +83,8 @@ const sortedYears = Object.keys(archivesByYearMonth)
           .sort((a, b) => b - a) 
           .map(month => (
             <div class="month">
-          
+              {/* ¡Añadimos el título del mes aquí para seguir el patrón de la imagen! */}
+              <h3 class="month-header">  📅 {dayjs(`${year}-${month}-01`).format('MMMM YYYY')}</h3> 
               <ul class="post-list">
                 {archivesByYearMonth[year][month].map(post => (
                   <li class="post-item">
@@ -103,10 +104,10 @@ const sortedYears = Object.keys(archivesByYearMonth)
   {/* Contenedor de etiquetas */}
   {post.data.tags && post.data.tags.length > 0 && (
     <div class="post-tags-container">
-      <div class="post-tag-title">tags:  
+      <div class="post-tag-title">🏷️ tags:  
       {post.data.tags.slice(0, 4).map((tag: string) => (
         <span class="post-tag">
-          <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">🏷️ {tag}</a>
+          <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">#{tag}</a>
         </span>
       ))}
       </div>

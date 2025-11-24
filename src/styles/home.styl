@@ -101,7 +101,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .container-bloque
   position relative
   width 75%
-  padding 0.5rem 1rem 1.5rem 1rem
+  padding 0rem 1rem 1.5rem 1rem
   background rgba(0, 0, 0, 0.18)
   border-radius 1rem
   box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
@@ -271,13 +271,15 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .blockSpan { 
   font-family: 'Pixelify Sans', sans-serif; 
-  font-size: 23px;
+  font-size: 1.8rem;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
     float: left;
+    position: absolute
+    top: -14px
 }
 
 .buttonHome {
@@ -324,6 +326,77 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   align-items: center; 
   margin-bottom: 30px;
 }
+
+.contact-box {
+    color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-family: 'Inter', sans-serif
+}
+
+.contact-title {
+    /* El título en la imagen es más simple */
+    font-size: 0.95rem
+    font-weight: normal; /* Menos negrita */
+    margin-bottom: 10px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    align-items: center;
+    margin-bottom: 5px; /* Menos espacio entre ítems */
+}
+
+.contact-list li::before {
+    /* * * * CORRECCIÓN DEL CÍRCULO * * * */
+    content: "•";
+    color: #5c6370; /* Color gris oscuro/negro para que se mezcle más */
+    font-size: 1.4em;
+    line-height: 0;
+    margin-right: 8px;
+    /* Ajuste fino para la posición si es necesario */
+    transform: translateY(-2px); 
+}
+
+.icon {
+    /* Los íconos de emoji */
+    margin-right: 5px;
+}
+
+/* Estilos para el email (comando base64) */
+.code-inline {
+    background-color: transparent; /* No tiene un fondo de código sólido en la imagen */
+    color: #d19a66; /* Un color de acento (como naranja/marrón) para el comando */
+    font-family: monospace;
+    font-size: 0.95em;
+    white-space: normal;
+    word-break: break-all;
+}
+
+/* Estilos para los enlaces */
+.contact-list a {
+    color: #61afef;
+    text-decoration: none; /* Quitar el subrayado por defecto del navegador */
+    
+    /* --- CAMBIOS CLAVE AQUÍ --- */
+    border-bottom: 1px dashed #61afef; /* Cambiado a 'dashed' (discontinuo) */
+    padding-bottom: 3px; /* Añade espacio y empuja el borde hacia abajo */
+    /* -------------------------- */
+    
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-list a:hover {
+    color: #98c379;
+    border-color: #98c379;
+}
+
 
 // ───── MEDIA QUERIES ─────
 
@@ -378,16 +451,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 @media (max-width: 480px)
   .blockSpan { 
-   font-size: .8rem; 
-  }
-
-  .blockSpan2 { 
-   font-size: .8rem; 
-  }
-
-  .blockSpan3 {
-   font-size: .8rem;
-   display: block;
+   font-size: 1.5rem;
+   position: relative;
   }
 
   .portfolio-button {
@@ -395,7 +460,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   }
 
   .container-bloque1 {
-    margin-top: 1.5rem
+    margin-top: 2.2rem
   }
 
   .container-bloque
