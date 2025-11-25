@@ -1,23 +1,28 @@
 ---
-title: Broken Access Control (BAC)
-tags: 
-  - TryHackMe
-  - OWASP top 10 
-  - POC
+title: "Broken Access Control (BAC) Analysis and Mitigation"
+tags:
+  - OWASP-Top-10
+  - Broken-Access-Control
+  - Web-Exploitation
+  - IDOR
+  - Privilege-Escalation
   - BurpSuite
-  - BAC
-  - Web Exploitation
-  - Cybersecurity 
+  - Cybersecurity
 categories:
-    - TryHackMe
-    - WriteUp
+  - Web-Vulnerabilities
+  - Penetration-Testing
+  - POC
 date: 2024-11-12
-description: "こんにちは、azaraです。今年もみなさまにご指導ご鞭撻をいただき、無事 1 年を過ごすことができました。 無事に誕生日を迎え、暮に近づく中の振り返り記事となります。 summary インターネットに放流された早10年、エンジニア稼業を始めてからもう直ぐ…"
-updated: 2024-11-12
+description: "Technical analysis of Access Control failures (A01:2021) leading to resource exposure or privilege escalation. Covers identification of IDOR, Horizontal, and Vertical BAC vulnerabilities, presenting a Proof of Concept (PoC) using Burp Suite, alongside key mitigation strategies like RBAC."
+updated: 2025-11-25
 abbrlink: bac
 ---
 
+![BAC Yw4rf](tryhackme-BAC.png)
+
 ## ¿Qué es Access Control?
+
+![BAC Yw4rf](BAC.png)
 
 El control de acceso es un conjunto de políticas y configuraciones que aseguran que cada usuario pueda acceder solo a los recursos y funcionalidades que tiene autorizados. Por ejemplo, un usuario registrado en una aplicación de redes sociales puede ver su propio perfil, pero no el perfil privado de otro usuario sin permiso. Cuando este control de acceso falla se le conoce como **Broken Access Control**.
 
