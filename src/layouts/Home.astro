@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 import pokeBlue from "../images/pokeball-blue.png";
 import pokeRed from "../images/pokeball-red.png";
 import Vim from "../images/pokeViolet.png";
-import avatar from '../images/bulbasaur-pokemon.gif';
+import avatar from '/src/images/gif/lost-gnome.gif';
 
 import '../styles/home.styl'
 import SocialLinks from '../components/others/SocialLinks.astro'
@@ -37,16 +37,15 @@ const avatarImage = config_site.avatarPath || avatar
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <body>
         <Header />
         <div class="containerHome">
         <div class="main-wrapper">
-           <!--  <div class="homeImage">
-                <Image src={avatar} alt="balbasaur" class="avatarPokemon" />
-            </div> -->
+            <div class="homeImage">
+                <Image src={avatar} alt="gif-random" class="avatarPokemon" />
+            </div> 
             <div class="container">
               <div class="textHeader">
                 <div class="Hometitle"><h1> {config_site.title} </h1></div>
@@ -93,29 +92,27 @@ const avatarImage = config_site.avatarPath || avatar
 
 </div> -->
    <div class="contact-box">
-  <div class="contact-title">📬 Reach out:</div>
+  <div class="contact-title">Reach me out:</div>
 
   <ul class="contact-list">
     <li>
-      <span class="icon">✉️</span>
       <code class="code-inline">echo 'eXc0cmZAcHJvdG9ubWFpbC5jb20K' | base64 -d (if you're in Linux)</code>
     </li>
     <li>
-      <span class="icon">✉️</span>
         <code class="code-inline">[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("eXc0cmZAcHJvdG9ubWFpbC5jb20K"))  (if you're in Windows)</code>
     </li>
     <li>
       <span class="icon">💬</span>
-      <a href="https://t.me/yw4rf" target="_blank">t.me/yw4rf</a>
+      <a href="https://t.me/yw4rf" target="_blank">https://t.me/yw4rf</a>
     </li>
 
     <li>
       <span class="icon">🐦</span>
-      <a href="https://x.com/Yw4rf" target="_blank">x.com/Yw4rf</a>
+      <a href="https://x.com/Yw4rf" target="_blank">https://x.com/Yw4rf</a>
     </li>
     <li>
       <span class="icon">💼</span>
-      <a href="https://linkedin.com/in/Yw4rf" target="_blank">linkedin.com/in/Yw4rf</a>
+      <a href="https://linkedin.com/in/Yw4rf" target="_blank">https://linkedin.com/in/Yw4rf</a>
     </li>
   </ul>
 </div>
@@ -199,9 +196,27 @@ const avatarImage = config_site.avatarPath || avatar
   <div class="container-bloque">
     <p>
       <span class="blockSpan">📝 My Blog</span> <br><br>
-      I share hands-on notes, CTF write-ups, and practical insights into cybersecurity — from ethical hacking and threat detection to log analysis and defensive scripting. Explore my labs, traffic captures, and tutorials, all aimed at learning and improving real-world security skills and contribute to the community.
+      I share hands-on notes, CTF write-ups, and practical insights into cybersecurity — from ethical hacking and threat detection to log analysis and defensive scripting. Explore labs, traffic captures, and tutorials, all aimed at learning and improving real-world security skills and contribute to the community.
     </p>
-  <!--  <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" /> -->
+    <div class="contact-box">
+    <div class="contact-title">Pinned posts:</div>
+    <ul class="contact-list">
+      <li>
+        <span class="icon">📍</span>
+        <a href="/posts/bac/">Broken Access Control (BAC)</a>
+      </li>
+      <li>
+        <span class="icon">📍</span>
+        <a href="/posts/whiterose/">TryHackMe - Whiterose</a>
+      </li>
+      <li>
+        <span class="icon">📍</span>
+        <a href="https:/posts/evilcups/">HackTheBox - EvilCUPS</a>
+      </li>
+    </ul>
+    </div>
+    </div>
+    <!--  <Image src={pokeRed} alt="gif-yw4rf" class="pokeRed" /> -->
   </div>
 </div>
 <div class="buttonHome">
