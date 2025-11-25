@@ -16,7 +16,7 @@ categories:
   - CTF-Writeup
   - Web-Vulnerabilities
   - Linux-Privesc
-date: 2025-12-02
+date: 2024-12-02
 description: "Technical writeup detailing the compromise of the Oopsie machine. Initial access involves exploiting an IDOR vulnerability to enumerate credentials, followed by cookie manipulation to gain access to an arbitrary file upload function for a PHP reverse shell. Privilege escalation is achieved by finding plaintext database credentials for SSH access, and finally, exploiting the SUID binary '/usr/bin/bugtracker' using a PATH hijacking technique to execute a root shell."
 updated: 2025-11-25
 abbrlink: oopsie

@@ -69,9 +69,8 @@ const sortedYears = Object.keys(archivesByYearMonth)
     <main class="archives-container">
       <div class="page-header">
         {/* Use a more generic title prop for the H1, description prop for P */}
-        <h1 class="page-title">{pageTitle.split(' | ')[0]}</h1>
-        <p class="page-description">Sharing insights on cybersecurity and tech ({totalPostsCount} Posts）</p>
-      </div>
+        <h1 class="page-title">My {pageTitle.split(' | ')[0]}</h1>
+      <!--   <p class="page-description">Sharing insights on cybersecurity and tech ({totalPostsCount} Posts）</p> --> </div>
 
       
       <div class="timeline-container">
@@ -116,8 +115,8 @@ const sortedYears = Object.keys(archivesByYearMonth)
    {/* Contenedor de etiquetas */}
   {post.data.tags && post.data.tags.length > 0 && (
     <div class="post-tags-container">
-      <div class="post-tag-title">🏷️ tags:  
-      {post.data.tags.slice(0, 3).map((tag: string) => (
+      <div class="post-tag-title">🏷️   
+      {post.data.tags.slice(0, 14).map((tag: string) => (
         <span class="post-tag">
           <a href={`/tags/${encodeURIComponent(tag)}/`} class="anchore-tag">#{tag}</a>
         </span>

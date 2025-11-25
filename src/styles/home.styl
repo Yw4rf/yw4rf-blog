@@ -117,6 +117,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 }
 
 .container-bloque p {
+  font-size: 1rem
   font-family: 'Inter', sans-serif;
   line-height: 1.55;
 }
@@ -206,7 +207,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .categorySkills {
       background: rgba(255, 255, 255, 0);
       margin-bottom: 0.7rem;
-      margin-left: -10px;
+      display: flex
+      flex-wrap: wrap
       border-radius: 16px;
     }
 
@@ -246,6 +248,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   display: flex;
   gap: 1rem; 
   text-decoration: none !important;
+  flex-wrap: wrap
   }
 
   .targets-container a {
@@ -281,7 +284,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     background-clip: text
     float: left;
     position: absolute
-    top: -14px
+    top: -5px
 }
 
 .buttonHome {
@@ -341,51 +344,45 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 }
 
 .contact-title {
-    /* El título en la imagen es más simple */
-    font-size: 0.95rem
     font-weight: normal; /* Menos negrita */
-    margin-bottom: 10px;
+    margin-top: 8px;
 }
 
 .contact-list {
     list-style: none;
-    padding: 0px 15px;
-    margin: 0;
 }
 
 .contact-list li {
     align-items: center;
     margin-bottom: 0px; /* Menos espacio entre ítems */
-}
-
-.contact-list li::before {
-    /* * * * CORRECCIÓN DEL CÍRCULO * * * */
-    content: "-";
-    color: #5c6370; /* Color gris oscuro/negro para que se mezcle más */
-    font-size: 1.4em;
-    line-height: 0;
-    margin-right: 8px;
+    font-size: 1rem;
 }
 
 .icon {
-    /* Los íconos de emoji */
     margin-right: 5px;
 }
+
 
 /* Estilos para el email (comando base64) */
 .code-inline {
     background-color: transparent; /* No tiene un fondo de código sólido en la imagen */
-    color: #d19a66; /* Un color de acento (como naranja/marrón) para el comando */
     font-family: monospace;
     font-size: 0.95em;
     white-space: normal;
     word-break: break-all;
 }
 
+.code-linux
+  color: #F4BC00
+
+.code-windows
+  color: #00A4EF
+
 /* Estilos para los enlaces */
 .contact-list a {
-    color: #61afef;
-    text-decoration: 1px underline dashed #61afef
+    color: #81E6D9;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-decoration: 1px underline dashed #95ffe3ff
     transition: color 0.2s, border-color 0.2s;
 }
 
@@ -412,8 +409,8 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   .container-bloque
     width 85%
     font-size 0.9rem
-    padding 1.2rem
-
+    padding: 0rem
+    
   .container-bloque1 {
     margin-top: 3rem
   }
@@ -439,6 +436,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
   .containerNewsletter
    margin-top: 50px;
+   
   
 
 @media (max-width: 480px)
@@ -452,13 +450,15 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   }
 
   .container-bloque1 {
-    margin-top: 2.2rem
+    margin-top: 3rem
   }
 
   .container-bloque
-    width 99%
-    font-size 0.85rem
-    padding 1rem
+    width 100%
+    padding 0rem
+
+  .container-bloque p 
+    font-size: 1rem
 
   .vimSkills
     width: 50px;
