@@ -1,5 +1,5 @@
 ---
-title: "CyberDefenders: Amadey - Volatility3 Analysis of a Credential Stealer Trojan"
+title: "Amadey - Volatility3 Analysis of a Credential Stealer Trojan"
 tags:
   - CyberDefenders
   - DFIR

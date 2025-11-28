@@ -1,5 +1,5 @@
 ---
-title: "CyberDefenders: Poisoned Credentials - Network Forensics of LLMNR/NBT-NS Poisoning Attacks"
+title: "Poisoned Credentials - Network Forensics of LLMNR/NBT-NS Poisoning Attacks"
 tags:
   - CyberDefenders
   - Network-Forensics

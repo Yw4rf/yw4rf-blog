@@ -154,30 +154,10 @@
     "modified": "2025-11-25T13:55:58.619-03:00",
     "abbrlink": "ac2868ce"
   },
-  "src/content/posts/CyberDefenders/Amadey/amadey.md": {
-    "created": "2025-11-25T16:41:00.041-03:00",
-    "modified": "2025-11-25T16:48:57.061-03:00",
-    "abbrlink": "ddbf1da6"
-  },
-  "src/content/posts/CyberDefenders/PoisonedCredentials/poisonedcredentials.md": {
-    "created": "2025-11-25T16:41:00.497-03:00",
-    "modified": "2025-11-25T16:59:04.532-03:00",
-    "abbrlink": "277fe1a7"
-  },
-  "src/content/posts/CyberDefenders/Reveal/reveal.md": {
-    "created": "2025-11-25T16:41:00.781-03:00",
-    "modified": "2025-11-25T17:00:45.583-03:00",
-    "abbrlink": "ef0e37fb"
-  },
   "src/content/posts/CyberDefenders/TheCrime/thecrime.md": {
     "created": "2025-11-25T16:41:01.165-03:00",
-    "modified": "2025-11-25T17:14:35.649-03:00",
+    "modified": "2025-11-27T22:55:40.703-03:00",
     "abbrlink": "824ec051"
-  },
-  "src/content/posts/CyberDefenders/WebStrike/webstrike.md": {
-    "created": "2025-11-25T16:41:01.353-03:00",
-    "modified": "2025-11-25T17:15:59.719-03:00",
-    "abbrlink": "f07528ce"
   },
   "src/content/posts/HackTheBox/Alert/alert.md": {
     "created": "2025-11-25T16:10:30.168-03:00",
@@ -228,5 +208,25 @@
     "created": "2025-11-25T16:10:32.320-03:00",
     "modified": "2025-11-25T16:16:36.225-03:00",
     "abbrlink": "9379e2bf"
+  },
+  "src/content/posts/CyberDefenders/WebStrike/webstrike.md": {
+    "created": "2025-11-27T22:55:33.419-03:00",
+    "modified": "2025-11-27T22:55:33.419-03:00",
+    "abbrlink": "b44a7a7a"
+  },
+  "src/content/posts/CyberDefenders/Reveal/reveal.md": {
+    "created": "2025-11-27T22:55:47.652-03:00",
+    "modified": "2025-11-27T22:55:47.652-03:00",
+    "abbrlink": "cb89a48d"
+  },
+  "src/content/posts/CyberDefenders/PoisonedCredentials/poisonedcredentials.md": {
+    "created": "2025-11-27T22:55:52.432-03:00",
+    "modified": "2025-11-27T22:55:52.432-03:00",
+    "abbrlink": "dea4ebaa"
+  },
+  "src/content/posts/CyberDefenders/Amadey/amadey.md": {
+    "created": "2025-11-27T22:55:59.136-03:00",
+    "modified": "2025-11-27T22:55:59.136-03:00",
+    "abbrlink": "914439f6"
   }
 }

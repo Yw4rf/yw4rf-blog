@@ -1,5 +1,5 @@
 ---
-title: "CyberDefenders: Reveal - Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution"
+title: "Reveal - Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution"
 tags:
   - CyberDefenders
   - DFIR

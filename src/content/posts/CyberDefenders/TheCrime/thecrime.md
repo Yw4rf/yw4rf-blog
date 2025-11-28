@@ -1,5 +1,5 @@
 ---
-title: "CyberDefenders: The Crime - Mobile Forensics with ALEAPP to Reconstruct a Crime Timeline"
+title: "The Crime - Mobile Forensics with ALEAPP to Reconstruct a Crime Timeline"
 tags:
   - CyberDefenders
   - DFIR

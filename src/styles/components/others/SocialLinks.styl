@@ -1,102 +1,125 @@
 .social-links {
-  display: flex
-  justify-content: center
-  align-items: center
-  margin: 5px auto
-  width: 100%
-  max-width: 800px
-  
-  ul {
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    list-style: none
-    padding: 0
-    margin: 0
-    gap: 5px
-  }
-  
-  li {
-    margin: 5px
-  }
-  
-  a {
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 25px
-    height: 25px
-    border-radius: 20%
-    transition: all 0.3s ease
-    color: #000000ff
-    text-decoration: none
-    background: #81E6D9
-    
-    &:hover {
-      transform: translateY(-3px)
-      background:rgb(118, 193, 177)
-      animation: buttonGlow 1.5s ease-in-out infinite
-      box-shadow: 0 0 10px rgba(71, 71, 71, 0.35), 0 0 20px rgba(137, 215, 198, 0.5)
-    }
-  }
-  
-  i {
-    font-size: 1.5rem
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-lg) auto;
+  width: 100%;
+  max-width: var(--width-lg);
+  margin-top: 8px;
 }
 
-/* 为bilibili自定义图标 */
+/* Contenedor de la lista */
+.social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--spacing-sm);
+}
+
+/* Ítems */
+.social-links li {
+  margin: 0;
+}
+
+/* Estilos base del botón/icono */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover */
+.social-links a:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: var(--color-primary-light);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus accesible */
+.social-links a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Active */
+.social-links a:active {
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos */
+.social-links i,
+.icon-container svg,
 .custom-icon {
-  font-style: normal
-  font-weight: bold
-  font-size: 1.3rem
+  font-size: var(--font-size-lg);
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
+/* Para SVG */
+.icon-container svg {
+  fill: currentColor;
+}
+
+/* Icono bilibili */
+.custom-icon {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Oculto accesible */
 .sr-only {
-  position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0)
-  white-space: nowrap
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
-/* 添加svg图标的样式 */
-.icon-container {
-  svg {
-    width: 13px
-    height: 13px
-    font-size: 1.5rem
-  }
-}
-
-/* 响应式调整 */
+/* Responsivo */
 @media (max-width: 768px) {
   .social-links {
-    margin: 20px auto
-    
-    ul {
-      gap: 5px
-    }
-    
-    a {
-      width: 44px
-      height: 44px
-    }
+    margin: var(--spacing-md) auto;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
   }
 }
 
 @media (max-width: 480px) {
   .social-links {
-    a {
-      width: 40px
-      height: 40px
-    }
-    
-    i, .icon-container svg {
-      font-size: 1.2rem
-    }
+    margin-top: 10px;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-links i,
+  .icon-container svg,
+  .custom-icon {
+    font-size: var(--font-size-md);
   }
 }

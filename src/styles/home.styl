@@ -228,11 +228,12 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     .badge {
       background: rgba(255, 255, 255, 0.08);
       padding: 4px 12px;
-      border-radius: 12px;
+      border-radius: .4rem;
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 4px;
       font-size: 13px;
+      font-family: 'Pixelify Sans', sans-serif
     }
 
     .badge img {
@@ -276,12 +277,9 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .blockSpan { 
   font-family: 'Pixelify Sans', sans-serif; 
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
+  color: #f0f0f0
     float: left;
     position: absolute
     top: -5px
@@ -298,7 +296,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .portfolio-button
     background: #81E6D9
     border none
-    border-radius 8px // Slightly rounded corners
+    border-radius .4rem // Slightly rounded corners
     padding 12px 24px // Vertical and horizontal padding
     font-family: 'Pixelify Sans', sans-serif; 
     display flex
@@ -335,56 +333,131 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   animation-delay: 0.1s;
 }
 
-.contact-box {
-    color: #f0f0f0;
-    padding: 15px 0px;
-    border-radius: 8px;
-    font-family: sans-serif;
-    font-family: 'Inter', sans-serif
-}
+.contact-box
+  color #f0f0f0
+  padding 15px 0
+  border-radius 8px
+  font-family 'Inter', sans-serif
 
-.contact-title {
-    font-weight: normal; /* Menos negrita */
-    margin-top: 8px;
-}
+.contact-title
+  font-weight normal
+  margin-top 8px
 
-.contact-list {
-    list-style: none;
-}
+/* Lista general */
+.contact-list
+  list-style none
+  padding 0
+  margin 0
 
-.contact-list li {
-    align-items: center;
-    margin-bottom: 0px; /* Menos espacio entre ítems */
-    font-size: 1rem;
-}
+  li
+    display flex
+    align-items center
+    font-size 1rem
+    margin-bottom 4px
 
-.icon {
-    margin-right: 5px;
-}
+/* Iconos */
+.icon
+  margin-right 6px
+  display inline-flex
 
+/* Estilos para los comandos */
+.code-inline
+  font-family monospace
+  font-size 1rem
+  background transparent
+  white-space normal
+  word-break break-all
+  display block
+  margin-bottom 6px
 
-/* Estilos para el email (comando base64) */
-.code-inline {
-    background-color: transparent; /* No tiene un fondo de código sólido en la imagen */
-    font-family: monospace;
-    font-size: 0.95em;
-    white-space: normal;
-    word-break: break-all;
-}
-
+/* Colores específicos */
 .code-linux
-  color: #F4BC00
+  color #F4BC00
 
 .code-windows
-  color: #00A4EF
+  color #00A4EF
 
-/* Estilos para los enlaces */
-.contact-list a {
-    color: #81E6D9;
-    font-family: 'Pixelify Sans', sans-serif;
-    text-decoration: 1px underline dashed #95ffe3ff
-    transition: color 0.2s, border-color 0.2s;
-}
+/* Enlaces */
+.contact-list a
+  font-size 1rem
+  color #81E6D9
+  font-family 'Pixelify Sans', sans-serif
+  text-decoration underline dashed #95ffe3
+  text-underline-offset 2px
+  transition color .2s ease, text-decoration-color .2s ease
+
+  &:hover
+    color #a9fff4
+    text-decoration-color #a9fff4
+
+
+// BLOG SECTION IMPROVED
+
+.blog-section
+  margin-top 24px // Más espacio arriba
+
+.blog-list
+  list-style none
+  padding 0
+  margin 0
+
+.blog-item
+  display flex // Usar Flexbox para alinear contenido
+  align-items center
+  margin 12px 0
+  padding 4px 0
+  border-bottom 1px solid rgba(129, 230, 217, 0.15) // Separador sutil
+
+  &:last-child
+    border-bottom none // No poner separador en el último
+
+.blog-date
+  font-family sans-serif // La fecha más legible y sutil
+  font-size 0.85rem
+  color #A0AEC0 // Gris sutil
+  margin-right 16px
+  min-width 85px // Asegura que la fecha tenga espacio fijo
+
+.blog-link
+  font-family 'Pixelify Sans', sans-serif
+  font-size 1rem
+  color #81E6D9 // Color de enlace original
+  text-decoration none // Quitar la decoración inicial
+  position relative
+  transition all .3s ease
+
+  // Efecto de subrayado que crece al pasar el ratón
+  &:before
+    content ''
+    position absolute
+    bottom -3px
+    left 0
+    width 0
+    height 2px
+    background-color #A9FFF4
+    transition width .3s ease
+
+  &:hover
+    color #a9fff4 // Color más claro al hacer hover
+    text-shadow 0 0 5px rgba(169, 255, 244, 0.5) // Un ligero brillo
+    
+    &:before
+      width 100% // El subrayado aparece
+
+// Si deseas mantener el estilo de subrayado punteado
+// Comenta la sección de :before y usa esto en su lugar:
+
+/*
+.blog-link
+  // ... resto del estilo ...
+  text-decoration underline dashed #95ffe3
+  text-underline-offset 4px
+
+  &:hover
+    color #a9fff4
+    text-decoration-color #a9fff4
+*/
+
 
 
 // ───── MEDIA QUERIES ─────

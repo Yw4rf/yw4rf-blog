@@ -1,5 +1,5 @@
 ---
-title: "CyberDefenders: WebStrike - Network Forensics of Web Shell Upload and Data Exfiltration"
+title: "WebStrike - Network Forensics of Web Shell Upload and Data Exfiltration"
 tags:
   - CyberDefenders
   - Network-Forensics

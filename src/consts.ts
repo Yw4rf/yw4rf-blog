@@ -74,8 +74,8 @@ export const site: SiteConfig = {
   medialinks: [
     { title: 'Telegram', url: 'https://t.me/Yw4rf', icon: 'telegram' },
     { title: 'Gmail', url: 'mailto:yw4rf@protonmail.com', icon: 'gmail' },
-    { title: 'Linkedin', url: 'https://linkedin.com/in/Yw4rf', icon: 'linkedin' },
     { title: 'Github', url: 'https://github.com/Yw4rf', icon: 'github' },
+    { title: 'Twitter', url: 'https://x.com/Yw4rf', icon: 'x-twitter'},
   ],
 
   /**
