@@ -87,7 +87,7 @@ const pageTitle = `Tag: ${tag} | ${config_site.siteName}`;
               <h2 class="post-title">{post.data.title}</h2>
               <br />
               {post.data.description && (
-              <p class="post-description">{post.data.description.slice(0,50)+ '...'}</p>
+              <p class="post-description">{post.data.description.slice(0)}</p>
               )}
             </a>
             {post.data.tags && post.data.tags.length > 0 && (
