@@ -1,5 +1,5 @@
 ---
-title: "DockerLabs: Trust - SSH Brute-Force and Vim Sudo Privilege Escalation"
+title: "Trust - SSH Brute-Force and Vim Sudo Privilege Escalation"
 tags:
   - DockerLabs
   - Brute-Force
@@ -16,7 +16,7 @@ categories:
 date: 2024-09-17
 description: "Technical writeup detailing the compromise of the 'Trust' challenge. Methodology includes Nmap scanning and web fuzzing via Gobuster to identify hidden resources, a targeted Hydra brute-force attack to obtain SSH credentials, and final privilege escalation by exploiting the NOPASSWD sudo permission on the Vim binary."
 updated: 2025-11-25
-abbrlink: trust
+abbrlink: dockerlabs/trust
 ---
 
 ## Introducción

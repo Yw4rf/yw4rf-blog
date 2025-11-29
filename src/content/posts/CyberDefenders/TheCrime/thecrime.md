@@ -18,7 +18,7 @@ categories:
 date: 2025-02-23
 description: "Detailed mobile forensics writeup solving a murder case by analyzing an extracted Android device using ALEAPP. The analysis successfully traces the victim's final actions, identifying the primary financial stressor (Olymptrade and a 250,000 EGP debt owed to 'Shady Wahab'), the victim's final known location ('The Nile Ritz-Carlton'), planned escape route ('Las Vegas' flight ticket), and a final scheduled meeting location ('The Mob Museum') based on Discord chat logs."
 updated: 2025-11-25
-abbrlink: the-crime
+abbrlink: cyberdefenders/the-crime
 ---
 
 ![Yw4rf TheCrime](thecrime-cyberdefenders.png)

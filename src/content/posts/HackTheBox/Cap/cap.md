@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Cap - PCAP Analysis, FTP Credential Disclosure, and cap_setuid Privilege Escalation"
+title: "Cap - PCAP Analysis, FTP Credential Disclosure, and cap_setuid Privilege Escalation"
 tags:
   - HackTheBox
   - Tshark
@@ -17,7 +17,7 @@ categories:
 date: 2024-10-20
 description: "Technical writeup detailing the compromise of the Cap machine. Initial access is achieved by enumerating a web application that provides downloadable .PCAP network capture files. Tshark analysis of a specific PCAP file reveals FTP credentials in plaintext. These credentials are used to gain SSH access as the 'nathan' user. Privilege escalation to root is achieved by exploiting the 'cap_setuid' capability set on the /usr/bin/python3.8 binary, allowing arbitrary user ID change to 0 (root)."
 updated: 2025-11-25
-abbrlink: cap
+abbrlink: htb/cap
 ---
 
 ![Cap yw4rf](cap-hackthebox.png)

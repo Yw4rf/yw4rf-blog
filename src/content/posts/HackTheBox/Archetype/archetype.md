@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Archetype - SMB Credential Disclosure, MSSQL xp_cmdshell RCE, and SYSTEM Privileges via psexec"
+title: "Archetype - SMB Credential Disclosure, MSSQL xp_cmdshell RCE, and SYSTEM Privileges via psexec"
 tags:
   - HackTheBox
   - Windows
@@ -20,7 +20,7 @@ categories:
 date: 2024-11-28
 description: "Technical writeup detailing the compromise of the Archetype Windows machine. Initial foothold is achieved by exploiting Anonymous SMB access (445/tcp) to retrieve SQL credentials from a shared backup directory (prod.dtsConfig). These credentials are used to gain access to the MSSQL service (1433/tcp), where xp_cmdshell is activated to achieve RCE and establish a reverse shell. Privilege escalation to NT AUTHORITY\ sYSTEM is completed by hunting for credentials in the PowerShell history file and leveraging Impacket's psexec.py with the found administrator account."
 updated: 2025-11-25
-abbrlink: archetype
+abbrlink: htb/archetype
 ---
 
 ![archetype htb yw4rf](archetype-hackthebox.png)

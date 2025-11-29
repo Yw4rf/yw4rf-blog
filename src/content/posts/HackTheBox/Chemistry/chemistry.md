@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Chemistry - Pymatgen RCE (CVE-2024-23346), SSH Port Forwarding, and aiohttp LFI (CVE-2024-23334)"
+title: "Chemistry - Pymatgen RCE (CVE-2024-23346), SSH Port Forwarding, and aiohttp LFI (CVE-2024-23334)"
 tags:
   - HackTheBox
   - RCE
@@ -21,7 +21,7 @@ categories:
 date: 2024-10-21
 description: "Technical writeup detailing the compromise of the Chemistry machine. Initial access (RCE) is gained by exploiting CVE-2024-23346, an arbitrary code execution vulnerability in the pymatgen library via a malicious .CIF file upload, leading to a low-privileged shell. Privilege escalation is achieved by locating hidden credentials in a SQLite database, gaining SSH access, and then using SSH Port Forwarding to access an internal web service. The final step involves exploiting CVE-2024-23334, a critical path traversal vulnerability in aiohttp/3.9.1, to perform Local File Inclusion (LFI) and read the /etc/shadow file for root access."
 updated: 2025-11-25
-abbrlink: chemistry-full
+abbrlink: htb/chemistry-full
 ---
 
 ![Chemistry Yw4rf](chemistry-hackthebox.png)

@@ -6,57 +6,57 @@
   },
   "src/content/posts/Cybersecurity/BAC/index.md": {
     "created": "2025-07-12T18:41:12.466-03:00",
-    "modified": "2025-11-24T12:31:33.397-03:00",
+    "modified": "2025-11-29T16:07:42.536-03:00",
     "abbrlink": "6857fc92"
   },
   "src/content/posts/Cybersecurity/Network Enumeration with Nmap/index.md": {
     "created": "2025-11-25T13:55:36.890-03:00",
-    "modified": "2025-11-25T13:55:36.890-03:00",
+    "modified": "2025-11-29T16:07:42.536-03:00",
     "abbrlink": "9de5ba33"
   },
   "src/content/posts/DockerLabs/ApiBase/index.md": {
     "created": "2025-11-25T13:55:37.742-03:00",
-    "modified": "2025-11-25T13:55:37.742-03:00",
+    "modified": "2025-11-29T16:07:42.812-03:00",
     "abbrlink": "a67e7374"
   },
   "src/content/posts/DockerLabs/BreakMySSH/index.md": {
     "created": "2025-11-25T13:55:37.742-03:00",
-    "modified": "2025-11-25T13:55:37.742-03:00",
+    "modified": "2025-11-29T16:07:42.856-03:00",
     "abbrlink": "94f7d04e"
   },
   "src/content/posts/DockerLabs/FirstHacking/index.md": {
     "created": "2025-11-25T13:55:38.214-03:00",
-    "modified": "2025-11-25T13:55:38.214-03:00",
+    "modified": "2025-11-29T16:07:42.884-03:00",
     "abbrlink": "6f2cedbc"
   },
   "src/content/posts/DockerLabs/Injection/index.md": {
     "created": "2025-11-25T13:55:38.214-03:00",
-    "modified": "2025-11-25T13:55:38.214-03:00",
+    "modified": "2025-11-29T16:07:42.896-03:00",
     "abbrlink": "cfbd6b45"
   },
   "src/content/posts/DockerLabs/Internship/index.md": {
     "created": "2025-11-25T13:55:38.214-03:00",
-    "modified": "2025-11-25T13:55:38.214-03:00",
+    "modified": "2025-11-29T16:07:42.928-03:00",
     "abbrlink": "2493adb0"
   },
   "src/content/posts/DockerLabs/StellarJWT/index.md": {
     "created": "2025-11-25T13:55:39.414-03:00",
-    "modified": "2025-11-25T13:55:39.414-03:00",
+    "modified": "2025-11-29T16:07:42.992-03:00",
     "abbrlink": "325d07b4"
   },
   "src/content/posts/DockerLabs/Trust/index.md": {
     "created": "2025-11-25T13:55:41.982-03:00",
-    "modified": "2025-11-25T13:55:41.982-03:00",
+    "modified": "2025-11-29T16:07:43.304-03:00",
     "abbrlink": "092ce6e0"
   },
   "src/content/posts/DockerLabs/Verdejo/index.md": {
     "created": "2025-11-25T13:55:41.986-03:00",
-    "modified": "2025-11-25T13:55:41.986-03:00",
+    "modified": "2025-11-29T16:07:43.400-03:00",
     "abbrlink": "c65491d9"
   },
   "src/content/posts/DockerLabs/WalkingCMS/index.md": {
     "created": "2025-11-25T13:55:43.414-03:00",
-    "modified": "2025-11-25T13:55:43.414-03:00",
+    "modified": "2025-11-29T16:07:43.560-03:00",
     "abbrlink": "c4145631"
   },
   "src/content/posts/HackTheBox/Dancing/index.md": {
@@ -79,100 +79,40 @@
     "modified": "2025-11-25T13:55:46.478-03:00",
     "abbrlink": "27930982"
   },
-  "src/content/posts/HackTheBox/Noxious/index.md": {
-    "created": "2025-11-25T13:55:47.130-03:00",
-    "modified": "2025-11-25T13:55:47.130-03:00",
-    "abbrlink": "0484657a"
-  },
-  "src/content/posts/HackTheBox/Oopsie/index.md": {
-    "created": "2025-11-25T13:55:48.398-03:00",
-    "modified": "2025-11-25T17:21:53.944-03:00",
-    "abbrlink": "51920b97"
-  },
-  "src/content/posts/HackTheBox/Redeemer/index.md": {
-    "created": "2025-11-25T13:55:50.558-03:00",
-    "modified": "2025-11-25T13:55:50.558-03:00",
-    "abbrlink": "2d8089f0"
-  },
-  "src/content/posts/HackTheBox/Responder/index.md": {
-    "created": "2025-11-25T13:55:50.562-03:00",
-    "modified": "2025-11-25T13:55:50.562-03:00",
-    "abbrlink": "06681ad4"
-  },
-  "src/content/posts/HackTheBox/Sequel/index.md": {
-    "created": "2025-11-25T13:55:51.631-03:00",
-    "modified": "2025-11-25T13:55:51.631-03:00",
-    "abbrlink": "eeeaeec6"
-  },
-  "src/content/posts/HackTheBox/Three/index.md": {
-    "created": "2025-11-25T13:55:51.959-03:00",
-    "modified": "2025-11-25T13:55:51.959-03:00",
-    "abbrlink": "6e138369"
-  },
-  "src/content/posts/HackTheBox/Titanic/index.md": {
-    "created": "2025-11-25T13:55:52.647-03:00",
-    "modified": "2025-11-25T13:55:52.647-03:00",
-    "abbrlink": "880ef4ee"
-  },
-  "src/content/posts/HackTheBox/TwoMillion/index.md": {
-    "created": "2025-11-25T13:55:53.215-03:00",
-    "modified": "2025-11-25T13:55:53.215-03:00",
-    "abbrlink": "e5f311b2"
-  },
-  "src/content/posts/HackTheBox/UFO-1/index.md": {
-    "created": "2025-11-25T13:55:54.763-03:00",
-    "modified": "2025-11-25T13:55:54.763-03:00",
-    "abbrlink": "f2015fca"
-  },
-  "src/content/posts/HackTheBox/Underpass/index.md": {
-    "created": "2025-11-25T13:55:55.079-03:00",
-    "modified": "2025-11-25T13:55:55.079-03:00",
-    "abbrlink": "d038c716"
-  },
-  "src/content/posts/HackTheBox/Vaccine/index.md": {
-    "created": "2025-11-25T13:55:55.691-03:00",
-    "modified": "2025-11-25T13:55:55.691-03:00",
-    "abbrlink": "5cb29acf"
-  },
   "src/content/posts/TheHackersLabs/TickTackRoot/index.md": {
     "created": "2025-11-25T13:55:57.535-03:00",
-    "modified": "2025-11-25T13:55:57.535-03:00",
+    "modified": "2025-11-29T16:07:49.316-03:00",
     "abbrlink": "2f52956d"
   },
   "src/content/posts/TryHackMe/Source/index.md": {
     "created": "2025-11-25T13:55:58.107-03:00",
-    "modified": "2025-11-25T13:55:58.107-03:00",
+    "modified": "2025-11-29T16:07:49.572-03:00",
     "abbrlink": "a87cdf09"
   },
   "src/content/posts/TryHackMe/TheStickerShop/index.md": {
     "created": "2025-11-25T13:55:58.615-03:00",
-    "modified": "2025-11-25T13:55:58.615-03:00",
+    "modified": "2025-11-29T16:07:49.612-03:00",
     "abbrlink": "5df0f720"
   },
   "src/content/posts/TryHackMe/Whiterose/index.md": {
     "created": "2025-11-25T13:55:58.619-03:00",
-    "modified": "2025-11-25T13:55:58.619-03:00",
+    "modified": "2025-11-29T16:07:49.628-03:00",
     "abbrlink": "ac2868ce"
   },
   "src/content/posts/CyberDefenders/TheCrime/thecrime.md": {
     "created": "2025-11-25T16:41:01.165-03:00",
-    "modified": "2025-11-27T22:55:40.703-03:00",
+    "modified": "2025-11-29T16:53:49.425-03:00",
     "abbrlink": "824ec051"
   },
   "src/content/posts/HackTheBox/Alert/alert.md": {
     "created": "2025-11-25T16:10:30.168-03:00",
-    "modified": "2025-11-25T16:35:42.145-03:00",
+    "modified": "2025-11-29T16:07:44.400-03:00",
     "abbrlink": "0bd37e22"
   },
   "src/content/posts/HackTheBox/Appointment/appointment.md": {
     "created": "2025-11-25T16:10:30.356-03:00",
-    "modified": "2025-11-25T16:33:13.208-03:00",
+    "modified": "2025-11-29T16:07:44.524-03:00",
     "abbrlink": "288d15d5"
-  },
-  "src/content/posts/HackTheBox/Cap/cap.md": {
-    "created": "2025-11-25T16:10:31.052-03:00",
-    "modified": "2025-11-25T16:29:18.722-03:00",
-    "abbrlink": "cdce1ce3"
   },
   "src/content/posts/HackTheBox/Chemistry/chemistry.md": {
     "created": "2025-11-25T16:10:31.208-03:00",
@@ -191,7 +131,7 @@
   },
   "src/content/posts/HackTheBox/Archetype/archetype.md": {
     "created": "2025-11-25T16:10:30.680-03:00",
-    "modified": "2025-11-25T17:20:15.749-03:00",
+    "modified": "2025-11-29T16:07:44.824-03:00",
     "abbrlink": "dbf243e6"
   },
   "src/content/posts/HackTheBox/EscapeTwo/escapetwo.md": {
@@ -204,29 +144,89 @@
     "modified": "2025-11-25T16:13:08.344-03:00",
     "abbrlink": "03dad236"
   },
-  "src/content/posts/HackTheBox/LinkVortex/linkvortex.md": {
-    "created": "2025-11-25T16:10:32.320-03:00",
-    "modified": "2025-11-25T16:16:36.225-03:00",
-    "abbrlink": "9379e2bf"
-  },
   "src/content/posts/CyberDefenders/WebStrike/webstrike.md": {
     "created": "2025-11-27T22:55:33.419-03:00",
-    "modified": "2025-11-27T22:55:33.419-03:00",
+    "modified": "2025-11-29T16:53:55.425-03:00",
     "abbrlink": "b44a7a7a"
   },
   "src/content/posts/CyberDefenders/Reveal/reveal.md": {
     "created": "2025-11-27T22:55:47.652-03:00",
-    "modified": "2025-11-27T22:55:47.652-03:00",
+    "modified": "2025-11-29T16:53:22.620-03:00",
     "abbrlink": "cb89a48d"
   },
   "src/content/posts/CyberDefenders/PoisonedCredentials/poisonedcredentials.md": {
     "created": "2025-11-27T22:55:52.432-03:00",
-    "modified": "2025-11-27T22:55:52.432-03:00",
+    "modified": "2025-11-29T16:53:38.781-03:00",
     "abbrlink": "dea4ebaa"
   },
   "src/content/posts/CyberDefenders/Amadey/amadey.md": {
     "created": "2025-11-27T22:55:59.136-03:00",
-    "modified": "2025-11-27T22:55:59.136-03:00",
+    "modified": "2025-11-29T16:54:02.789-03:00",
     "abbrlink": "914439f6"
+  },
+  "src/content/posts/HackTheBox/Cap/cap.md": {
+    "created": "2025-11-29T16:07:45.148-03:00",
+    "modified": "2025-11-29T16:07:45.148-03:00",
+    "abbrlink": "c720cb8e"
+  },
+  "src/content/posts/HackTheBox/Noxious/index.md": {
+    "created": "2025-11-29T16:07:46.468-03:00",
+    "modified": "2025-11-29T16:07:46.468-03:00",
+    "abbrlink": "40aeec65"
+  },
+  "src/content/posts/HackTheBox/Oopsie/index.md": {
+    "created": "2025-11-29T16:07:46.628-03:00",
+    "modified": "2025-11-29T16:07:46.628-03:00",
+    "abbrlink": "3c0cdebe"
+  },
+  "src/content/posts/HackTheBox/Responder/index.md": {
+    "created": "2025-11-29T16:07:46.936-03:00",
+    "modified": "2025-11-29T16:07:46.936-03:00",
+    "abbrlink": "7ecb9ffa"
+  },
+  "src/content/posts/HackTheBox/Redeemer/index.md": {
+    "created": "2025-11-29T16:07:46.884-03:00",
+    "modified": "2025-11-29T16:07:46.884-03:00",
+    "abbrlink": "40bf7659"
+  },
+  "src/content/posts/HackTheBox/Sequel/index.md": {
+    "created": "2025-11-29T16:07:47.340-03:00",
+    "modified": "2025-11-29T16:07:47.340-03:00",
+    "abbrlink": "418d7aef"
+  },
+  "src/content/posts/HackTheBox/Three/index.md": {
+    "created": "2025-11-29T16:07:47.576-03:00",
+    "modified": "2025-11-29T16:07:47.576-03:00",
+    "abbrlink": "c1bf69f5"
+  },
+  "src/content/posts/HackTheBox/Titanic/index.md": {
+    "created": "2025-11-29T16:07:47.788-03:00",
+    "modified": "2025-11-29T16:07:47.788-03:00",
+    "abbrlink": "43150843"
+  },
+  "src/content/posts/HackTheBox/TwoMillion/index.md": {
+    "created": "2025-11-29T16:07:47.900-03:00",
+    "modified": "2025-11-29T16:07:47.900-03:00",
+    "abbrlink": "6457dcc9"
+  },
+  "src/content/posts/HackTheBox/Ufo/index.md": {
+    "created": "2025-11-29T20:46:46.554-03:00",
+    "modified": "2025-11-29T20:50:42.001-03:00",
+    "abbrlink": "19e221d2"
+  },
+  "src/content/posts/HackTheBox/Underpass/index.md": {
+    "created": "2025-11-29T16:07:48.416-03:00",
+    "modified": "2025-11-29T16:07:48.416-03:00",
+    "abbrlink": "f5d50d5d"
+  },
+  "src/content/posts/HackTheBox/Vaccine/index.md": {
+    "created": "2025-11-29T16:07:48.564-03:00",
+    "modified": "2025-11-29T16:07:48.564-03:00",
+    "abbrlink": "6b3ab98b"
+  },
+  "src/content/posts/HackTheBox/UFO-1/index.md": {
+    "created": "2025-11-29T20:46:46.554-03:00",
+    "modified": "2025-11-29T20:50:42.001-03:00",
+    "abbrlink": "ee382379"
   }
 }

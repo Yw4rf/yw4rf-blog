@@ -1,5 +1,5 @@
 ---
-title: "Poisoned Credentials - Network Forensics of LLMNR/NBT-NS Poisoning Attacks"
+title: "Network Forensics of LLMNR/NBT-NS Poisoning Attacks"
 tags:
   - CyberDefenders
   - Network-Forensics
@@ -19,7 +19,7 @@ categories:
 date: 2025-02-17
 description: "Detailed network forensics writeup investigating an LLMNR/NBT-NS poisoning incident using Wireshark. The analysis tracks the attack chain, identifying the initial mistyped network query (FILESHAARE), the attacker's rogue IP (192.168.232.215), the compromised user (janesmith) whose NTLM hash was intercepted via SMB, and the hostname of the accessed machine (AccountingPC), demonstrating the vulnerability of unauthenticated name resolution protocols."
 updated: 2025-11-25
-abbrlink: poisoned-credentials
+abbrlink: cyberdefenders/poisoned-credentials
 ---
 
 ![Yw4rf PoisonedCredentials](poisonedcredentials-cyberdefenders.png)

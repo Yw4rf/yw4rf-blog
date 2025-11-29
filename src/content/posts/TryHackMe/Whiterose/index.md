@@ -1,5 +1,5 @@
 ---
-title: "TryHackMe: Whiterose - IDOR, EJS SSTI (CVE-2022-29078), and Sudoedit Bypass (CVE-2023-22809)"
+title: "Whiterose - IDOR, EJS SSTI (CVE-2022-29078), and Sudoedit Bypass (CVE-2023-22809)"
 tags:
   - TryHackMe
   - IDOR
@@ -19,7 +19,7 @@ categories:
 date: 2024-11-06
 description: "Technical writeup detailing the compromise of the Whiterose machine. Initial access involves subdomain enumeration via wFuzz and exploiting an IDOR vulnerability to retrieve privileged user credentials. This leads to a Server-Side Template Injection (SSTI) RCE via CVE-2022-29078 (EJS Template Engine vulnerability). Privilege escalation is achieved by exploiting the Sudoedit vulnerability CVE-2023-22809 to gain root access via modifying the /etc/sudoers file."
 updated: 2025-11-25
-abbrlink: whiterose
+abbrlink: tryhackme/whiterose
 ---
 
 ![Whiterose yw4rf](tryhackme-whiterose.png)

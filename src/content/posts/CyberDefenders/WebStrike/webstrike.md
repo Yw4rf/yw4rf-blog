@@ -19,7 +19,7 @@ categories:
 date: 2025-02-06
 description: "Detailed network forensics writeup analyzing a PCAP file to investigate a web shell incident. The analysis successfully identifies the attack's origin (Tianjin, China), the attacker's User-Agent, and the exploitation of a file upload vulnerability to deploy a malicious web shell ('image.jpg.php' in the /reviews/uploads/ directory). Further investigation reveals the attacker's attempt to establish a reverse shell to port 8080 and the subsequent data exfiltration of the sensitive /etc/passwd file."
 updated: 2025-11-25
-abbrlink: webstrike
+abbrlink: cyberdefenders/webstrike
 ---
 
 ![WebStrike Yw4rf](webstrike-cyberdefenders.png)

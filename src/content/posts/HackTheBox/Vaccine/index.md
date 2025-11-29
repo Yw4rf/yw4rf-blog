@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Vaccine - FTP, PKZIP/MD5 Cracking, SQL Injection via SQLMap, and SUID vi Privesc"
+title: "Vaccine - FTP, PKZIP/MD5 Cracking, SQL Injection via SQLMap, and SUID vi Privesc"
 tags:
   - HackTheBox
   - FTP
@@ -20,7 +20,7 @@ categories:
 date: 2024-12-04
 description: "Technical writeup detailing the compromise of the Vaccine machine. Initial access is achieved by exploiting Anonymous FTP to retrieve a password-protected PKZIP file, cracking the PKZIP and subsequent MD5 hashes to gain web credentials. Authentication leads to exploiting a blind SQL Injection vulnerability via SQLMap, gaining an OS shell. Privilege escalation is completed by finding plaintext credentials for SSH access, then exploiting the SUID binary 'vi' with specific permissions via the ':shell' command to achieve a root shell."
 updated: 2025-11-25
-abbrlink: vaccine
+abbrlink: htb/vaccine
 ---
 
 ![Vaccine Yw4rf](vaccine-hackthebox.png)

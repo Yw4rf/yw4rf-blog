@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Instant - APK Decompilation, LFI via Swagger API, and Solar-PuTTY Backup Decryption"
+title: "Instant - APK Decompilation, LFI via Swagger API, and Solar-PuTTY Backup Decryption"
 tags:
   - HackTheBox
   - APK-Analysis
@@ -20,7 +20,7 @@ categories:
 date: 2025-02-19
 description: "Technical writeup detailing the compromise of the Instant machine. Initial foothold is achieved through static analysis of a downloadable APK file, revealing subdomains and a hardcoded API key. This key is used to exploit a Local File Inclusion (LFI) vulnerability within the authenticated Swagger API (via the logs reading function), leading to SSH key exfiltration and user access. Privilege escalation is achieved by locating, transferring, and decrypting an encrypted Solar-PuTTY sessions backup file, which yields the root password."
 updated: 2025-11-25
-abbrlink: instant
+abbrlink: htb/instant
 ---
 
 ## Introduction

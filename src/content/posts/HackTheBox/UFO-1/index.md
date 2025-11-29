@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox Sherlock: UFO-1 - Sandworm Team (APT44) MITRE ATT&CK TTP Analysis"
+title: "UFO-1 - Sandworm Team (APT44) MITRE ATT&CK TTP Analysis"
 tags:
   - HackTheBox
   - Sherlocks
@@ -17,7 +17,7 @@ categories:
 date: 2025-01-30
 description: "Research writeup focusing on the Sandworm Team (APT44), a highly aggressive Russian APT group, using the MITRE ATT&CK framework. Analysis covers their TTPs, critical infrastructure attacks (e.g., 2016 Ukraine power grid, 2022 SCADA attacks), key malware (e.g., Industroyer2, NotPetya, Exaramel), persistence methods, and specific tools used for code execution and data destruction."
 updated: 2025-11-25
-abbrlink: ufo-1
+abbrlink: hackthebox/ufo-1
 ---
 
 ![UFO-1 HackTheBox](ufo-hackthebox.png)

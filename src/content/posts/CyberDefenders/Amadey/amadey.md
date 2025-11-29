@@ -1,5 +1,5 @@
 ---
-title: "Amadey - Volatility3 Analysis of a Credential Stealer Trojan"
+title: "Volatility3 Analysis of a Credential Stealer Trojan"
 tags:
   - CyberDefenders
   - DFIR
@@ -17,7 +17,7 @@ categories:
 date: 2024-12-05
 description: "Detailed forensic analysis of a Windows memory dump compromised by the Amadey Trojan. This investigation utilizes Volatility3 to identify the main malicious process (lssass.exe), determine its location on the filesystem (Temp folder), confirm its nature via VirusTotal, track its C2C network connections (41.75.84.12), and discover persistence mechanisms (Scheduled Tasks and DLL payload execution via rundll32.exe)."
 updated: 2025-11-25
-abbrlink: amadey
+abbrlink: cyberdefenders/amadey
 ---
 
 ![Yw4rf Amadey](amadey-cyberdefenders.png)

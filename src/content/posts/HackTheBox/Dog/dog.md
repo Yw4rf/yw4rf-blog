@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Dog - Active Machine Writeup (Content Withheld)"
+title: "Dog - Active Machine Writeup (Content Withheld)"
 tags:
   - HackTheBox
   - Active-Machine
@@ -12,7 +12,7 @@ categories:
 date: 2025-03-08
 description: "Content is currently withheld as per HackTheBox policy, since Chemistry is an active machine. This writeup details the full exploitation path from initial access to root, likely involving chemical-themed web application vulnerabilities, service enumeration, and local privilege escalation on a Linux target."
 updated: 2025-11-25
-abbrlink: dog
+abbrlink: htb/dog
 ---
 
 ![Alert yw4rf](dog-hackthebox.png)

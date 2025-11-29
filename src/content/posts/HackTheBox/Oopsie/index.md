@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Oopsie - IDOR, Arbitrary File Upload, and SUID Path Hijacking"
+title: "Oopsie - IDOR, Arbitrary File Upload, and SUID Path Hijacking"
 tags:
   - HackTheBox
   - Web-Exploitation
@@ -19,7 +19,7 @@ categories:
 date: 2024-12-02
 description: "Technical writeup detailing the compromise of the Oopsie machine. Initial access involves exploiting an IDOR vulnerability to enumerate credentials, followed by cookie manipulation to gain access to an arbitrary file upload function for a PHP reverse shell. Privilege escalation is achieved by finding plaintext database credentials for SSH access, and finally, exploiting the SUID binary '/usr/bin/bugtracker' using a PATH hijacking technique to execute a root shell."
 updated: 2025-11-25
-abbrlink: oopsie
+abbrlink: htb/oopsie
 ---
 
 ![Oopsie](oopsie-hackthebox.png)

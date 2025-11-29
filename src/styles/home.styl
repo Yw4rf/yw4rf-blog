@@ -41,7 +41,7 @@ html, body {
 }
 
 .container {
-  width: 100%;
+  width: 50%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -49,8 +49,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: fadeInUp 0.8s ease-in-out forwards;
-  animation-delay: 0.1s;
 }
 
 .textHeader {
@@ -61,24 +59,18 @@ html, body {
   font-size: 3.0rem;
   display: flex;
   justify-content: center;
-  animation: fadeInUp 0.8s ease-in-out forwards;
-  opacity: 0;
-  animation-delay: 0.1s;
   font-family: "Pixelify Sans", sans-serif;
 }
 
 .Hometitle h1 { 
-background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    background-clip: text
-    font-family: 'Pixelify Sans', sans-serif; 
-    }
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  font-family: 'Pixelify Sans', sans-serif; 
+}
 
 .Homesubtitle {
-  animation: fadeInUp 0.8s ease-in-out forwards;
-  opacity: 0;
-  animation-delay: 0.1s;
   display: flex
   justify-content: center !important
   align-items: center
@@ -102,7 +94,7 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 
 .container-bloque
   position relative
-  width 75%
+  width 100%
   padding 0rem 1rem 1.5rem 1rem
   background rgba(0, 0, 0, 0.18)
   border-radius 1rem
@@ -267,14 +259,6 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   text-decoration: none;
 }
 
-// BLOG SECTION
-
-.containerNewsletter {
-  margin-top: 50px;
-}
-
-//BUTTON
-
 .blockSpan { 
   font-family: 'Pixelify Sans', sans-serif; 
   font-size: 2rem;
@@ -285,12 +269,14 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     top: -5px
 }
 
+//BUTTON
+
 .buttonHome {
   display: flex;
   justify-content: center; 
   align-items: center;
   margin-top: 18px;
-  margin-bottom: 60px;
+  margin-bottom: 4rem;
 }
 
 .portfolio-button
@@ -308,13 +294,12 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
     position: relative;
     box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
     transition: all 0.3s ease
+    
 
     &:hover
       background:rgb(118, 193, 177)
-    box-shadow: 0 0 24px rgba(71, 71, 71, 0.35), 0 0 20px rgba(137, 215, 198, 0.5)
-    transform: scale(1.05)
-    cursor: pointer
-    animation: buttonGlow 1.5s ease-in-out infinite
+      cursor: pointer 
+      transition: background 0.3s ease
 
 
 .portfolio-button .arrow
@@ -329,8 +314,6 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
   align-items: center; 
   margin-top: 20px
   margin-bottom: -30px;
-  animation: fadeInUp 0.8s ease-in-out forwards;
-  animation-delay: 0.1s;
 }
 
 .contact-box
@@ -421,7 +404,10 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163,
 .blog-link
   font-family 'Pixelify Sans', sans-serif
   font-size 1rem
-  color #81E6D9 // Color de enlace original
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(78, 186, 163, 0.9));
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
   text-decoration none // Quitar la decoración inicial
   position relative
   transition all .3s ease

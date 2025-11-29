@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: EscapeTwo - Active Machine Writeup (Content Withheld)"
+title: "EscapeTwo - Active Machine Writeup (Content Withheld)"
 tags:
   - HackTheBox
   - Active-Machine
@@ -12,7 +12,7 @@ categories:
 date: 2025-03-02
 description: "Content is currently withheld as per HackTheBox policy, since Chemistry is an active machine. This writeup details the full exploitation path from initial access to root, likely involving chemical-themed web application vulnerabilities, service enumeration, and local privilege escalation on a Linux target."
 updated: 2025-11-25
-abbrlink: escapetwo
+abbrlink: htb/escapetwo
 ---
 
 ![EscapeTwo yw4rf](escapetwo-hackthebox.png)

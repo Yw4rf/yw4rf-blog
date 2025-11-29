@@ -1,5 +1,5 @@
 ---
-title: "DockerLabs: BreakMySSH - Exploiting OpenSSH CVE-2018-15473 for Root Access"
+title: "BreakMySSH - Exploiting OpenSSH CVE-2018-15473 for Root Access"
 tags:
   - DockerLabs
   - SSH
@@ -16,7 +16,7 @@ categories:
 date: 2024-10-09
 description: "Technical writeup detailing the compromise of the BreakMySSH challenge. Methodology covers Nmap scanning, exploiting the OpenSSH 7.7 Username Enumeration vulnerability (CVE-2018-15473) to identify a valid user, followed by a targeted password brute-force attack using Hydra to gain root access."
 updated: 2025-11-25
-abbrlink: breakmyssh
+abbrlink: dockerlabs/dockerlabs/breakmyssh
 ---
 
 ![Logo Dockerlabs](dockerlabs-breakmyssh.png)

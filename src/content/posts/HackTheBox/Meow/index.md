@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Meow - Exploiting Weak Credentials via Telnet (Port 23)"
+title: "Meow - Exploiting Weak Credentials via Telnet (Port 23)"
 tags:
   - HackTheBox
   - Telnet
@@ -14,7 +14,7 @@ categories:
 date: 2024-09-03
 description: "Technical writeup detailing the compromise of the Meow machine. The methodology involves Nmap scanning to identify the exposed Telnet service on port 23 and exploiting weak, unauthenticated credentials (root access with no password) to gain immediate root control and retrieve the flag."
 updated: 2025-11-25
-abbrlink: meow
+abbrlink: htb/meow
 ---
 
 ![Yw4rf Meow](meow-6.png)

@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Responder - LFI/RFI Chain to NTLMv2 Hash Capture and WinRM Access"
+title: "Responder - LFI/RFI Chain to NTLMv2 Hash Capture and WinRM Access"
 tags:
   - HackTheBox
   - WinRM
@@ -19,7 +19,7 @@ categories:
 date: 2024-11-23
 description: "Technical writeup detailing the initial compromise of the Responder machine. The attack chain involves exploiting a Local File Inclusion (LFI) vulnerability in a PHP application, escalating it to an RFI-style attack by injecting a UNC path to force an SMB authentication attempt. The resulting NTLMv2 hash is captured using the Responder tool, cracked with Hashcat, and used to gain full remote access via Evil-WinRM on port 5985."
 updated: 2025-11-25
-abbrlink: responder
+abbrlink: htb/responder
 ---
 
 ![Responder](responder-hackthebox.png)

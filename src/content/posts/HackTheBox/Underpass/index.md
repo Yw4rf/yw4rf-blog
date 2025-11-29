@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: UnderPass - Active Machine Writeup (Content Withheld)"
+title: "UnderPass - Active Machine Writeup (Content Withheld)"
 tags:
   - HackTheBox
   - Active-Machine
@@ -11,7 +11,7 @@ categories:
 date: 2025-02-19
 description: "Content is currently withheld as per HackTheBox policy, since UnderPass is an active machine. This writeup details the full exploitation path from initial access to root, likely involving web vulnerabilities, service misconfigurations, and local privilege escalation."
 updated: 2025-11-25
-abbrlink: underpass
+abbrlink: htb/underpass
 ---
 
 ![UnderPass yw4rf](underpass-hackthebox.png)

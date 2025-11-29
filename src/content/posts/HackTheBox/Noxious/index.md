@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox Sherlock: Noxious - LLMNR Poisoning and NTLMv2 Hash Cracking"
+title: "Noxious - LLMNR Poisoning and NTLMv2 Hash Cracking"
 tags:
   - HackTheBox
   - Sherlocks
@@ -19,7 +19,7 @@ categories:
 date: 2025-01-26
 description: "Network forensics writeup detailing the analysis of an LLMNR poisoning attack. The process covers identifying the rogue device via LLMNR and DHCP traffic, locating the victim's credential leak (NTLMv2 hash) within SMB Session Setup packets, extracting NTLM Challenge/Response components, and performing hash cracking with Hashcat to recover the plaintext password, providing full context on the credential theft incident."
 updated: 2025-11-25
-abbrlink: noxious
+abbrlink: hackthebox/noxious
 ---
 
 ![Noxious](noxiuos-hackthebox.png)

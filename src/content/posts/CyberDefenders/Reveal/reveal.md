@@ -1,5 +1,5 @@
 ---
-title: "Reveal - Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution"
+title: "Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution"
 tags:
   - CyberDefenders
   - DFIR
@@ -19,7 +19,7 @@ categories:
 date: 2025-03-23
 description: "Detailed forensic analysis of a Windows memory dump using Volatility3 to investigate a compromise at a financial institution. The analysis identifies a hidden malicious PowerShell process (powershell.exe -windowstyle hidden) abusing WebDAV to execute a second-stage payload (3435.dll) via rundll32.exe. This activity aligns with MITRE ATT&CK sub-technique T1218.011. The investigation determines the attacker's C2 IP (45.9.74.32), the compromised user ('Elon'), and correlates the C2 infrastructure with the STRELASTEALER malware family."
 updated: 2025-11-25
-abbrlink: reveal
+abbrlink: cyberdefenders/reveal
 ---
 
 ![Yw4rf Reveal](reveal-cyberdefenders.png)

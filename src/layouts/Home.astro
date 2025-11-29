@@ -47,7 +47,9 @@ const avatarImage = config_site.avatarPath || avatar
               <div class="textHeader">
                 <div class="Hometitle"><h1> {config_site.title} </h1></div>
                 <div class="Homesubtitle"><h2>Networking and CybSec</h2></div>
-                <SocialLinks mediaLinks={config_site.medialinks || []} />
+                <div class="social-links">
+                  <SocialLinks mediaLinks={config_site.medialinks || []} />
+                </div>
               </div>
             <div class="contentHome">
         <section class="containerText">
@@ -202,19 +204,19 @@ const avatarImage = config_site.avatarPath || avatar
   <ul class="blog-list">
     <li class="blog-item">
       <time datetime="2025-03-23" class="blog-date">2025-03-23</time>
-      <a href="/posts/reveal/" class="blog-link">Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution</a>
+      <a href="/posts/cyberdefenders/reveal/" class="blog-link">Volatility3 Analysis of STRELASTEALER via Rundll32 Proxy Execution</a>
     </li>
     <li class="blog-item">
       <time datetime="2024-11-23" class="blog-date">2024-11-23</time>
-      <a href="/posts/responder/" class="blog-link">LFI/RFI Chain to NTLMv2 Hash Capture and WinRM Access</a>
+      <a href="/posts/htb/responder/" class="blog-link">LFI/RFI Chain to NTLMv2 Hash Capture and WinRM Access</a>
     </li>
     <li class="blog-item">
       <time datetime="2025-01-26" class="blog-date">2025-01-26</time>
-      <a href="/posts/noxious/" class="blog-link">LLMNR Poisoning and NTLMv2 Hash Cracking</a>
+      <a href="/posts/hackthebox/noxious/" class="blog-link">LLMNR Poisoning and NTLMv2 Hash Cracking</a>
     </li>
     <li class="blog-item">
       <time datetime="2025-02-19" class="blog-date">2025-02-19</time>
-      <a href="/posts/instant/" class="blog-link">APK Decompilation, LFI via Swagger API, and Solar-PuTTY Backup Decryption</a>
+      <a href="/posts/htb/instant/" class="blog-link">APK Decompilation, LFI via Swagger API, and Solar-PuTTY Backup Decryption</a>
     </li>
   </ul>
 </section>

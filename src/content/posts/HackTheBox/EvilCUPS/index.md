@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: EvilCUPS - CUPS Vulnerability Chaining (CVEs) and Local Credential Compromise"
+title: "EvilCUPS - CUPS Vulnerability Chaining (CVEs) and Local Credential Compromise"
 tags:
   - HackTheBox
   - CUPS
@@ -16,7 +16,7 @@ categories:
 date: 2024-10-16
 description: "Technical writeup detailing the compromise of the EvilCUPS machine. Initial access is achieved by exploiting a chain of CUPS vulnerabilities (including CVE-2024-47176, CVE-2024-47076, CVE-2024-47175, CVE-2024-47177) to gain Remote Code Execution (RCE) as the 'lp' user. Local privilege escalation is then performed by manually enumerating the CUPS spool directory (/var/spool/cups) to extract cleartext credentials for the root user."
 updated: 2025-11-25
-abbrlink: evilcups
+abbrlink: htb/evilcups
 ---
 
 ![HackTheBox EvilCUPS](evilcups-hackthebox.png)

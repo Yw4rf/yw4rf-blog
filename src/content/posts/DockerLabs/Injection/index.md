@@ -1,5 +1,5 @@
 ---
-title: "DockerLabs: Injection - SQLi Authentication Bypass and SUID Privilege Escalation"
+title: "Injection - SQLi Authentication Bypass and SUID Privilege Escalation"
 tags:
   - DockerLabs
   - SQL-Injection
@@ -15,7 +15,7 @@ categories:
 date: 2024-09-18
 description: "Technical writeup covering the compromise of the 'Injection' challenge. Methodology includes port scanning, exploitation of a SQL Injection vulnerability for authentication bypass (' OR 1=1-- -), securing initial access via SSH, and leveraging a vulnerable SUID binary ('env') via GTFObins for root privilege escalation."
 updated: 2025-11-25
-abbrlink: injection
+abbrlink: dockerlabs/injection
 ---
 
 ![Injection DockerLabs Yw4rf](injection-dockerlabs.png)

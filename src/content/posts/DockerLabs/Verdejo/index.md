@@ -1,5 +1,5 @@
 ---
-title: "DockerLabs: Verdejo - SSTI Exploitation and Base64 SUID Privesc Chain"
+title: "Verdejo - SSTI Exploitation and Base64 SUID Privesc Chain"
 tags:
   - DockerLabs
   - SSTI
@@ -17,7 +17,7 @@ categories:
 date: 2024-10-25
 description: "Technical writeup detailing the compromise of the 'Verdejo' challenge. Initial access is gained by exploiting a Server-Side Template Injection (SSTI) vulnerability via Jinja2 to obtain a reverse shell. Privilege escalation is achieved by exploiting NOPASSWD SUID on '/usr/bin/base64' to read the root SSH private key, which is then cracked using ssh2john and JohnTheRipper for final root access."
 updated: 2025-11-25
-abbrlink: verdejo
+abbrlink: dockerlabs/verdejo
 ---
 
 ## Introduction 

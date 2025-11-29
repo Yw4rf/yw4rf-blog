@@ -1,5 +1,5 @@
 ---
-title: "HackTheBox: Dancing - Exploiting Unauthenticated SMB Shares"
+title: "Dancing - Exploiting Unauthenticated SMB Shares"
 tags:
   - HackTheBox
   - Windows-Exploitation
@@ -15,7 +15,7 @@ categories:
 date: 2024-09-05
 description: "Technical writeup detailing the initial compromise of the Dancing machine. The methodology focuses on thorough Nmap scanning to identify exposed SMB services (ports 139, 445), leveraging the 'smbclient' tool to enumerate and gain unauthorized access to publicly accessible network shares (WorkShares), and retrieving sensitive data (flags/notes) due to weak share permissions."
 updated: 2025-11-25
-abbrlink: dancing
+abbrlink: htb/dancing
 ---
 
 ![Dancing pwned](dancing-pwnd.png)
